@@ -1,4 +1,4 @@
-# Hi there, I'm [Delara]! 👋 
+# Hi there, I'm Delara! 👋 
 ### Product Designer | Design Engineer | Visual Strategist
 
 I am a multi-disciplinary designer with an "Engineering Soul." My mission is to bridge the gap between complex user experiences and clean, scalable code. 
@@ -17,7 +17,7 @@ This is the official home of my **Personal Portfolio Website**.
 ### 🟦 Vertical (Depth): Product Design & UX
 * **SaaS Design:** Expertise in building complex dashboards and data-heavy workflows.
 * **Design Systems:** Creating scalable UI libraries and documentation in Figma.
-* **UX Research:** Data-driven decision making and user-centric problem solving.
+* **UX Research:** Data-driven decision making and user-centric problem-solving.
 
 ### 🟧 Horizontal (Breadth): Technical & Strategic
 * **Frontend Development:** Translating designs into pixel-perfect, responsive code.
@@ -34,8 +34,7 @@ This is the official home of my **Personal Portfolio Website**.
 ---
 
 ## 📫 Let's Connect!
-* **LinkedIn:** [Link to your LinkedIn profile]
-* **Email:** [Your Professional Email Address]
+* **LinkedIn:** [delara-mozdbar](https://www.linkedin.com/in/delara-mozdbar)
 
 ---
 *"Design is not just what it looks like and feels like. Design is how it works." – Steve Jobs*
