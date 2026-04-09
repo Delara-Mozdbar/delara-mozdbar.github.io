@@ -128,7 +128,7 @@ section { padding: 100px 8%; }
 .work-card { 
     background: var(--card-bg); 
     /* Padding adjusted to give space for larger images and title distance */
-    padding: 130px 25px 40px 25px; 
+    padding: 150px 25px 40px 25px
     border-radius: 25px; 
     text-align: center; 
     transition: 0.3s; 
