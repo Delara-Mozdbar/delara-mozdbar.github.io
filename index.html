@@ -1,194 +1,138 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delara Mozdbar</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #fafafa;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 60px;
-    }
-
-    p {
-      color: #444;
-    }
-
-    .buttons {
-      margin-top: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 18px;
-      margin-right: 10px;
-      border: 1px solid #111;
-      text-decoration: none;
-      color: #111;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #111;
-      color: #fff;
-    }
-
-    .section {
-      margin-top: 60px;
-    }
-
-    .item {
-      margin-bottom: 20px;
-    }
-
-    .label {
-      font-weight: bold;
-      color: #777;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      margin-top: 80px;
-      text-align: center;
-      color: #777;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delara Mozdbar</title>
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="container">
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
 
-```
-<!-- Hero -->
-<section>
-  <h1>A Product Designer with an Engineering Mind.</h1>
-  <p>
-    I design scalable digital products by combining UX thinking,
-    visual strategy, and frontend understanding.
-  </p>
+        <div class="nav-left">
+            <div class="logo"><img src="images/Logo.png" alt="DM Logo"></div>
+        </div>
 
-  <div class="buttons">
-    <a href="#" class="btn">View My Work</a>
-    <a href="#" class="btn">Contact Me</a>
-  </div>
-</section>
+        <div class="nav-center menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
 
-<!-- How I Help -->
-<section class="section">
-  <h2>How I can help your team</h2>
+        <div class="nav-right">
+            <a href="resume.pdf" class="resume-btn" download>Resume</a>
+        </div>
+    </nav>
 
-  <div class="item">
-    <div class="label">01 — Product Designer</div>
-    <p>Designing complex SaaS experiences focused on usability and business goals.</p>
-  </div>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Delara Mozdbar</h1>
+            <p style="font-size: 1.2rem; color: var(--text-sec); margin-top: 10px;">Product Designer with an Engineering Soul. Bridging the gap between complex logic and human-centered design.</p>
+            <a href="#work" class="contact-item highlight" style="width: fit-content; margin-top: 25px; padding: 12px 25px;">Explore My Work</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/Hero-Imge.png" alt="Delara Profile" onerror="this.src='https://via.placeholder.com/600x600/161616/ffffff?text=Delara+Profile'">
+        </div>
+    </section>
 
-  <div class="item">
-    <div class="label">02 — Design Engineer</div>
-    <p>Bridging design and development with a strong understanding of frontend.</p>
-  </div>
+    <section id="about" style="background: #0f0f0f;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 30px;">About Me</h2>
+        <div class="about-grid">
+            <div>
+                <p>I have been immersed in the IT industry since 2015. Starting as a Frontend Web Developer, I developed a unique "engineering mindset" that fuels my approach to Product Design.</p>
+                <br>
+                <p>I specialize in complex SaaS solutions, collaborating with international teams in Australia and Africa.</p>
+            </div>
+            <div>
+                <div class="strength-card">
+                    <h4>Design-to-Dev Synergy</h4>
+                    <p style="color: var(--text-sec); font-size: 0.9rem;">I speak the language of engineering, reducing handoff friction.</p>
+                </div>
+                <div class="strength-card">
+                    <h4>Strategic Product Design</h4>
+                    <p style="color: var(--text-sec); font-size: 0.9rem;">From deep research to robust Design Systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="item">
-    <div class="label">03 — Visual Strategist</div>
-    <p>Crafting visual systems that communicate brand meaning clearly.</p>
-  </div>
-</section>
+    <section id="work">
+        <h2 style="text-align: center; margin-bottom: 80px; font-size: 2.5rem;">Expertise</h2>
+        <div class="work-grid">
+            <div class="work-card">
+                <div class="card-image"><span style="font-size: 12px; color: #555;">[UX/UI Project]</span></div>
+                <h3>UX/UI Design</h3>
+                <p style="color: var(--text-sec); margin-top: 10px;">SaaS, Mobile Apps, Dashboards</p>
+                <a href="#" class="show-more">Show more →</a>
+            </div>
+            <div class="work-card">
+                <div class="card-image"><span style="font-size: 12px; color: #555;">[Graphic Branding]</span></div>
+                <h3>Graphic Design</h3>
+                <p style="color: var(--text-sec); margin-top: 10px;">Visual Strategy & Branding</p>
+                <a href="#" class="show-more">Show more →</a>
+            </div>
+            <div class="work-card">
+                <div class="card-image"><span style="font-size: 12px; color: #555;">[Coding/FE]</span></div>
+                <h3>Coding</h3>
+                <p style="color: var(--text-sec); margin-top: 10px;">Frontend Foundations (HTML/CSS)</p>
+                <a href="#" class="show-more">Show more →</a>
+            </div>
+        </div>
+    </section>
 
-<!-- Selected Work -->
-<section class="section">
-  <h2>Selected Work</h2>
+    <section class="tools-section">
+        <h2 style="font-size: 2.2rem; opacity: 0.9;">Tools</h2>
+        <p style="color: var(--text-sec); margin-top: 10px;">The software and technologies I use to bring ideas to life.</p>
+        <div class="tools-grid">
+            <div class="tool-box"><img src="tool1.png" alt="Tool 1" onerror="this.src='https://via.placeholder.com/40/222/555?text=1'"></div>
+            <div class="tool-box"><img src="tool2.png" alt="Tool 2" onerror="this.src='https://via.placeholder.com/40/222/555?text=2'"></div>
+            <div class="tool-box"><img src="tool3.png" alt="Tool 3" onerror="this.src='https://via.placeholder.com/40/222/555?text=3'"></div>
+            <div class="tool-box"><img src="tool4.png" alt="Tool 4" onerror="this.src='https://via.placeholder.com/40/222/555?text=4'"></div>
+            <div class="tool-box"><img src="tool5.png" alt="Tool 5" onerror="this.src='https://via.placeholder.com/40/222/555?text=5'"></div>
+            <div class="tool-box"><img src="tool6.png" alt="Tool 6" onerror="this.src='https://via.placeholder.com/40/222/555?text=6'"></div>
+            <div class="tool-box"><img src="tool7.png" alt="Tool 7" onerror="this.src='https://via.placeholder.com/40/222/555?text=7'"></div>
+            <div class="tool-box"><img src="tool8.png" alt="Tool 8" onerror="this.src='https://via.placeholder.com/40/222/555?text=8'"></div>
+        </div>
+    </section>
 
-  <div class="item">
-    <div class="label">SaaS UX</div>
-    <p>Improving complex workflows for a digital product.</p>
-  </div>
+    <section id="contact" class="contact-section">
+        <div class="contact-visual">
+            <img src="contact-side.jpg" alt="Connect" onerror="this.src='https://via.placeholder.com/500x400/161616/3b82f6?text=Get+In+Touch'">
+        </div>
+        <div class="contact-links">
+            <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Let's Talk</h2>
+            <p style="color: var(--text-sec); margin-bottom: 20px;">Open for collaborations and interesting SaaS projects.</p>
+            
+            <a href="#" class="contact-item highlight">
+                <span>📅 Schedule 1:1 Meet</span>
+                <span>→</span>
+            </a>
+            
+            <a href="mailto:delara.mozdbar@gmail.com" class="contact-item">
+                <span>✉️ delara.mozdbar@gmail.com</span>
+                <span>→</span>
+            </a>
+            
+            <a href="#" class="contact-item">
+                <span>📱 WhatsApp / Telegram</span>
+                <span>→</span>
+            </a>
+            
+            <a href="#" class="contact-item">
+                <span>🔗 LinkedIn Profile</span>
+                <span>→</span>
+            </a>
+        </div>
+    </section>
 
-  <div class="item">
-    <div class="label">UI & Visual</div>
-    <p>Designing a modern stationery experience.</p>
-  </div>
-
-  <div class="item">
-    <div class="label">Design to Code</div>
-    <p>From interface design to frontend implementation.</p>
-  </div>
-</section>
-
-<!-- Skills -->
-<section class="section">
-  <h2>Core & Supporting Skills</h2>
-
-  <p><strong>Core:</strong> Product Design, UX Research, Design Systems</p>
-  <p><strong>Supporting:</strong> Frontend (HTML, CSS), Brand Identity, Project Management, AI Workflows</p>
-</section>
-
-<!-- Value -->
-<section class="section">
-  <h2>What makes me different</h2>
-
-  <div class="item">
-    <div class="label">Technical Empathy</div>
-    <p>Designs that developers can actually build.</p>
-  </div>
-
-  <div class="item">
-    <div class="label">Global Mindset</div>
-    <p>Experience working with international teams across Australia and Africa.</p>
-  </div>
-
-  <div class="item">
-    <div class="label">Problem Solver</div>
-    <p>Focused on business impact, not just visuals.</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section">
-  <h2>Let’s build something meaningful together.</h2>
-
-  <div class="buttons">
-    <a href="#" class="btn">Get in touch</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Delara Mozdbar
-</footer>
-```
-
-  </div>
+    <footer>
+        Copyright © 2026, Delara Mozdbar, All rights reserved.
+    </footer>
 
 </body>
 </html>
