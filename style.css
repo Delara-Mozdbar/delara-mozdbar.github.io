@@ -159,7 +159,6 @@ section { padding: 100px 8%; }
     width: 100%;
     height: auto;
     object-fit: contain;
-    border-radius: 20px;
     /* Deeper shadow for better separation from the dark background */
 }
 
