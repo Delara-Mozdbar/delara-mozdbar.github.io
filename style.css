@@ -120,16 +120,15 @@ section { padding: 100px 8%; }
 /* --- EXPERTISE (WORK) SECTION --- */
 .work-grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 120px 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 140px 30px; 
     margin-top: 100px; 
 }
 
 .work-card { 
     background: var(--card-bg); 
-    /* Increased padding top and bottom to match the requested design */
-    padding: 110px 20px 50px 20px; 
-    /* Rounded corners as per screenshot */
+    /* Padding adjusted to give space for larger images and title distance */
+    padding: 130px 25px 50px 25px; 
     border-radius: 25px; 
     text-align: center; 
     transition: 0.3s; 
@@ -143,39 +142,39 @@ section { padding: 100px 8%; }
 }
 
 .card-image { 
-    width: 290px; 
-    height: 170px; 
-    background: #222; 
-    border-radius: 20px; 
+    width: 320px; /* Increased image size */
+    height: auto; 
+    background: transparent; /* Removed dark background as requested */
     position: absolute; 
-    /* Positioned to overlap the card top border */
-    top: -60px; 
+    top: -80px; 
     left: 50%; 
     transform: translateX(-50%); 
-    overflow: hidden; 
     display: flex; 
     align-items: center; 
     justify-content: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     z-index: 2;
 }
 
 .card-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    /* Deeper shadow for better separation from the dark background */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6); 
 }
 
 /* Content styling inside work cards */
 .work-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-top: 20px; /* Distance between the image and the title */
     margin-bottom: 8px;
     font-weight: 700;
 }
 
 .work-card p {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 25px;
     color: var(--text-sec);
 }
 
@@ -308,7 +307,7 @@ footer {
     .hero-content h1 { font-size: 3rem; }
 
     .work-grid { gap: 120px 20px; }
-    .card-image { width: 90%; max-width: 290px; }
+    .card-image { width: 90%; max-width: 320px; top: -60px; }
 
     .tools-grid { grid-template-columns: repeat(4, 1fr); gap: 15px; }
     .tool-box { width: 65px; height: 65px; }
