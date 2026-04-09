@@ -128,7 +128,7 @@ section { padding: 100px 8%; }
 .work-card { 
     background: var(--card-bg); 
     /* Padding adjusted to give space for larger images and title distance */
-    padding: 130px 25px 50px 25px; 
+    padding: 130px 25px 40px 25px; 
     border-radius: 25px; 
     text-align: center; 
     transition: 0.3s; 
@@ -146,7 +146,7 @@ section { padding: 100px 8%; }
     height: auto; 
     background: transparent; /* Removed dark background as requested */
     position: absolute; 
-    top: -80px; 
+    top: -90px; 
     left: 50%; 
     transform: translateX(-50%); 
     display: flex; 
@@ -165,7 +165,7 @@ section { padding: 100px 8%; }
 /* Content styling inside work cards */
 .work-card h3 {
     font-size: 1.5rem;
-    margin-top: 20px; /* Distance between the image and the title */
+    margin-top: 40px; /* Distance between the image and the title */
     margin-bottom: 8px;
     font-weight: 700;
 }
