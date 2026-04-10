@@ -20,6 +20,96 @@ body {
     overflow-x: hidden;
 }
 
+.explore-btn {
+background: var(--accent);
+color: white;
+padding: 14px 28px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: bold;
+margin-top: 35px;
+display: inline-block;
+transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 25px rgba(74,108,247,0.4);
+}
+
+.tool-box {
+background: var(--card-bg);
+width: 80px;
+height: 80px;
+padding: 15px;
+border-radius: 16px;
+border: 1px solid transparent;
+transition: all 0.3s ease;
+}
+
+.tool-box:hover {
+transform: translateY(-5px) scale(1.08);
+border-color: var(--accent);
+}
+
+.contact-item {
+background: var(--card-bg);
+padding: 22px;
+border-radius: 14px;
+text-decoration: none;
+color: white;
+display: flex;
+justify-content: space-between;
+border: 1px solid #333;
+margin-bottom: 15px;
+transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+transform: translateX(6px);
+border-color: var(--accent);
+}
+
+.contact-item.highlight:hover {
+transform: translateX(6px) scale(1.02);
+}
+
+@media (max-width: 1024px) {
+.hero-content h1 {
+font-size: 3.2rem;
+}
+}
+
+@media (max-width: 768px) {
+.hero {
+flex-direction: column-reverse;
+text-align: center;
+}
+
+```
+.work-grid {
+    grid-template-columns: 1fr;
+    gap: 100px;
+}
+```
+
+}
+
+@media (max-width: 480px) {
+.hero-content h1 {
+font-size: 2.2rem;
+}
+
+```
+.explore-btn {
+    width: 100%;
+    text-align: center;
+}
+```
+
+}
+
+
 /* --- NAVIGATION --- */
 nav {
     height: var(--nav-h);
@@ -142,6 +232,30 @@ nav {
 
 .card-image { width: 260px; position: absolute; top: -80px; left: 50%; transform: translateX(-50%); z-index: 5; }
 .card-image img { width: 100%; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5)); }
+
+.work-card {
+background: var(--card-bg);
+padding: 140px 25px 40px 25px;
+border-radius: 32px;
+position: relative;
+border: 1px solid #222;
+transition: all 0.35s ease;
+}
+
+.work-card:hover {
+transform: translateY(-12px);
+border-color: var(--accent);
+box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Image */
+.card-image img {
+transition: transform 0.4s ease;
+}
+
+.work-card:hover .card-image img {
+transform: scale(1.05);
+}
 
 /* --- TECH STACK --- */
 .tools-section { padding: 80px 8%; text-align: center; }
