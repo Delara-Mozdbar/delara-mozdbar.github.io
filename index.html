@@ -34,64 +34,66 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Delara Mozdbar</h1>
-            <p style="font-size: 1.25rem; color: var(--text-sec); margin-top: 10px; max-width: 600px;">
+            <p class="hero-description">
                 Senior Product Designer with an Engineering Soul. I specialize in turning complex SaaS logic into seamless, human-centered digital experiences.
             </p>
-            <a href="#work" class="contact-item highlight" style="width: fit-content; margin-top: 25px; padding: 14px 28px;">Explore My Work</a>
+            <div class="hero-action">
+                <a href="#work" class="explore-btn">Explore My Work</a>
+            </div>
         </div>
         <div class="hero-image">
             <img src="images/Hero-Imge.png" alt="Delara Mozdbar - Product Designer">
         </div>
     </section>
 
-    <section id="about" style="background: #0f0f0f;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Impact & Journey</h2>
+    <section id="about" class="about-section">
+        <h2 class="section-title">Impact & Journey</h2>
         <div class="about-grid">
-            <div>
+            <div class="about-text">
                 <p>Since 2015, I've navigated the intersection of code and canvas. Starting as a Frontend Developer, I built a foundation of technical feasibility that now powers my strategic design decisions.</p>
                 <br>
                 <p>I thrive in complex ecosystems, having led design initiatives for international SaaS platforms across Australia and Africa, ensuring scalability and user delight.</p>
             </div>
-            <div>
+            <div class="about-cards">
                 <div class="strength-card">
                     <h4>Bridging the Gap</h4>
-                    <p style="color: var(--text-sec); font-size: 0.95rem;">I eliminate handoff friction by speaking the language of engineering and data.</p>
+                    <p>I eliminate handoff friction by speaking the language of engineering and data.</p>
                 </div>
                 <div class="strength-card">
                     <h4>Strategic Design Systems</h4>
-                    <p style="color: var(--text-sec); font-size: 0.95rem;">Architecting robust systems that ensure visual consistency and development speed.</p>
+                    <p>Architecting robust systems that ensure visual consistency and development speed.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="work">
-        <h2 style="text-align: center; margin-bottom: 140px; font-size: 2.5rem;">Core Expertise</h2>
+    <section id="work" class="expertise-section">
+        <h2 class="expertise-title">Core Expertise</h2>
         <div class="work-grid">
             <div class="work-card">
-                <div class="card-image"><img src="images/UXUI-Design.png" alt="Product Design"></div>
+                <div class="card-image"><img src="images/UXUI-Design.png" alt="UX/UI Design"></div>
                 <h3>UX/UI Design</h3>
                 <p>End-to-end solutions for SaaS, Dashboards, and Mobile Apps.</p>
-                <a href="#" class="show-more">View Case Study →</a>
+                <a href="#" class="case-study-link">View Case Study →</a>
             </div>
             <div class="work-card">
                 <div class="card-image"><img src="images/Graphic-Design.png" alt="Visual Strategy"></div>
                 <h3>Visual Strategy</h3>
                 <p>Crafting identities that resonate across digital touchpoints.</p>
-                <a href="#" class="show-more">View Case Study →</a>
+                <a href="#" class="case-study-link">View Case Study →</a>
             </div>
             <div class="work-card">
                 <div class="card-image"><img src="images/Coding.png" alt="Design Engineering"></div>
                 <h3>Design Engineering</h3>
                 <p>Prototyping with HTML/CSS to validate complex interactions.</p>
-                <a href="#" class="show-more">View Case Study →</a>
+                <a href="#" class="case-study-link">View Case Study →</a>
             </div>
         </div>
     </section>
 
     <section class="tools-section">
-        <h2 style="font-size: 2.2rem; opacity: 0.9;">Tech Stack</h2>
-        <p style="color: var(--text-sec); margin-top: 10px;">The industry-standard tools I use to build and scale products.</p>
+        <h2 class="tools-title">Tech Stack</h2>
+        <p class="tools-subtitle">The industry-standard tools I use to build and scale products.</p>
         <div class="tools-grid">
             <div class="tool-box"><img src="images/Figma.png" alt="Figma"></div>
             <div class="tool-box"><img src="images/ChatGPT.png" alt="AI Tools"></div>
@@ -104,33 +106,40 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-visual">
-            <img src="images/Connect.png" alt="Connect with Delara">
-        </div>
-        <div class="contact-links">
-            <h2 style="font-size: 2.2rem; margin-bottom: 15px;">Let's Talk</h2>
-            <p style="color: var(--text-sec); margin-bottom: 20px;">Currently open to senior-level roles and innovative SaaS collaborations.</p>
+   <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-visual">
+                <img src="images/Connect.png" alt="Connect with Delara">
+            </div>
             
-            <a href="https://calendar.app.google/7JH3uLpp5a7SVG2TA" class="contact-item highlight">
-                <span>📅 Schedule a Discovery Call</span>
-                <span>→</span>
-            </a>
-            <a href="mailto:delara.mozdbar@gmail.com" class="contact-item">
-                <span>✉️ Email</span>
-                <span>→</span>
-            </a>
-            <a href="tel:+989307193837" class="contact-item">
-                <span>📱 Telegram / WhatsApp</span>
-                <span>→</span>
-            </a>
-            <a href="https://www.linkedin.com/in/delara-mozdbar/" class="contact-item">
-                <span>🔗 LinkedIn Profile</span>
-                <span>→</span>
-            </a>
+            <div class="contact-links">
+                <div class="contact-header">
+                    <h2>Let's Talk</h2>
+                    <p>Currently open to senior-level roles and innovative SaaS collaborations.</p>
+                </div>
+                
+                <div class="links-grid">
+                    <a href="https://calendar.app.google/7JH3uLpp5a7SVG2TA" class="contact-item highlight">
+                        <span>📅 Schedule a Discovery Call</span>
+                        <span>→</span>
+                    </a>
+                    <a href="mailto:delara.mozdbar@gmail.com" class="contact-item">
+                        <span>✉️ Email</span>
+                        <span>→</span>
+                    </a>
+                    <a href="tel:+989307193837" class="contact-item">
+                        <span>📱 Telegram / WhatsApp</span>
+                        <span>→</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/delara-mozdbar/" class="contact-item">
+                        <span>🔗 LinkedIn Profile</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-
+    
     <footer>
         Copyright © 2026 | Delara Mozdbar | Designed with Intention.
     </footer>
