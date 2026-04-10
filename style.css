@@ -209,8 +209,6 @@ section { padding: 100px 8%; }
 .tool-box img { 
     width: 40px; 
     height: 40px; 
-    filter: grayscale(100%); 
-    opacity: 0.7; 
     transition: 0.3s; 
 }
 .tool-box:hover img { filter: grayscale(0%); opacity: 1; }
