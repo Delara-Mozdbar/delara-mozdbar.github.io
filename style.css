@@ -147,7 +147,7 @@ HERO
 
 .hero-image img {
   width: 100%;
-  max-width: 460px;
+  max-height: 460px;
   aspect-ratio: 460 / 570;
   object-fit: cover;
 }
