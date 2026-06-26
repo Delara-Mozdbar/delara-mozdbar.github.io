@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delara Mozdbar | Senior Product Designer</title>
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+     <link rel="stylesheet" href="css/works.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                <a href="index.html"><img src="images/Logo.png" alt="Delara Logo"></a>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
+
+            <div class="nav-center menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <div class="dropdown">
+                    <a class="dropbtn">Work ▾</a>
+                    <div class="dropdown-content">
+                        <a href="ux-ui.html">UX/UI Design</a>
+                        <a href="visual-strategy.html">Visual Strategy</a>
+                        <a href="frontend.html">Frontend Development</a>
+                    </div>
+                </div>
+
+                <a href="impact.html">Impact</a>
+                <a href="library.html">Library</a>
+                
+                <a href="contact.html" class="mobile-contact-link">Let's Talk</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="contact.html" class="contact-btn">Let's Talk</a>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+<main class="cs-page">
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="ux-ui.html">UX/UI Design</a>
+        <span aria-hidden="true">/</span>
+        <span class="current">CoreView</span>
+    </div>
+
+    <!-- ── HERO ── -->
+    <section class="cs-hero">
+
+        <div class="cs-hero-top">
+            <!-- LEFT -->
+            <div class="cs-hero-left">
+                <p class="cs-hero-eyebrow">Case Study</p>
+                <h1 class="cs-title">CoreView —<br>Workforce Health<br>Monitoring</h1>
+                <p class="cs-subtitle">A B2B SaaS platform built for real-time employee health screening and risk control — not HR management. Designed to help managers identify and respond to workforce health risks before they escalate.</p>
+                <p class="cs-confidential"><em>Product name changed for confidentiality.</em></p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="cs-hero-right">
+                <div class="cs-hero-visual">
+                    <img src="images/CoreView-about.png" alt="CoreView Dashboard">
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM: INFO + TAGS -->
+        <div class="cs-hero-bottom">
+            <div class="cs-info-row">
+                <div class="cs-info-item">
+                    <span class="cs-info-label">My Role</span>
+                    <span class="cs-info-value">UX Designer — strategy, conversational UI (survey bot), wireframing, dev handoff</span>
+                </div>
+                <div class="cs-info-divider"></div>
+                <div class="cs-info-item">
+                    <span class="cs-info-label">Team</span>
+                    <span class="cs-info-value">1 UX Researcher & Client Liaison + 1 UI Designer + Engineering team</span>
+                </div>
+                <div class="cs-info-divider"></div>
+                <div class="cs-info-item">
+                    <span class="cs-info-label">Timeline</span>
+                    <span class="cs-info-value">May - July 2021</span>
+                </div>
+                <div class="cs-info-divider"></div>
+                <div class="cs-info-item">
+                    <span class="cs-info-label">Type</span>
+                    <span class="cs-info-value">MVP / Enterprise Web App</span>
+                </div>
+            </div>
+            <div class="cs-tags">
+                <span class="cs-tag">UX Design</span>
+                <span class="cs-tag">Information Architecture</span>
+                <span class="cs-tag">Conversational UI</span>
+                <span class="cs-tag">B2B SaaS</span>
+                <span class="cs-tag">Figma</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ── STRATEGIC CHALLENGE ── -->
+    <section class="cs-section">
+        <div class="cs-section-inner">
+            <div class="cs-section-label">The Challenge</div>
+            <h2 class="cs-heading">Building CoreView wasn't one hard problem —<br>it was several interconnected ones.</h2>
+
+            <div class="cs-challenge-cards">
+
+                <div class="cs-challenge-card">
+                    <div class="cs-challenge-body">
+                        <h3 class="cs-challenge-title"><span class="cs-challenge-num">01</span>Five distinct user roles, one platform</h3>
+                        <p class="cs-challenge-text">Each role had different access levels, different goals, and a different mental model.</p>
+                        <div class="cs-role-badges">
+                            <span class="cs-role-badge">Super Admin</span>
+                            <span class="cs-role-badge">Admin</span>
+                            <span class="cs-role-badge">Director</span>
+                            <span class="cs-role-badge cs-role-badge--highlight">Manager</span>
+                            <span class="cs-role-badge">Employee</span>
+                        </div>
+                        <p class="cs-challenge-text" style="margin-top:12px;">A manager needed risk status at a glance. An employee just needed to answer a daily survey. A director needed to delegate without losing oversight.</p>
+                    </div>
+                    <div class="cs-challenge-image">
+                        <img src="images/CoreView-TheChallenge-01.png" alt="Five distinct user roles, one platform">
+                    </div>
+                </div>
+
+                <div class="cs-challenge-card cs-challenge-card--reverse">
+                    <div class="cs-challenge-body">
+                        <h3 class="cs-challenge-title"><span class="cs-challenge-num">02</span>A survey that wasn't a form</h3>
+                        <p class="cs-challenge-text">The survey system was a conversational chatbot with conditional branching — questions appeared in random order, each answer could trigger a different follow-up. Designing this logic visually, so both the client and the dev team could understand it, was one of the core UX challenges.</p>
+                    </div>
+                    <div class="cs-challenge-image">
+                        <img src="images/CoreView-TheChallenge-02.png" alt="A survey that wasn't a form">
+                    </div>
+                </div>
+
+                <div class="cs-challenge-card">
+                    <div class="cs-challenge-body">
+                        <h3 class="cs-challenge-title"><span class="cs-challenge-num">03</span>Real-time data, right person, right moment</h3>
+                        <p class="cs-challenge-text">The dashboard needed to surface real-time screening data alongside risk scores — making sure the right information reached the right person at the right moment.</p>
+                    </div>
+                    <div class="cs-challenge-image">
+                        <img src="images/CoreView-TheChallenge-03.png" alt="Real-time data, right person, right moment">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cs-callout cs-callout-summary">
+                <div class="cs-callout-icon">→</div>
+                <p class="cs-callout-text">The real challenge was designing a system where all of these layers worked together without overwhelming any single user.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── MY APPROACH ── -->
+    <section class="cs-section cs-section-dark">
+        <div class="cs-section-inner">
+            <div class="cs-section-label">My Approach</div>
+            <h2 class="cs-heading">How I navigated the complexity</h2>
+            <p class="cs-body cs-body-wide">
+                The project started with a kickoff meeting with the technical lead and company founder, where the initial brief was shared: a client needed a health screening platform for their workforce. The requirements were high-level — the details had to be discovered through the process.
+            </p>
+
+            <div class="cs-approach-layout">
+            <div class="cs-approach-image">
+                <img src="images/CoreView-MyApproach.png" alt="My Approach">
+            </div>
+
+            <div class="cs-steps">
+
+                <div class="cs-step">
+                    <div class="cs-step-track">
+                        <div class="cs-step-dot"></div>
+                        <div class="cs-step-line"></div>
+                    </div>
+                    <div class="cs-step-content">
+                        <div class="cs-step-label">Step 1</div>
+                        <h3 class="cs-step-title">Understand the market</h3>
+                        <p class="cs-step-body">
+                            Before touching any wireframe, our team analyzed six competing platforms — Ceridian, SafetyTek, NetHealth, ProtectWell, Kokomo, and Appian — to understand how others solved similar problems. This research was led by a colleague, and the key insights informed the overall design direction, particularly around dashboard clarity and risk visualization.
+                        </p>
+                        
+                        <div class="cs-step-tags">
+                            <span class="cs-tag">Ceridian</span>
+                            <span class="cs-tag">SafetyTek</span>
+                            <span class="cs-tag">NetHealth</span>
+                            <span class="cs-tag">ProtectWell</span>
+                            <span class="cs-tag">Kokomo</span>
+                            <span class="cs-tag">Appian</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-step">
+                    <div class="cs-step-track">
+                        <div class="cs-step-dot"></div>
+                        <div class="cs-step-line"></div>
+                    </div>
+                    <div class="cs-step-content">
+                        <div class="cs-step-label">Step 2</div>
+                        <h3 class="cs-step-title">Clarify with the client</h3>
+                        <p class="cs-step-body">As requirements evolved, I documented every ambiguity as a formal question to the client — covering user roles, survey logic, SMS behavior, and temperature tracking.</p>
+                        <div class="cs-step-stat">
+                            <span class="cs-step-stat-value">15+</span>
+                            <span class="cs-step-stat-label">documented Q&As with the client</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cs-step cs-step--last">
+                    <div class="cs-step-track">
+                        <div class="cs-step-dot"></div>
+                    </div>
+                    <div class="cs-step-content">
+                        <div class="cs-step-label">Step 3</div>
+                        <h3 class="cs-step-title">Design iteratively</h3>
+                        <p class="cs-step-body">Rather than designing in isolation, I worked in close collaboration with the UI designer and engineering team — sharing sketches early, collecting client feedback on prototypes, and iterating based on real responses.</p>
+                    </div>
+                </div>
+
+            </div>
+            </div><!-- end cs-approach-layout -->
+        </div>
+    </section>
+
+
+    <!-- ── KEY DESIGN DECISIONS ── -->
+    <section class="cs-section">
+        <div class="cs-section-inner">
+            <div class="cs-section-label">Key Design Decisions</div>
+            <h2 class="cs-heading">Why each decision was made</h2>
+
+            <!-- DECISION 1 -->
+            <div class="cs-kd-block">
+                <div class="cs-kd-header">
+                    <span class="cs-kd-num">01</span>
+                    <h3 class="cs-kd-title">Why a conversational bot instead of a simple form</h3>
+                </div>
+                <div class="cs-kd-layout">
+                    <div class="cs-kd-text">
+                        <p class="cs-body">A standard form could collect answers — but it couldn't collect them in a way that was flexible enough for the system's logic.</p>
+                        <p class="cs-body">The survey needed conditional branching: each answer could trigger a different follow-up question, displayed in random order to prevent bias. On top of that, the responses needed to feed directly into a risk scoring algorithm that the dashboard would display in real time.</p>
+                        <p class="cs-body">I worked closely with the technical lead through multiple back-and-forth sessions to fully understand this data complexity. The conversational bot wasn't just a UX choice — it was the right structure to capture nuanced, conditional responses that a flat form couldn't handle.</p>
+                        <div class="cs-kd-quote">
+                            <p>"Employees found the conversational format more engaging and easier to complete."</p>
+                            <span>— Client user feedback</span>
+                        </div>
+                    </div>
+                    <div class="cs-kd-visual">
+                        <div class="cs-kd-placeholder"><img src="images/CoreView-KeyDesignDecisions-01.png" alt="Survey"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DECISION 2 -->
+            <div class="cs-kd-block">
+                <div class="cs-kd-header">
+                    <span class="cs-kd-num">02</span>
+                    <h3 class="cs-kd-title">Designing one system for five different mental models</h3>
+                </div>
+                <div class="cs-kd-layout">
+                    <div class="cs-kd-text">
+                        <p class="cs-body">The biggest challenge wasn't building five separate interfaces — it was designing shared screens that behaved differently depending on who was logged in.</p>
+                        <p class="cs-body">To solve this, I mapped each role's needs separately before touching any UI. The key question for every screen was: <em>what does this person need to act on, and what would distract them?</em></p>
+                    </div>
+                    <div class="cs-kd-role-table">
+                        <div class="cs-kd-role-header">
+                            <span>Role</span>
+                            <span>Scope</span>
+                            <span>Primary Need</span>
+                        </div>
+                        <div class="cs-kd-role-row">
+                            <span class="cs-role-badge">Manager</span>
+                            <span>Assigned location only</span>
+                            <span>Act on at-risk employees</span>
+                        </div>
+                        <div class="cs-kd-role-row">
+                            <span class="cs-role-badge cs-role-badge--highlight">Director</span>
+                            <span>All locations</span>
+                            <span>Delegate + oversee</span>
+                        </div>
+                        <div class="cs-kd-role-row">
+                            <span class="cs-role-badge">Admin</span>
+                            <span>Full access</span>
+                            <span>Configure + manage</span>
+                        </div>
+                        <div class="cs-kd-role-row">
+                            <span class="cs-role-badge">Employee</span>
+                            <span>Self only</span>
+                            <span>Complete daily survey</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DECISION 3 -->
+            <div class="cs-kd-block">
+                <div class="cs-kd-header">
+                    <span class="cs-kd-num">03</span>
+                    <h3 class="cs-kd-title">Information hierarchy: from status to action</h3>
+                </div>
+                <p class="cs-body cs-body-wide">The dashboard content was defined by the client. My job was deciding how to present it. The core question: <em>what does a manager need to see the moment they open the dashboard?</em></p>
+                <div class="cs-kd-layers">
+                    <div class="cs-kd-layer cs-kd-layer--primary">
+                        <div class="cs-kd-layer-label">Layer 1 — Today's Status</div>
+                        <p class="cs-kd-layer-desc">Immediate snapshot — actionable</p>
+                        <div class="cs-kd-layer-panels">
+                            <div class="cs-kd-panel">
+                                <div class="cs-kd-panel-icon">✓</div>
+                                <span>Screening Status</span>
+                            </div>
+                            <div class="cs-kd-panel">
+                                <div class="cs-kd-panel-icon cs-kd-panel-icon--red">!</div>
+                                <span>High Risk Status</span>
+                            </div>
+                            <div class="cs-kd-panel">
+                                <div class="cs-kd-panel-icon cs-kd-panel-icon--amber">↗</div>
+                                <span>Risk Scores</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-kd-layer-arrow">↓ scroll</div>
+                    <div class="cs-kd-layer cs-kd-layer--secondary">
+                        <div class="cs-kd-layer-label">Layer 2 — History</div>
+                        <p class="cs-kd-layer-desc">Trend analysis — analytical</p>
+                        <div class="cs-kd-layer-panels">
+                            <div class="cs-kd-panel">
+                                <div class="cs-kd-panel-icon">📈</div>
+                                <span>Risk Level Over Time</span>
+                            </div>
+                            <div class="cs-kd-panel">
+                                <div class="cs-kd-panel-icon">📋</div>
+                                <span>Screening History</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DECISION 4 -->
+            <div class="cs-kd-block">
+                <div class="cs-kd-header">
+                    <span class="cs-kd-num">04</span>
+                    <h3 class="cs-kd-title">Reducing onboarding from 7 steps to 3</h3>
+                </div>
+                <div class="cs-kd-layout">
+                    <div class="cs-kd-text">
+                        <p class="cs-body">The initial onboarding flow had 7 separate steps — each on its own screen. While logically complete, it created unnecessary friction. The client flagged this directly: 7 steps felt overwhelming.</p>
+                        <p class="cs-body">By grouping related information into three primary stages, we reduced cognitive load without removing any functionality — organized around what the user was trying to accomplish, not data categories.</p>
+                    </div>
+                    <div class="cs-kd-onboarding">
+                        <div class="cs-kd-ob-before">
+                            <div class="cs-kd-ob-label cs-kd-ob-label--before">Before</div>
+                            <div class="cs-kd-ob-steps">
+                                <div class="cs-kd-ob-step">Step 1</div>
+                                <div class="cs-kd-ob-step">Step 2</div>
+                                <div class="cs-kd-ob-step">Step 3</div>
+                                <div class="cs-kd-ob-step">Step 4</div>
+                                <div class="cs-kd-ob-step">Step 5</div>
+                                <div class="cs-kd-ob-step">Step 6</div>
+                                <div class="cs-kd-ob-step">Step 7</div>
+                            </div>
+                            <div class="cs-kd-ob-count">7 steps</div>
+                        </div>
+                        <div class="cs-kd-ob-arrow">→</div>
+                        <div class="cs-kd-ob-after">
+                            <div class="cs-kd-ob-label cs-kd-ob-label--after">After</div>
+                            <div class="cs-kd-ob-steps">
+                                <div class="cs-kd-ob-step cs-kd-ob-step--new">Account Setup</div>
+                                <div class="cs-kd-ob-step cs-kd-ob-step--new">Employee Config</div>
+                                <div class="cs-kd-ob-step cs-kd-ob-step--new">Survey Settings</div>
+                            </div>
+                            <div class="cs-kd-ob-count cs-kd-ob-count--after">3 steps</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── WORKING WITH CONSTRAINTS ── -->
+    <section class="cs-constraints">
+        <div class="cs-constraints-inner">
+
+            <div class="cs-constraints-top">
+                <div class="cs-section-label">Working with Constraints</div>
+                <h2 class="cs-heading">The biggest challenge wasn't any single feature — it was the fact that everything was connected.</h2>
+            </div>
+
+            <!-- dependency chain -->
+            <div class="cs-chain">
+                <div class="cs-chain-node">
+                    <div class="cs-chain-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <span class="cs-chain-label">Survey Responses</span>
+                </div>
+                <div class="cs-chain-arrow">→</div>
+                <div class="cs-chain-node">
+                    <div class="cs-chain-icon cs-chain-icon--amber">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <span class="cs-chain-label">Risk Scores</span>
+                </div>
+                <div class="cs-chain-arrow">→</div>
+                <div class="cs-chain-node">
+                    <div class="cs-chain-icon cs-chain-icon--red">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    </div>
+                    <span class="cs-chain-label">Alerts Triggered</span>
+                </div>
+                <div class="cs-chain-arrow">→</div>
+                <div class="cs-chain-node cs-chain-node--split">
+                    <div class="cs-chain-icon cs-chain-icon--blue">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <span class="cs-chain-label">Routed to Directors & Managers</span>
+                </div>
+            </div>
+            
+            <p class="cs-image-caption" style="margin-top:-36px; margin-bottom:48px;">Alert Settings — each of the 9+ alert types configured independently, with separate routing logic for Directors and Managers.</p>
+
+            <div class="cs-constraints-two-col">
+                <div class="cs-constraints-body">
+                    <p>Designing this required constant back-and-forth with the technical lead to fully understand the dependencies before making any design decisions. A change in one area could ripple through the entire system.</p>
+                </div>
+                <blockquote class="cs-constraints-quote">
+                    The constraint forced a discipline that ultimately improved the design: every screen had to be understood in the context of the whole system, not in isolation.
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── FINAL DESIGN ── -->
+    <section class="cs-section">
+        <div class="cs-section-inner">
+            <div class="cs-section-label">Final Design</div>
+            <h2 class="cs-heading">Selected screens</h2>
+
+            <div class="cs-final-grid">
+
+                <div class="cs-final-item">
+                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Dashboard.png" alt="Dashboard"></div>
+                    <div class="cs-final-caption">
+                        <h3 class="cs-final-title">Dashboard</h3>
+                        <p class="cs-final-desc">Designed around a two-layer hierarchy: immediate action items first, historical trends second. Managers see today's risk status at a glance — no scrolling required.</p>
+                    </div>
+                </div>
+
+                <div class="cs-final-item">
+                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Onboarding.png" alt="Onboarding"></div>
+                    <div class="cs-final-caption">
+                        <h3 class="cs-final-title">Onboarding</h3>
+                        <p class="cs-final-desc">Simplified from 7 steps to 3 by grouping related configuration tasks. Account, Employees, and Survey — each step represents a complete mental unit, not just a data category.</p>
+                    </div>
+                </div>
+
+                <div class="cs-final-item">
+                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Survey-Bot-Mobile.png" alt="Survey Bot"></div>
+                    <div class="cs-final-caption">
+                        <h3 class="cs-final-title">Survey Bot — Mobile</h3>
+                        <p class="cs-final-desc">A conversational chatbot replaced a traditional form to support conditional branching logic. Each answer could trigger a different follow-up question, displayed in random order to reduce bias.</p>
+                    </div>
+                </div>
+
+                <div class="cs-final-item">
+                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Survey-Result.png" alt="Survey Result"></div>
+                    <div class="cs-final-caption">
+                        <h3 class="cs-final-title">Survey Result on Dashboard</h3>
+                        <p class="cs-final-desc">Once employees complete the conversational survey, results are immediately available to managers. Each response is scored and translated into a risk level — Low, Moderate, or High — enabling direct action without manual analysis.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── WHAT I'D DO DIFFERENTLY ── -->
+    <section class="cs-section cs-section-dark">
+        <div class="cs-section-inner">
+            <div class="cs-section-label">Reflection</div>
+            <h2 class="cs-heading">What I'd Do Differently</h2>
+
+            <div class="cs-reflection-layout">
+                <div class="cs-reflection-text">
+                    <p class="cs-body">Looking back, the two areas I would approach differently are the survey logic and the user role architecture.</p>
+                    <p class="cs-body">Both were among the most complex parts of the system — and in hindsight, I moved into wireframing before fully mapping out all the edge cases. The survey's conditional branching logic and the five-role permission structure each deserved a dedicated research and mapping phase before any design work began.</p>
+                    <p class="cs-body">If I were doing this again, I'd spend more time upfront creating a formal information architecture document for the role system and a logic map for the survey branching before touching the UI.</p>
+                </div>
+
+                <div class="cs-reflection-cards">
+                    <div class="cs-reflection-card">
+                        <div class="cs-reflection-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div>
+                            <p class="cs-reflection-card-title">Survey Logic</p>
+                            <p class="cs-reflection-card-body">A dedicated logic map for the conditional branching before any wireframing would have reduced iteration cycles significantly.</p>
+                        </div>
+                    </div>
+                    <div class="cs-reflection-card">
+                        <div class="cs-reflection-card-icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <p class="cs-reflection-card-title">User Role Architecture</p>
+                            <p class="cs-reflection-card-body">A formal IA document defining what each role can see, do, and access would have made the dev handoff significantly cleaner.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cs-reflection-lesson">
+                <span class="cs-reflection-lesson-label">The Lesson</span>
+                <p>For systems this complex, time spent on structured research and documentation before designing is never wasted. It reduces iteration cycles and makes the dev handoff significantly cleaner.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NEXT PROJECT -->
+    <section class="cs-next">
+        <span class="cs-next-label">Next project</span>
+        <a href="visual-strategy.html" class="cs-next-link">Visual Strategy →</a>
+    </section>
+
+    <!-- CTA -->
+    <section class="cs-download">
+        <div class="cs-download-inner">
+            <div>
+                <p class="cs-download-title">Interested in working together?</p>
+                <p class="cs-download-sub">Download my UX/UI focused resume or schedule a call</p>
+            </div>
+            <div class="cs-download-actions">
+                <a href="resume-uxui.pdf" class="cs-btn-primary" download>Download Resume</a>
+                <a href="https://calendar.app.google/7JH3uLpp5a7SVG2TA" target="_blank" class="cs-btn-secondary">Schedule a Call</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        
+        <span class="footer-status">● Available for international collaborations</span>
+
+        <div class="footer-links">
+            <a href="mailto:delara.mozdbar@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/delara-mozdbar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+
+        <span class="footer-copy">© 2026 Delara Mozdbar — Designed with 🫶🏻☕️🎧</span>
+
+    </div>
+</footer>
+
+</body>
+</html>
