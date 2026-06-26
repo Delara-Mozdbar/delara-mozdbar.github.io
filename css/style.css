@@ -420,7 +420,11 @@ footer {
 .footer-inner {
   max-width: 1440px;
   margin: 0 auto;
+<<<<<<< HEAD
   padding: 0 5%;
+=======
+  padding: 0 8%;
+>>>>>>> 772f306e1c8316f828cedcbc886d82bc2219ad08
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -439,11 +443,16 @@ footer {
 }
 
 .footer-status {
+<<<<<<< HEAD
   color:darkseagreen;
   font-weight: 500;
   background-color: #222;
   padding: 5px 10px;
   border-radius: 100px;
+=======
+  color: #4caf50;
+  font-weight: 500;
+>>>>>>> 772f306e1c8316f828cedcbc886d82bc2219ad08
 }
 
 /* =========================
@@ -606,4 +615,8 @@ footer {
     width: 100%;
     text-align: center;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 772f306e1c8316f828cedcbc886d82bc2219ad08
