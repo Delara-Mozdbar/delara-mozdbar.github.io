@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+﻿<<<<<<< HEAD
 /* =========================
    BREADCRUMB
 ========================= */
@@ -88,7 +88,7 @@
 
 .thinking-grid div {
   padding: 20px;
-  border: 1px solid #333;
+  border: 1px solid #383532;
   border-radius: 10px;
   color: var(--text-sec);
 }
@@ -192,7 +192,7 @@
 
 .project-details {
   margin: 25px 0;
-  border-top: 1px solid #222;
+  border-top: 1px solid #383532;
   padding-top: 20px;
 }
 
