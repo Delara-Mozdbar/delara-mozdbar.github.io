@@ -222,6 +222,40 @@ nav {
   transform: translateY(-2px);
 }
 
+.contact-img-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-img-btn img {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: 0.25s ease;
+}
+
+.contact-img-btn:hover img {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.explore-img-btn {
+  display: inline-block;
+  margin-top: 35px;
+  transition: 0.25s ease;
+}
+
+.explore-img-btn img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+.explore-img-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.88;
+}
+
 .case-study-link {
   display: inline-block;
   margin-top: 10px;
