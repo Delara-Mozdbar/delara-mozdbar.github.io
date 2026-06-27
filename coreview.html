@@ -7,7 +7,39 @@
     <link rel="icon" type="image/png" href="images/Favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
-     <link rel="stylesheet" href="css/works.css">
+    <link rel="stylesheet" href="css/works.css">
+    <style>
+        /* ── CoreView — Indigo system ── */
+        :root {
+            --accent:       #6366f1;   /* Indigo — primary */
+            --accent-light: #818cf8;   /* Indigo light — tags, highlights */
+            --accent-deep:  #1e1b4b;   /* Indigo deep — section bg tint */
+        }
+
+        /* Tags use indigo-light */
+        .cs-tag {
+            color: var(--accent-light);
+            border-color: rgba(129, 140, 248, 0.25);
+            background: rgba(99, 102, 241, 0.07);
+        }
+
+        /* Challenge number uses indigo-light */
+        .cs-challenge-num {
+            color: var(--accent-light);
+        }
+
+        /* Eyebrow uses indigo-light */
+        .cs-hero-eyebrow {
+            color: var(--accent-light);
+        }
+
+        /* Constraints dark section uses indigo-deep as bg */
+        .cs-constraints {
+            background: var(--accent-deep);
+            border-top-color:    rgba(129, 140, 248, 0.15);
+            border-bottom-color: rgba(129, 140, 248, 0.15);
+        }
+    </style>
 </head>
 
 <body>
@@ -109,7 +141,6 @@
                 <span class="cs-tag">Information Architecture</span>
                 <span class="cs-tag">Conversational UI</span>
                 <span class="cs-tag">B2B SaaS</span>
-                <span class="cs-tag">Figma</span>
             </div>
         </div>
 

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delara Mozdbar | Pitch — Case Study</title>
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/works.css">
+    <style>
+        /* ── Pitch hero overrides ── */
+        :root {
+            --pitch-bg:    #363332;
+            --pitch-pink:  #FF818B;
+            --pitch-text:  #F5F0EF;
+            --pitch-muted: rgba(245,240,239,0.55);
+        }
+
+        .pitch-hero {
+            background: var(--pitch-bg);
+            color: var(--pitch-text);
+            padding: calc(var(--nav-h) + 56px) 8% 0;
+            min-height: calc(100vh - var(--nav-h));
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Breadcrumb on dark bg */
+        .pitch-hero .breadcrumb {
+            margin-bottom: 48px;
+        }
+        .pitch-hero .breadcrumb a,
+        .pitch-hero .breadcrumb span {
+            color: var(--pitch-muted);
+        }
+        .pitch-hero .breadcrumb a:hover { color: var(--pitch-pink); }
+        .pitch-hero .breadcrumb .current { color: var(--pitch-text); }
+
+        /* Eyebrow */
+        .pitch-eyebrow {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--pitch-pink);
+            margin-bottom: 20px;
+        }
+
+        /* Headline */
+        .pitch-title {
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--pitch-text);
+            max-width: 820px;
+            margin-bottom: 22px;
+        }
+
+        .pitch-title em {
+            font-style: normal;
+            color: var(--pitch-pink);
+        }
+
+        /* Subtitle */
+        .pitch-subtitle {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--pitch-muted);
+            max-width: 680px;
+            margin-bottom: 52px;
+        }
+
+        /* 4-col metadata row */
+        .pitch-meta {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid rgba(245,240,239,0.12);
+            border-bottom: 1px solid rgba(245,240,239,0.12);
+            padding: 28px 0;
+            margin-bottom: 32px;
+        }
+
+        .pitch-meta-item {
+            padding: 0 24px;
+            border-right: 1px solid rgba(245,240,239,0.12);
+        }
+        .pitch-meta-item:first-child { padding-left: 0; }
+        .pitch-meta-item:last-child  { border-right: none; }
+
+        .pitch-meta-label {
+            display: block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--pitch-pink);
+            margin-bottom: 8px;
+        }
+
+        .pitch-meta-value {
+            font-size: 0.92rem;
+            color: var(--pitch-text);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* Team pill tags */
+        .pitch-team-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        .pitch-pill {
+            font-size: 0.68rem;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 100px;
+            background: rgba(255,129,139,0.15);
+            color: var(--pitch-pink);
+            border: 1px solid rgba(255,129,139,0.3);
+        }
+
+        /* Skill tags row */
+        .pitch-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .pitch-skill-tag {
+            font-size: 0.78rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 6px;
+            background: rgba(245,240,239,0.06);
+            color: var(--pitch-muted);
+            border: 1px solid rgba(245,240,239,0.1);
+            transition: 0.2s;
+        }
+
+        .pitch-skill-tag:hover {
+            background: rgba(255,129,139,0.12);
+            color: var(--pitch-pink);
+            border-color: rgba(255,129,139,0.3);
+        }
+
+        /* Divider + scroll hint */
+        .pitch-hero-footer {
+            border-top: 1px solid rgba(245,240,239,0.1);
+            padding: 20px 0 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pitch-scroll-hint {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--pitch-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pitch-scroll-arrow {
+            display: inline-flex;
+            animation: pitch-bounce 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pitch-bounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(4px); }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .pitch-hero {
+                padding-top: calc(var(--nav-h) + 36px);
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .pitch-meta {
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+            }
+
+            .pitch-meta-item {
+                padding: 16px 16px;
+                border-right: none;
+                border-bottom: 1px solid rgba(245,240,239,0.12);
+            }
+            .pitch-meta-item:nth-child(1),
+            .pitch-meta-item:nth-child(2) {
+                border-right: 1px solid rgba(245,240,239,0.12);
+            }
+            .pitch-meta-item:nth-child(2),
+            .pitch-meta-item:nth-child(4) {
+                border-right: none;
+            }
+            .pitch-meta-item:nth-child(3),
+            .pitch-meta-item:nth-child(4) {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .pitch-title { font-size: 1.9rem; }
+            .pitch-subtitle { font-size: 0.95rem; }
+
+            .pitch-meta {
+                grid-template-columns: 1fr;
+            }
+            .pitch-meta-item {
+                padding: 14px 0;
+                border-right: none !important;
+                border-bottom: 1px solid rgba(245,240,239,0.1);
+            }
+            .pitch-meta-item:last-child { border-bottom: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                <a href="index.html"><img src="images/Logo.png" alt="Delara Logo"></a>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
+
+            <div class="nav-center menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <div class="dropdown">
+                    <a class="dropbtn">Work ▾</a>
+                    <div class="dropdown-content">
+                        <a href="ux-ui.html">UX/UI Design</a>
+                        <a href="visual-strategy.html">Visual Strategy</a>
+                        <a href="frontend.html">Frontend Development</a>
+                    </div>
+                </div>
+
+                <a href="impact.html">Impact</a>
+                <a href="library.html">Library</a>
+
+                <a href="contact.html" class="mobile-contact-link">Let's Talk</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="contact.html" class="contact-btn">Let's Talk</a>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- ── HERO ── -->
+    <section class="pitch-hero">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="ux-ui.html">UX/UI Design</a>
+            <span aria-hidden="true">/</span>
+            <span class="current">Pitch</span>
+        </div>
+
+        <div>
+            <!-- Eyebrow -->
+            <span class="pitch-eyebrow">Case Study</span>
+
+            <!-- Headline -->
+            <h1 class="pitch-title">Pitch — Where founders<br>meet their <em>investors</em></h1>
+
+            <!-- Subtitle -->
+            <p class="pitch-subtitle">
+                A 0→1 mobile platform connecting startup founders with accredited investors
+                through curated video pitches. Designed end-to-end in 8 weeks across iOS and Android.
+            </p>
+
+            <!-- Metadata row -->
+            <div class="pitch-meta">
+
+                <div class="pitch-meta-item">
+                    <span class="pitch-meta-label">Role</span>
+                    <span class="pitch-meta-value">UX Designer</span>
+                </div>
+
+                <div class="pitch-meta-item">
+                    <span class="pitch-meta-label">Timeline</span>
+                    <span class="pitch-meta-value">Mar – Apr 2021</span>
+                </div>
+
+                <div class="pitch-meta-item">
+                    <span class="pitch-meta-label">Platform</span>
+                    <span class="pitch-meta-value">iOS &amp; Android</span>
+                </div>
+
+                <div class="pitch-meta-item">
+                    <span class="pitch-meta-label">Team</span>
+                    <span class="pitch-meta-value">7 people</span>
+                    <div class="pitch-team-pills">
+                        <span class="pitch-pill">UX</span>
+                        <span class="pitch-pill">UI</span>
+                        <span class="pitch-pill">CTO</span>
+                        <span class="pitch-pill">VP Exp.</span>
+                        <span class="pitch-pill">3 Devs</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Skill tags -->
+            <div class="pitch-skills">
+                <span class="pitch-skill-tag">UX Strategy</span>
+                <span class="pitch-skill-tag">User Research</span>
+                <span class="pitch-skill-tag">Wireframing</span>
+                <span class="pitch-skill-tag">Dev Collaboration</span>
+                <span class="pitch-skill-tag">Spec Handoff</span>
+            </div>
+        </div>
+
+        <!-- Divider + scroll hint -->
+        <div class="pitch-hero-footer">
+            <span class="pitch-scroll-hint">
+                Scroll to explore
+                <span class="pitch-scroll-arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                </span>
+            </span>
+        </div>
+
+    </section>
+
+    <!-- ── CASE STUDY CONTENT (placeholder) ── -->
+    <div style="padding: 80px 8%; color: var(--text-sec); text-align: center; font-size: 0.95rem;">
+        Case study sections coming soon.
+    </div>
+
+</main>
+
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-col">
+            <span class="footer-status">● Available for international collaborations</span>
+        </div>
+        <div class="footer-col">
+            <div class="footer-links">
+                <a href="mailto:delara.mozdbar@gmail.com">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/delara-mozdbar/" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <span class="footer-copy">© 2026 Delara Mozdbar — Designed with 🫶🏻☕️🎧</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
