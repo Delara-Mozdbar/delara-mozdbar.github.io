@@ -27,8 +27,8 @@
 
 /* PLACEHOLDERS */
 .cs-placeholder {
-  background: #2c2a27;
-  border: 1px dashed #383532;
+  background: #141420;
+  border: 1px dashed #20202e;
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -93,7 +93,7 @@
 .cs-hero-visual img { width: 100%; height: auto; display: block; }
 
 .cs-hero-bottom {
-  border-top: 1px solid #383532;
+  border-top: 1px solid #20202e;
   padding-top: 24px;
 }
 
@@ -121,8 +121,8 @@
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid #383532;
-  background: #2c2a27;
+  border: 1px solid #20202e;
+  background: #141420;
 }
 
 .cs-hero-image img { width: 100%; height: auto; display: block; }
@@ -133,8 +133,8 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 40px 0;
-  border-top: 1px solid #383532;
-  border-bottom: 1px solid #383532;
+  border-top: 1px solid #20202e;
+  border-bottom: 1px solid #20202e;
 }
 
 .cs-info-item {
@@ -171,11 +171,11 @@
 /* SECTIONS */
 .cs-section {
   padding: 100px 0;
-  border-bottom: 1px solid #2c2a27;
+  border-bottom: 1px solid #141420;
 }
 
 .cs-section-dark {
-  background: #1e1c1a;
+  background: #0c0c10;
   margin: 0 -8%;
   padding: 100px 8%;
 }
@@ -216,7 +216,7 @@
 
 /* CALLOUT */
 .cs-callout {
-  background: #2c2a27;
+  background: #141420;
   border: 1px solid #2a2a2a;
   border-left: 3px solid var(--accent);
   border-radius: 16px;
@@ -230,7 +230,7 @@
   width: 36px;
   height: 36px;
   background: var(--accent);
-  color: #1e1c1a;
+  color: #0c0c10;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -276,7 +276,7 @@
 }
 
 .cs-ann-bubble {
-  background: rgba(74, 108, 247, 0.15);
+  background: rgba(155, 85, 224, 0.12);
   border: 1px solid var(--accent);
   border-radius: 8px;
   padding: 8px 12px;
@@ -290,8 +290,8 @@
 .cs-persona {
   display: flex;
   gap: 24px;
-  background: #2c2a27;
-  border: 1px solid #383532;
+  background: #141420;
+  border: 1px solid #20202e;
   border-radius: 20px;
   padding: 30px;
   margin-top: 20px;
@@ -380,7 +380,7 @@
 .cs-decision-num {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #383532;
+  color: #20202e;
   line-height: 1;
   padding-top: 4px;
 }
@@ -429,8 +429,8 @@
 .cs-image-wrap {
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid #383532;
-  background: #2c2a27;
+  border: 1px solid #20202e;
+  background: #141420;
 }
 
 .cs-image-wrap img { width: 100%; height: auto; display: block; }
@@ -468,8 +468,8 @@
   align-items: center;
   margin-top: 50px;
   padding: 40px;
-  background: #2c2a27;
-  border: 1px solid #383532;
+  background: #141420;
+  border: 1px solid #20202e;
   border-radius: 20px;
 }
 
@@ -498,7 +498,7 @@
 
 .cs-flow-label { font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
 .cs-flow-desc  { font-size: 0.78rem; color: var(--text-sec); line-height: 1.5; }
-.cs-flow-arrow { font-size: 1.4rem; color: #383532; padding: 0 4px; }
+.cs-flow-arrow { font-size: 1.4rem; color: #20202e; padding: 0 4px; }
 
 /* IMPACT */
 .cs-impact-grid {
@@ -510,8 +510,8 @@
 }
 
 .cs-metric {
-  background: #2c2a27;
-  border: 1px solid #383532;
+  background: #141420;
+  border: 1px solid #20202e;
   border-radius: 16px;
   padding: 30px 24px;
   text-align: center;
@@ -535,7 +535,7 @@
 
 .cs-reflection {
   padding: 30px;
-  background: #1e1c1a;
+  background: #0c0c10;
   border-radius: 16px;
   border: 1px solid #1e1e1e;
   font-style: italic;
@@ -550,7 +550,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #383532;
+  border-bottom: 1px solid #20202e;
 }
 
 .cs-next-label {
@@ -584,8 +584,8 @@
 .cs-download-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .cs-btn-primary {
-  background: var(--accent);
-  color: #1e1c1a;
+  background: var(--accent-2);
+  color: #fff;
   padding: 12px 24px;
   border-radius: 10px;
   font-weight: 600;
@@ -597,8 +597,8 @@
 .cs-btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
 
 .cs-btn-secondary {
-  border: 2px solid var(--accent);
-  color: var(--accent);
+  border: 2px solid var(--accent-2);
+  color: var(--accent-2);
   padding: 12px 24px;
   border-radius: 10px;
   font-weight: 600;
@@ -607,7 +607,7 @@
   display: inline-block;
 }
 
-.cs-btn-secondary:hover { background: var(--accent); color: #1e1c1a; }
+.cs-btn-secondary:hover { background: var(--accent-2); color: #fff; }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -773,11 +773,11 @@
    WORKING WITH CONSTRAINTS
 ========================= */
 .cs-constraints {
-  background: #1e1c1a;
+  background: #0c0c10;
   margin: 0 -8%;
   padding: 100px 8%;
-  border-top: 1px solid #2c2a27;
-  border-bottom: 1px solid #2c2a27;
+  border-top: 1px solid #141420;
+  border-bottom: 1px solid #141420;
 }
 
 .cs-constraints-inner {
@@ -795,8 +795,8 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 48px;
-  background: #1e1c1a;
-  border: 1px solid #383532;
+  background: #0c0c10;
+  border: 1px solid #20202e;
   border-radius: 16px;
   padding: 28px 32px;
 }
@@ -846,7 +846,7 @@
 
 .cs-chain-arrow {
   font-size: 1.2rem;
-  color: #383532;
+  color: #20202e;
   flex-shrink: 0;
 }
 
@@ -883,11 +883,11 @@
 ========================= */
 .cs-kd-block {
   padding: 48px 0;
-  border-top: 1px solid #383532;
+  border-top: 1px solid #20202e;
 }
 
 .cs-kd-block:last-child {
-  border-bottom: 1px solid #383532;
+  border-bottom: 1px solid #20202e;
 }
 
 .cs-kd-header {
@@ -953,7 +953,7 @@
 
 /* Role table — Decision 2 */
 .cs-kd-role-table {
-  border: 1px solid #383532;
+  border: 1px solid #20202e;
   border-radius: 14px;
   overflow: hidden;
 }
@@ -962,8 +962,8 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr 1.6fr;
   padding: 12px 16px;
-  background: #2c2a27;
-  border-bottom: 1px solid #383532;
+  background: #141420;
+  border-bottom: 1px solid #20202e;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -976,7 +976,7 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr 1.6fr;
   padding: 14px 16px;
-  border-bottom: 1px solid #2c2a27;
+  border-bottom: 1px solid #141420;
   font-size: 0.88rem;
   color: var(--text-sec);
   align-items: center;
@@ -1005,7 +1005,7 @@
 }
 
 .cs-kd-layer--secondary {
-  background: #1e1c1a;
+  background: #0c0c10;
 }
 
 .cs-kd-layer-arrow {
@@ -1041,7 +1041,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #2c2a27;
+  background: #141420;
   border: 1px solid #2a2a2a;
   border-radius: 10px;
   padding: 10px 16px;
@@ -1105,7 +1105,7 @@
   border-radius: 8px;
   font-size: 0.82rem;
   color: var(--text-sec);
-  background: #1e1c1a;
+  background: #0c0c10;
 }
 
 .cs-kd-ob-step--new {
@@ -1147,12 +1147,12 @@
   grid-template-columns: 1fr 32%;
   gap: 48px;
   padding: 36px 0;
-  border-top: 1px solid #383532;
+  border-top: 1px solid #20202e;
   align-items: center;
 }
 
 .cs-challenge-card:last-child {
-  border-bottom: 1px solid #383532;
+  border-bottom: 1px solid #20202e;
 }
 
 .cs-challenge-card--reverse {
@@ -1201,9 +1201,9 @@
   font-weight: 500;
   padding: 4px 12px;
   border-radius: 20px;
-  border: 1px solid #383532;
+  border: 1px solid #20202e;
   color: var(--text-sec);
-  background: #2c2a27;
+  background: #141420;
 }
 
 .cs-role-badge--highlight {
@@ -1259,7 +1259,7 @@
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  background: #2c2a27;
+  background: #141420;
   border: 1px solid #2a2a2a;
   border-radius: 14px;
   padding: 20px;
@@ -1381,7 +1381,7 @@
   font-size: 12px;
   font-weight: 500;
   color: var(--text-sec);
-  border: 1px solid #383532;
+  border: 1px solid #20202e;
   border-radius: 20px;
   padding: 5px 14px;
   letter-spacing: 0.02em;
