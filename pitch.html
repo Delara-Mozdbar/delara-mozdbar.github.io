@@ -228,6 +228,226 @@
             }
             .pitch-meta-item:last-child { border-bottom: none; }
         }
+
+        /* ══════════════════════════════════
+           PROBLEM SECTION
+        ══════════════════════════════════ */
+        .pitch-problem {
+            background: #0a0a0a;
+            padding: 100px 8%;
+        }
+
+        .pitch-problem-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Label */
+        .pitch-section-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--pitch-pink);
+            margin-bottom: 20px;
+        }
+
+        /* Headline */
+        .pitch-problem-title {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.15;
+            color: #e8e8e8;
+            margin-bottom: 24px;
+            max-width: 720px;
+        }
+
+        .pitch-problem-title em {
+            font-style: normal;
+            color: var(--pitch-pink);
+        }
+
+        /* Intro */
+        .pitch-problem-intro {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: rgba(232,232,232,0.6);
+            max-width: 680px;
+            margin-bottom: 56px;
+        }
+
+        /* Stat cards */
+        .pitch-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(255,129,139,0.12);
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 56px;
+        }
+
+        .pitch-stat-card {
+            background: #141414;
+            padding: 36px 28px;
+        }
+
+        .pitch-stat-number {
+            display: block;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--pitch-pink);
+            line-height: 1;
+            margin-bottom: 14px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pitch-stat-card p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: rgba(232,232,232,0.55);
+        }
+
+        /* Divider */
+        .pitch-divider {
+            border: none;
+            border-top: 1px solid rgba(255,129,139,0.15);
+            margin: 0 0 56px;
+        }
+
+        /* Persona cards */
+        .pitch-personas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 56px;
+        }
+
+        .pitch-persona-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .pitch-persona-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .pitch-persona-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,129,139,0.12);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--pitch-pink);
+            flex-shrink: 0;
+        }
+
+        .pitch-persona-name {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #e8e8e8;
+            margin-bottom: 3px;
+        }
+
+        .pitch-persona-sub {
+            font-size: 0.8rem;
+            color: rgba(232,232,232,0.45);
+        }
+
+        .pitch-persona-body {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: rgba(232,232,232,0.6);
+            margin-bottom: 20px;
+        }
+
+        .pitch-persona-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .pitch-persona-list li {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: rgba(232,232,232,0.55);
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .pitch-persona-list li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--pitch-pink);
+            font-size: 0.5rem;
+            top: 5px;
+        }
+
+        .pitch-persona-list li strong {
+            color: #e8e8e8;
+            font-weight: 600;
+        }
+
+        /* Pull-quote insight */
+        .pitch-insight {
+            background: rgba(61, 26, 29, 0.45);
+            border-left: 3px solid var(--pitch-pink);
+            border-radius: 0 12px 12px 0;
+            padding: 28px 32px;
+            margin: 0 0 48px;
+        }
+
+        .pitch-insight-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--pitch-pink);
+            margin-bottom: 14px;
+        }
+
+        .pitch-insight p:last-child {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: rgba(232,232,232,0.75);
+        }
+
+        .pitch-insight em {
+            font-style: normal;
+            color: var(--pitch-pink);
+        }
+
+        /* Closing paragraph */
+        .pitch-problem-close {
+            font-size: 0.98rem;
+            line-height: 1.8;
+            color: rgba(232,232,232,0.5);
+            max-width: 760px;
+        }
+
+        /* ── Problem section responsive ── */
+        @media (max-width: 900px) {
+            .pitch-problem { padding: 72px 5%; }
+            .pitch-stats   { grid-template-columns: 1fr; }
+            .pitch-personas { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .pitch-problem-title { font-size: 1.7rem; }
+            .pitch-stat-number   { font-size: 2.2rem; }
+            .pitch-insight       { padding: 20px 20px; }
+        }
     </style>
 </head>
 
@@ -353,10 +573,104 @@
 
     </section>
 
-    <!-- ── CASE STUDY CONTENT (placeholder) ── -->
-    <div style="padding: 80px 8%; color: var(--text-sec); text-align: center; font-size: 0.95rem;">
-        Case study sections coming soon.
-    </div>
+    <!-- ── THE PROBLEM ── -->
+    <section class="pitch-problem">
+        <div class="pitch-problem-inner">
+
+            <!-- Label + headline -->
+            <p class="pitch-section-label">02 — The Problem</p>
+            <h2 class="pitch-problem-title">The investment process was broken for <em>both sides</em></h2>
+            <p class="pitch-problem-intro">
+                Funding a startup shouldn't depend on who you happen to know or where you happen to live.
+                But in 2021, for most founders and investors, it did. I started this project by understanding
+                the scale of that frustration.
+            </p>
+
+            <!-- Stat cards -->
+            <div class="pitch-stats">
+                <div class="pitch-stat-card">
+                    <span class="pitch-stat-number">94%</span>
+                    <p>of startups never raise seed funding — most never get in front of the right investor</p>
+                </div>
+                <div class="pitch-stat-card">
+                    <span class="pitch-stat-number">90×</span>
+                    <p>the average number of times a founder pitches before receiving any response</p>
+                </div>
+                <div class="pitch-stat-card">
+                    <span class="pitch-stat-number">13.5M</span>
+                    <p>accredited investors in the US alone — spending hours daily on irrelevant deal flow</p>
+                </div>
+            </div>
+
+            <hr class="pitch-divider">
+
+            <!-- Persona cards -->
+            <div class="pitch-personas">
+
+                <div class="pitch-persona-card">
+                    <div class="pitch-persona-header">
+                        <div class="pitch-persona-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div>
+                            <strong class="pitch-persona-name">The Founder</strong>
+                            <span class="pitch-persona-sub">Startup builder seeking capital</span>
+                        </div>
+                    </div>
+                    <p class="pitch-persona-body">
+                        Great ideas were dying not because they lacked merit — but because founders had no visibility.
+                        Without the right connections, most never reached an investor who could help.
+                    </p>
+                    <ul class="pitch-persona-list">
+                        <li><strong>Felt invisible</strong> — investors never saw their ideas, regardless of quality</li>
+                        <li><strong>Geography limited access</strong> — funding hubs dominated by local networks</li>
+                        <li><strong>Success felt like luck</strong> — not merit, not preparation</li>
+                    </ul>
+                </div>
+
+                <div class="pitch-persona-card">
+                    <div class="pitch-persona-header">
+                        <div class="pitch-persona-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                        </div>
+                        <div>
+                            <strong class="pitch-persona-name">The Investor</strong>
+                            <span class="pitch-persona-sub">Scout seeking fundable startups</span>
+                        </div>
+                    </div>
+                    <p class="pitch-persona-body">
+                        Investors weren't short on deal flow — they were drowning in it. Hours spent filtering
+                        irrelevant pitches meant the best startups were just as likely to be missed as found.
+                    </p>
+                    <ul class="pitch-persona-list">
+                        <li><strong>Too much noise</strong> — couldn't filter for what actually matched their focus</li>
+                        <li><strong>Time was the bottleneck</strong> — hours per day lost to irrelevant pitches</li>
+                        <li><strong>Networking-dependent</strong> — the best deals came through personal connections, not merit</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Pull-quote insight -->
+            <blockquote class="pitch-insight">
+                <p class="pitch-insight-label">Key Research Insight</p>
+                <p>
+                    Both sides described the same broken system from opposite ends. Founders felt <em>invisible</em>.
+                    Investors felt <em>overwhelmed</em>. The real problem wasn't a lack of great startups or willing
+                    investors — it was that <em>the right people never found each other</em>.
+                </p>
+            </blockquote>
+
+            <!-- Closing paragraph -->
+            <p class="pitch-problem-close">
+                This research became the north star for every design decision that followed. Rather than
+                building another pitch directory, we needed to design a system of intelligent matching —
+                one that surfaced the right founder to the right investor at exactly the right moment,
+                removing geography, luck, and personal networks from the equation entirely.
+            </p>
+
+        </div>
+    </section>
 
 </main>
 
