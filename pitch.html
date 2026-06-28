@@ -85,11 +85,11 @@
         /* 4-col metadata row */
         .pitch-meta {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: auto auto auto 1fr;
             gap: 0;
             border-top: 1px solid var(--pitch-border);
             border-bottom: 1px solid var(--pitch-border);
-            padding: 24px 0;
+            padding: 16px 0;
             margin-bottom: 28px;
         }
 
@@ -104,14 +104,9 @@
         .pitch-hero-visual {
             position: sticky;
             top: calc(var(--nav-h) + 32px);
-            aspect-ratio: 9 / 16;
-            max-height: 560px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            color: rgba(255,129,139,0.4);
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 16px;
         }
 
         .pitch-hero-visual svg { opacity: 0.5; }
@@ -140,12 +135,12 @@
             line-height: 1.4;
         }
 
-        /* Team pill tags */
+        /* Team pill tags — inline with "7 people" */
         .pitch-team-pills {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
-            margin-top: 8px;
+            margin-top: 0;
         }
 
         .pitch-pill {
@@ -181,6 +176,41 @@
             background: rgba(255,129,139,0.14);
             color: var(--pitch-pink);
             border-color: rgba(255,129,139,0.35);
+        }
+
+        /* Numbered step list (used inside design process steps) */
+        .pitch-step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 14px 0 18px;
+        }
+
+        .pitch-step-list li {
+            display: flex;
+            gap: 14px;
+            align-items: baseline;
+            font-size: 0.9rem;
+            color: var(--pitch-muted);
+            line-height: 1.6;
+        }
+
+        .pitch-step-list-num {
+            flex-shrink: 0;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--pitch-pink);
+            min-width: 20px;
+        }
+
+        .pitch-step-lesson {
+            font-size: 0.88rem;
+            color: var(--pitch-muted);
+            line-height: 1.7;
+            border-top: 1px solid var(--pitch-border);
+            padding-top: 14px;
+            margin-top: 4px;
         }
 
         /* Divider + scroll hint */
@@ -321,7 +351,7 @@
         /* Stat cards */
         .pitch-stats {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 1px;
             background: rgba(255,129,139,0.12);
             border-radius: 14px;
@@ -823,7 +853,7 @@
 
         .check  { color: #4ade80; font-size: 1rem; }
         .cross  { color: #f87171; font-size: 1rem; }
-        .partial { color: #d4c96a; font-size: 1rem; }
+        .partial { color: #f0b429; font-size: 1rem; }
 
         /* Research insight */
         .pitch-research-insight {
@@ -874,7 +904,7 @@
         }
 
         .pitch-process-inner {
-            max-width: 760px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -886,148 +916,84 @@
             margin-bottom: 16px;
         }
 
-        .pitch-process-title span {
-            color: var(--pitch-pink);
-        }
+        .pitch-process-title span { color: var(--pitch-pink); }
 
         .pitch-process-intro {
             font-size: 1rem;
             line-height: 1.75;
             color: rgba(232,232,232,0.5);
             max-width: 620px;
-            margin-bottom: 32px;
+            margin-bottom: 56px;
         }
 
-        /* Legend card */
-        .pitch-legend-card {
-            background: #141414;
-            border: 0.5px solid #2a2a2a;
-            border-radius: 12px;
-            padding: 18px 20px;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            margin-bottom: 48px;
-        }
-
-        .pitch-legend-dots {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            flex-shrink: 0;
-        }
-
-        .pitch-legend-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .pitch-legend-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .pitch-legend-text {
-            font-size: 0.75rem;
-            color: rgba(232,232,232,0.5);
-            white-space: nowrap;
-        }
-
-        .pitch-legend-rule {
-            width: 0.5px;
-            background: #2a2a2a;
-            align-self: stretch;
-            flex-shrink: 0;
-        }
-
-        .pitch-legend-note {
-            font-size: 0.82rem;
-            line-height: 1.65;
-            color: rgba(232,232,232,0.5);
-        }
-
-        .pitch-legend-note strong {
-            color: #e8e8e8;
-            font-weight: 600;
-        }
-
-        /* Vertical timeline */
+        /* Timeline wrapper */
         .pitch-timeline {
             position: relative;
-            margin-bottom: 40px;
+            padding-left: 28px;
         }
 
+        /* Vertical line */
         .pitch-timeline-track {
             position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: 0;
+            left: 4px;
+            top: 12px;
+            bottom: 12px;
             width: 1px;
-            background: linear-gradient(to bottom, var(--pitch-pink), #1a1a1a);
+            background: #2a2a2a;
         }
 
-        .pitch-step-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
+        /* Each step row */
         .pitch-step {
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        .pitch-step-left {
-            display: flex;
             flex-direction: column;
-            align-items: center;
-            flex-shrink: 0;
-            width: 40px;
-        }
-
-        .pitch-step-dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            border: 2px solid var(--pitch-pink);
-            background: #0a0a0a;
-            flex-shrink: 0;
-            margin-top: 26px;
-            z-index: 1;
+            gap: 14px;
+            margin-bottom: 48px;
             position: relative;
         }
 
-        .pitch-step-dot.active { background: var(--pitch-pink); }
-
-        .pitch-step-line {
-            width: 1px;
-            flex: 1;
-            background: #2a2a2a;
-            min-height: 16px;
+        /* Timeline dot */
+        .pitch-step::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--pitch-pink);
+            border: 1.5px solid var(--pitch-pink);
+            z-index: 1;
         }
 
-        .pitch-step-card {
-            background: #141414;
-            border: 0.5px solid #2a2a2a;
-            border-radius: 12px;
-            padding: 18px 20px;
-            margin: 10px 0;
-            flex: 1;
-            transition: border-color 0.2s;
-        }
-
-        .pitch-step-card:hover { border-color: rgba(255,129,139,0.2); }
-
-        .pitch-step-header {
+        /* Image — full width, landscape */
+        .pitch-step-img {
+            width: 745px;
+            height: 250px;
+            border-radius: 8px;
+            background: #1a1a1a;
+            border: 0.5px dashed #2a2a2a;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            margin-bottom: 8px;
+            overflow: hidden;
         }
+
+        .pitch-step-img svg {
+            color: var(--pitch-pink);
+            opacity: 0.3;
+        }
+
+        .pitch-step-img span {
+            font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(232,232,232,0.2);
+        }
+
+        /* Text below image */
+        .pitch-step-body { padding-top: 2px; }
 
         .pitch-step-num {
             font-size: 0.65rem;
@@ -1035,37 +1001,32 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--pitch-pink);
-        }
-
-        .pitch-step-icon {
-            margin-left: auto;
-            color: var(--pitch-pink);
-            opacity: 0.6;
-        }
-
-        .pitch-step-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #e8e8e8;
             margin-bottom: 6px;
         }
 
+        .pitch-step-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #e8e8e8;
+            margin-bottom: 8px;
+        }
+
         .pitch-step-desc {
-            font-size: 0.83rem;
-            line-height: 1.65;
+            font-size: 0.85rem;
+            line-height: 1.7;
             color: rgba(232,232,232,0.5);
+            margin-bottom: 12px;
         }
 
         .pitch-step-desc strong {
             font-weight: 500;
-            color: rgba(232,232,232,0.75);
+            color: rgba(232,232,232,0.8);
         }
 
         .pitch-step-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 12px;
         }
 
         .pitch-step-tag {
@@ -1076,9 +1037,133 @@
             letter-spacing: 0.04em;
         }
 
-        .tag-led    { background: rgba(255,129,139,0.12); color: var(--pitch-pink);  border: 0.5px solid rgba(255,129,139,0.3); }
-        .tag-collab { background: rgba(99,102,241,0.12);  color: #818cf8;            border: 0.5px solid rgba(99,102,241,0.3); }
-        .tag-output { background: rgba(74,222,128,0.1);   color: #4ade80;            border: 0.5px solid rgba(74,222,128,0.25); }
+        .tag-led    { background: rgba(255,129,139,0.12); color: var(--pitch-pink); border: 0.5px solid rgba(255,129,139,0.3); }
+        .tag-collab { background: rgba(99,102,241,0.12);  color: #818cf8;           border: 0.5px solid rgba(99,102,241,0.3); }
+        .tag-output { background: rgba(74,222,128,0.1);   color: #4ade80;           border: 0.5px solid rgba(74,222,128,0.25); }
+
+        /* Rich step card (used where more context is needed) */
+        .pitch-step-card {
+            background: #141414;
+            border: 0.5px solid #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .pitch-step-card-img {
+            width: 100%;
+            height: 180px;
+            background: #1a1a1a;
+            border-bottom: 0.5px solid #2a2a2a;
+            display: flex;
+            gap: 0;
+            overflow: hidden;
+        }
+
+        .pitch-step-card-half {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+        }
+
+        .pitch-step-card-divider {
+            width: 0.5px;
+            background: #2a2a2a;
+            align-self: stretch;
+            flex-shrink: 0;
+        }
+
+        .pitch-step-card-caption {
+            font-size: 0.65rem;
+            color: rgba(232,232,232,0.35);
+            text-align: center;
+            padding: 7px 14px;
+            background: #0f0f0f;
+            border-bottom: 0.5px solid #1a1a1a;
+        }
+
+        .pitch-step-card-body {
+            padding: 18px 20px;
+        }
+
+        .pitch-step-card-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-bottom: 14px;
+        }
+
+        .pitch-step-card-col-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: rgba(232,232,232,0.4);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .pitch-step-card-col-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .pitch-step-card-col-text {
+            font-size: 0.82rem;
+            color: rgba(232,232,232,0.5);
+            line-height: 1.7;
+        }
+
+        .pitch-step-card-col-text strong {
+            font-weight: 500;
+            color: rgba(232,232,232,0.75);
+        }
+
+        .pitch-step-card-rule {
+            border: none;
+            border-top: 0.5px solid #2a2a2a;
+            margin: 14px 0;
+        }
+
+        .pitch-step-card-connect {
+            font-size: 0.82rem;
+            color: rgba(232,232,232,0.5);
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .pitch-step-card-connect strong { font-weight: 500; color: rgba(232,232,232,0.75); }
+        .pitch-step-card-connect em     { color: var(--pitch-pink); font-style: normal; font-weight: 500; }
+
+        /* Comp analysis mini-visual */
+        .psc-comp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; width: 100%; }
+        .psc-comp-col  { display: flex; flex-direction: column; gap: 3px; }
+        .psc-comp-header { font-size: 7px; font-weight: 500; color: rgba(232,232,232,0.4); text-align: center; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .psc-comp-screen { height: 28px; border-radius: 3px; background: #2a2a2a; margin-bottom: 2px; }
+        .psc-comp-screen.yt  { background: linear-gradient(135deg, rgba(255,68,68,0.13), #2a2a2a); }
+        .psc-comp-screen.pil { background: linear-gradient(135deg, rgba(91,33,182,0.13), #2a2a2a); }
+        .psc-comp-screen.ori { background: linear-gradient(135deg, rgba(14,165,233,0.13), #2a2a2a); }
+
+        /* Feature list mini-visual */
+        .psc-feat-list    { display: flex; flex-direction: column; gap: 5px; width: 100%; }
+        .psc-feat-section { font-size: 8px; color: var(--pitch-pink); font-weight: 500; margin: 4px 0 2px; letter-spacing: 0.06em; }
+        .psc-feat-item    { display: flex; align-items: center; gap: 6px; }
+        .psc-feat-num     { font-size: 8px; color: var(--pitch-pink); font-weight: 600; flex-shrink: 0; width: 12px; }
+        .psc-feat-bar     { flex: 1; height: 5px; border-radius: 2px; background: rgba(255,129,139,0.25); }
+        .psc-feat-check   { font-size: 9px; color: #4ade80; flex-shrink: 0; }
+        .psc-feat-cross   { font-size: 9px; color: #f87171; flex-shrink: 0; }
+
+        @media (max-width: 700px) {
+            .pitch-step-card-two-col { grid-template-columns: 1fr; }
+            .pitch-step-card-img     { height: auto; flex-direction: column; }
+            .pitch-step-card-divider { width: 100%; height: 0.5px; }
+        }
 
         /* Closing pull-quote */
         .pitch-process-lesson {
@@ -1086,6 +1171,7 @@
             border-left: 3px solid var(--pitch-pink);
             border-radius: 0 12px 12px 0;
             padding: 24px 28px;
+            margin-top: 16px;
         }
 
         .pitch-process-lesson-label {
@@ -1109,10 +1195,9 @@
         }
 
         @media (max-width: 900px) {
-            .pitch-process         { padding: 72px 5%; }
-            .pitch-legend-card     { flex-wrap: wrap; }
-            .pitch-timeline-track  { display: none; }
-            .pitch-step-left       { display: none; }
+            .pitch-process  { padding: 72px 5%; }
+            .pitch-step     { grid-template-columns: 1fr; }
+            .pitch-step-img { height: 120px; }
         }
 
         /* ══════════════════════════════════
@@ -1328,6 +1413,86 @@
         @media (max-width: 600px) {
             .pitch-decisions-title { font-size: 1.7rem; }
             .pitch-principle       { padding: 20px 20px; }
+        }
+
+        /* ── Section 06 — Solution summary block ── */
+        .pitch-solution-block {
+            margin-bottom: 56px;
+        }
+
+        .pitch-solution-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: rgba(232,232,232,0.4);
+            margin-bottom: 20px;
+        }
+
+        .pitch-solution-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .pitch-solution-col {
+            background: #111111;
+            border: 0.5px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 20px 22px;
+        }
+
+        .pitch-solution-col-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--pitch-pink);
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 0.5px solid #2a2a2a;
+        }
+
+        .pitch-solution-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .pitch-solution-feature {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .pitch-solution-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: rgba(255,129,139,0.1);
+            border: 0.5px solid rgba(255,129,139,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--pitch-pink);
+        }
+
+        .pitch-solution-feature-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #e8e8e8;
+            margin-bottom: 2px;
+        }
+
+        .pitch-solution-feature-desc {
+            font-size: 0.78rem;
+            color: rgba(232,232,232,0.45);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 700px) {
+            .pitch-solution-cols { grid-template-columns: 1fr; }
         }
 
         /* ── Section 06 — Final UI ── */
@@ -1576,6 +1741,258 @@
             .pitch-final-ui-title { font-size: 1.7rem; }
             .pitch-proto-cta      { flex-direction: column; align-items: flex-start; }
         }
+
+        /* ── Section 07 — Testing & Feedback ── */
+        .pitch-testing {
+            background: var(--pitch-bg);
+            padding: 100px 8%;
+            border-top: 1px solid var(--pitch-border);
+        }
+
+        .pitch-testing-inner {
+            max-width: 900px;
+        }
+
+        /* Method card */
+        .pt-method-card {
+            background: #141414;
+            border: 0.5px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 20px 22px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .pt-method-icon {
+            font-size: 26px;
+            color: var(--pitch-pink);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .pt-method-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--pitch-text);
+            margin-bottom: 8px;
+        }
+
+        .pt-method-text {
+            font-size: 0.875rem;
+            color: var(--pitch-muted);
+            line-height: 1.75;
+        }
+
+        .pt-method-text strong { color: rgba(232,232,232,0.75); font-weight: 500; }
+
+        /* Sub-label */
+        .pt-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: rgba(136,133,128,0.8);
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        /* Issues 2×2 grid */
+        .pt-issues-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .pt-issue-card {
+            background: #141414;
+            border: 0.5px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 18px;
+        }
+
+        .pt-issue-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .pt-issue-icon {
+            font-size: 20px;
+            color: var(--pitch-pink);
+            flex-shrink: 0;
+        }
+
+        .pt-issue-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--pitch-text);
+        }
+
+        .pt-issue-text {
+            font-size: 0.8rem;
+            color: var(--pitch-muted);
+            line-height: 1.65;
+        }
+
+        .pt-issue-text strong { color: rgba(232,232,232,0.7); font-weight: 500; }
+
+        .pt-issue-example {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #1a1a1a;
+            border-radius: 6px;
+            border-left: 2px solid #2a2a2a;
+        }
+
+        .pt-example-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: rgba(136,133,128,0.7);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .pt-example-text {
+            font-size: 0.75rem;
+            color: var(--pitch-muted);
+            line-height: 1.5;
+        }
+
+        .pt-example-text em {
+            color: var(--pitch-pink);
+            font-style: normal;
+        }
+
+        /* Process flow */
+        .pt-flow {
+            display: flex;
+            align-items: flex-start;
+            gap: 0;
+            margin-bottom: 40px;
+        }
+
+        .pt-flow-step { flex: 1; }
+
+        .pt-flow-step-inner {
+            background: #141414;
+            border: 0.5px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+
+        .pt-flow-num {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--pitch-pink);
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .pt-flow-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--pitch-text);
+            margin-bottom: 4px;
+        }
+
+        .pt-flow-text {
+            font-size: 0.75rem;
+            color: var(--pitch-muted);
+            line-height: 1.5;
+        }
+
+        .pt-flow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8px;
+            flex-shrink: 0;
+            margin-top: 18px;
+            color: #3a3a3a;
+            font-size: 14px;
+        }
+
+        /* Result block */
+        .pt-result {
+            background: #1a0d0f;
+            border: 0.5px solid rgba(255,129,139,0.2);
+            border-left: 3px solid var(--pitch-pink);
+            border-radius: 0 10px 10px 0;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+        }
+
+        .pt-result-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: var(--pitch-pink);
+            margin-bottom: 10px;
+        }
+
+        .pt-result-text {
+            font-size: 0.95rem;
+            color: var(--pitch-text);
+            line-height: 1.75;
+            margin-bottom: 10px;
+        }
+
+        .pt-result-text em { color: var(--pitch-pink); font-style: normal; font-weight: 500; }
+
+        .pt-result-sub {
+            font-size: 0.85rem;
+            color: var(--pitch-muted);
+            line-height: 1.65;
+        }
+
+        .pt-result-sub strong { color: var(--pitch-text); font-weight: 500; }
+
+        /* Honest block */
+        .pt-honest {
+            background: #141414;
+            border: 0.5px solid #2a2a2a;
+            border-radius: 12px;
+            padding: 18px 20px;
+            display: flex;
+            gap: 14px;
+        }
+
+        .pt-honest-icon {
+            font-size: 22px;
+            color: #fbbf24;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .pt-honest-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--pitch-text);
+            margin-bottom: 6px;
+        }
+
+        .pt-honest-text {
+            font-size: 0.85rem;
+            color: var(--pitch-muted);
+            line-height: 1.65;
+        }
+
+        .pt-honest-text strong { color: rgba(232,232,232,0.7); font-weight: 500; }
+
+        @media (max-width: 900px) {
+            .pitch-testing { padding: 72px 5%; }
+            .pt-issues-grid { grid-template-columns: 1fr; }
+            .pt-flow { flex-wrap: wrap; gap: 8px; }
+            .pt-flow-arrow { display: none; }
+            .pt-flow-step { flex: 1 1 calc(50% - 4px); }
+        }
     </style>
 </head>
 
@@ -1650,6 +2067,8 @@
                     through curated video pitches. Designed end-to-end in 8 weeks across iOS and Android.
                 </p>
 
+                <p class="cs-confidential"><em>Product name changed for confidentiality.</em></p>
+
                 <!-- Metadata row -->
                 <div class="pitch-meta">
 
@@ -1670,13 +2089,15 @@
 
                     <div class="pitch-meta-item">
                         <span class="pitch-meta-label">Team</span>
-                        <span class="pitch-meta-value">7 people</span>
-                        <div class="pitch-team-pills">
-                            <span class="pitch-pill">UX</span>
-                            <span class="pitch-pill">UI</span>
-                            <span class="pitch-pill">CTO</span>
-                            <span class="pitch-pill">VP Exp.</span>
-                            <span class="pitch-pill">3 Devs</span>
+                        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                            <span class="pitch-meta-value">7 people</span>
+                            <div class="pitch-team-pills">
+                                <span class="pitch-pill">UX</span>
+                                <span class="pitch-pill">UI</span>
+                                <span class="pitch-pill">CTO</span>
+                                <span class="pitch-pill">VP Exp.</span>
+                                <span class="pitch-pill">3 Devs</span>
+                            </div>
                         </div>
                     </div>
 
@@ -1694,7 +2115,7 @@
 
             <!-- RIGHT: hero image -->
             <div class="pitch-hero-visual">
-                <img src="images/Pitch-about.png" alt="Pitch app screens" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;">
+                <img src="images/Pitch-Intro.png" alt="Pitch app screens" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;">
             </div>
 
         </div>
@@ -1727,16 +2148,20 @@
             <!-- Stat cards -->
             <div class="pitch-stats">
                 <div class="pitch-stat-card">
-                    <span class="pitch-stat-number">94%</span>
-                    <p>of startups never raise seed funding — most never get in front of the right investor</p>
+                    <span class="pitch-stat-number">95%</span>
+                    <p>of startups will never receive funding — countless innovations are never developed</p>
                 </div>
                 <div class="pitch-stat-card">
                     <span class="pitch-stat-number">90×</span>
                     <p>the average number of times a founder pitches before receiving any response</p>
                 </div>
                 <div class="pitch-stat-card">
+                    <span class="pitch-stat-number">500K</span>
+                    <p>new startups launched in the US every year — most never reach the right investor</p>
+                </div>
+                <div class="pitch-stat-card">
                     <span class="pitch-stat-number">13.5M</span>
-                    <p>accredited investors in the US alone — spending hours daily on irrelevant deal flow</p>
+                    <p>accredited investors in the US — spending hours daily on irrelevant deal flow</p>
                 </div>
             </div>
 
@@ -1784,6 +2209,7 @@
                         <li><strong>Too much noise</strong> — couldn't filter for what actually matched their focus</li>
                         <li><strong>Time was the bottleneck</strong> — hours per day lost to irrelevant pitches</li>
                         <li><strong>Networking-dependent</strong> — the best deals came through personal connections, not merit</li>
+                        <li><strong>Expensive to source</strong> — financial advisors and web services to find founders cost thousands a month</li>
                     </ul>
                 </div>
 
@@ -1832,8 +2258,8 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                         </div>
                         <div>
-                            <strong class="pitch-user-name">Startup Founder</strong>
-                            <span class="pitch-user-sub">First-time or early-stage entrepreneur</span>
+                            <strong class="pitch-user-name">Jeremy Gildan — Startup Founder</strong>
+                            <span class="pitch-user-sub">First-time founder in Omaha, NE — outside any major funding hub</span>
                         </div>
                     </div>
                     <p class="pitch-user-quote">"I have something real — but I can't get in front of anyone who could actually fund it."</p>
@@ -1860,8 +2286,8 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
                         </div>
                         <div>
-                            <strong class="pitch-user-name">Investor / Scout</strong>
-                            <span class="pitch-user-sub">Accredited investor or VC scout</span>
+                            <strong class="pitch-user-name">Halley Ashby — Investor / Scout</strong>
+                            <span class="pitch-user-sub">Seasoned investor in Chicago — rarely finds relevant startups in her deal flow</span>
                         </div>
                     </div>
                     <p class="pitch-user-quote">"I spend hours reviewing pitches that have nothing to do with what I invest in. I need signal, not noise."</p>
@@ -1965,6 +2391,8 @@
                             <th>Vetted Access</th>
                             <th>Direct Messaging</th>
                             <th>Fast Approval</th>
+                            <th>Anonymous Until Matched</th>
+                            <th>AI/ML Vetting</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -1975,6 +2403,8 @@
                             <td><span class="cross">✕</span></td>
                             <td><span class="partial">—</span></td>
                             <td><span class="check">✓</span></td>
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
                         </tr>
                         <tr>
                             <td>Pitch Investors Live</td>
@@ -1982,6 +2412,8 @@
                             <td><span class="partial">—</span></td>
                             <td><span class="partial">—</span></td>
                             <td><span class="check">✓</span></td>
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
                             <td><span class="cross">✕</span></td>
                         </tr>
                         <tr>
@@ -1991,9 +2423,13 @@
                             <td><span class="check">✓</span></td>
                             <td><span class="partial">—</span></td>
                             <td><span class="check">✓</span></td>
+                            <td><span class="cross">✕</span></td>
+                            <td><span class="cross">✕</span></td>
                         </tr>
                         <tr class="pitch-row-highlight">
                             <td>Pitch ✦</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
                             <td><span class="check">✓</span></td>
                             <td><span class="check">✓</span></td>
                             <td><span class="check">✓</span></td>
@@ -2024,215 +2460,142 @@
         <div class="pitch-process-inner">
 
             <p class="pitch-section-label">04 — Design Process</p>
-            <h2 class="pitch-process-title">8 steps from brief<br>to <span>dev handoff</span></h2>
+            <h2 class="pitch-process-title">6 steps from brief<br>to <span>dev handoff</span></h2>
             <p class="pitch-process-intro">
                 This was a mixed-ownership process — some steps I led independently, others were shaped
                 collaboratively with the CTO and VP of Experience. What mattered was knowing when to drive
                 and when to align. Here's how it unfolded.
             </p>
 
-            <!-- Legend -->
-            <div class="pitch-legend-card">
-                <div class="pitch-legend-dots">
-                    <div class="pitch-legend-item">
-                        <div class="pitch-legend-dot" style="background: var(--pitch-pink);"></div>
-                        <span class="pitch-legend-text">I led</span>
-                    </div>
-                    <div class="pitch-legend-item">
-                        <div class="pitch-legend-dot" style="background: #818cf8;"></div>
-                        <span class="pitch-legend-text">Collaborative</span>
-                    </div>
-                    <div class="pitch-legend-item">
-                        <div class="pitch-legend-dot" style="background: #4ade80;"></div>
-                        <span class="pitch-legend-text">Key output</span>
-                    </div>
-                </div>
-                <div class="pitch-legend-rule"></div>
-                <p class="pitch-legend-note">
-                    At senior level, knowing <strong>who owns what</strong> matters as much as the work itself.
-                    I was transparent with my team about which decisions were mine to make and which needed
-                    alignment — especially on feature scope and technical feasibility.
-                </p>
-            </div>
-
             <!-- Timeline -->
             <div class="pitch-timeline">
                 <div class="pitch-timeline-track"></div>
-                <div class="pitch-step-list">
 
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                            <div class="pitch-step-line"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 01</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">Brief &amp; product definition</p>
-                            <p class="pitch-step-desc">Received the product brief from the founding team. I spent time understanding not just <strong>what to design</strong> but why this product needed to exist — the business model, the two user types, and the MVP scope. This context shaped every decision that followed.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-collab">Collaborative</span>
-                            </div>
+                <!-- Step 01 -->
+                <div class="pitch-step">
+                    <div class="pitch-step-img" style="padding:0; overflow:hidden;">
+                        <img src="images/Pitch-DesignProcess-01.png" alt="Brief & product definition" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="pitch-step-body">
+                        <p class="pitch-step-num">Step 01</p>
+                        <p class="pitch-step-title">Brief &amp; product definition</p>
+                        <p class="pitch-step-desc">Received the product brief from the founding team. I spent time understanding not just <strong>what to design</strong> but why this product needed to exist — the business model, the two user types, and the MVP scope. This context shaped every decision that followed.</p>
+                        <div class="pitch-step-tags">
+                            <span class="pitch-step-tag tag-collab">Collaborative</span>
                         </div>
                     </div>
-
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                            <div class="pitch-step-line"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 02</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">Competitive analysis</p>
-                            <p class="pitch-step-desc">Analyzed YouTube for video UX patterns, Pitch Investors Live as a direct competitor, and Orionis for professional network structure. I wasn't looking for features to copy — I was <strong>mapping the white space</strong> that Pitch needed to own.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-led">I led</span>
-                                <span class="pitch-step-tag tag-output">Output: gap analysis</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                            <div class="pitch-step-line"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 03</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">Sketching &amp; low-fidelity flows</p>
-                            <p class="pitch-step-desc">Sketched the full MVP — 19 features across 3 user types (Startup, Scout, Team Member). I used a color-coded system: <strong>purple for descriptions, blue for dev notes</strong>. Keeping sketches low-fi at this stage allowed fast iteration without attachment to visual details.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-led">I led</span>
-                                <span class="pitch-step-tag tag-output">Output: MVP sketch board</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                            <div class="pitch-step-line"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 04</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">Dev Q&amp;A — structured alignment sessions</p>
-                            <p class="pitch-step-desc">Before moving to high-fidelity, I ran structured Q&amp;A sessions with the dev team to surface technical constraints early. Questions ranged from data handling to interaction feasibility. <strong>6 documented questions per session</strong> — each answered and signed off before proceeding.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-collab">Collaborative</span>
-                                <span class="pitch-step-tag tag-output">Output: Q&amp;A doc, aligned scope</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                            <div class="pitch-step-line"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 05</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">User flow handoff to dev team</p>
-                            <p class="pitch-step-desc">Delivered annotated user flows to the development team — covering onboarding, sign-up, home, search, pitch video, messaging, statistics, and profile flows for all 3 user types. <strong>This became the single source of truth</strong> the dev team built from.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-led">I led</span>
-                                <span class="pitch-step-tag tag-output">Output: user flow documentation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                            <div class="pitch-step-line"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 06</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">UI design — high fidelity</p>
-                            <p class="pitch-step-desc">Worked closely with the UI designer to translate wireframes into high-fidelity screens using the Pitch brand system — Garnet Rose, Cloudy Pink, Charcoal, and the Lemon Milk typeface. My role was to <strong>ensure every visual decision served the UX rationale</strong>, not just aesthetics.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-collab">Collaborative</span>
-                                <span class="pitch-step-tag tag-output">Output: 151 screens in Adobe XD</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                            <div class="pitch-step-line"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 07</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">Review, feedback &amp; iteration</p>
-                            <p class="pitch-step-desc">Presented designs to the CTO and VP of Experience for review. Feedback was structured, documented, and prioritized. <strong>Not all feedback became changes</strong> — I advocated for decisions grounded in user needs and pushed back where feedback conflicted with research findings.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-collab">Collaborative</span>
-                                <span class="pitch-step-tag tag-output">Output: revised design v3.3</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pitch-step">
-                        <div class="pitch-step-left">
-                            <div class="pitch-step-dot active"></div>
-                        </div>
-                        <div class="pitch-step-card">
-                            <div class="pitch-step-header">
-                                <span class="pitch-step-num">Step 08</span>
-                                <span class="pitch-step-icon" aria-hidden="true">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                                </span>
-                            </div>
-                            <p class="pitch-step-title">Final handoff to dev team</p>
-                            <p class="pitch-step-desc">Delivered the complete design system — 151 screens, annotated specs, component notes, and interaction guidelines — to the development team via Adobe XD. Remained available for <strong>design clarification throughout the build phase</strong> to prevent interpretation gaps.</p>
-                            <div class="pitch-step-tags">
-                                <span class="pitch-step-tag tag-led">I led</span>
-                                <span class="pitch-step-tag tag-output">Output: complete dev handoff</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Step 02 -->
+                <div class="pitch-step">
+                    <div class="pitch-step-img" style="padding:0; overflow:hidden;">
+                        <img src="images/Pitch-DesignProcess-02.png" alt="Competitive analysis" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="pitch-step-body">
+                        <p class="pitch-step-num">Step 02</p>
+                        <p class="pitch-step-title">Competitive analysis & feature list</p>
+                        <p class="pitch-step-desc">Analyzed YouTube for video UX patterns, Pitch Investors Live as a direct competitor, and Orionis for professional network structure. I wasn't looking for features to copy — I was mapping the white space Pitch needed to own.</p>
+                        <p class="pitch-step-desc">In parallel, I reviewed the full 19-feature list with the CTO and VP of Experience — cross-referencing what competitors offered against what we were planning to build. This ensured our feature decisions were grounded in both market reality and technical feasibility.</p>
+                        <div class="pitch-step-tags">
+                            <span class="pitch-step-tag tag-led">I led</span>
+                            <span class="pitch-step-tag tag-collab">Collaborative</span>
+                            <span class="pitch-step-tag tag-output">Output: gap analysis</span>
+                            <span class="pitch-step-tag tag-output">Output: scoped feature list</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="pitch-step">
+                    <div class="pitch-step-img" style="padding:0; overflow:hidden;">
+                        <img src="images/Pitch-DesignProcess-03.png" alt="Sketching & low-fidelity flows" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="pitch-step-body">
+                        <p class="pitch-step-num">Step 03</p>
+                        <p class="pitch-step-title">Sketching &amp; low-fidelity flows</p>
+                        <p class="pitch-step-desc">Sketched the full MVP — 19 features across 3 user types (Startup, Scout, Team Member). I used a color-coded system: <strong>purple for descriptions, blue for dev notes</strong>. Keeping sketches low-fi at this stage allowed fast iteration without attachment to visual details.</p>
+                        <div class="pitch-step-tags">
+                            <span class="pitch-step-tag tag-led">I led</span>
+                            <span class="pitch-step-tag tag-output">Output: MVP sketch board</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="pitch-step">
+                    <div class="pitch-step-img" style="padding:0; overflow:hidden;">
+                        <img src="images/Pitch-DesignProcess-04.png" alt="Dev Q&A interactions" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="pitch-step-body">
+                        <p class="pitch-step-num">Step 04</p>
+                        <p class="pitch-step-title">Dev Q&amp;A Interactions</p>
+                        <p class="pitch-step-desc">Before moving to high-fidelity, I ran structured Q&amp;A interactions with the dev team to surface technical constraints early. Questions ranged from data handling to interaction feasibility. <strong>6 documented questions per interaction</strong> — each answered and signed off before proceeding.</p>
+                        <div class="pitch-step-tags">
+                            <span class="pitch-step-tag tag-collab">Collaborative</span>
+                            <span class="pitch-step-tag tag-output">Output: Q&amp;A interactions doc, aligned scope</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 05 -->
+                <div class="pitch-step">
+                    <div class="pitch-step-img" style="padding:0; overflow:hidden;">
+                        <img src="images/Pitch-DesignProcess-05.png" alt="User flow handoff & UI design" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="pitch-step-body">
+                        <p class="pitch-step-num">Step 05</p>
+                        <p class="pitch-step-title">User flow handoff &amp; UI design</p>
+                        <p class="pitch-step-desc">Delivered annotated user flows to the development team — covering onboarding, sign-up, home, search, pitch video, messaging, statistics, and profile flows for all 3 user types. <strong>This became the single source of truth</strong> the dev team built from. Then worked closely with the UI designer to translate wireframes into high-fidelity screens using the Pitch brand system — ensuring every visual decision served the UX rationale.</p>
+                        <div class="pitch-step-tags">
+                            <span class="pitch-step-tag tag-led">I led</span>
+                            <span class="pitch-step-tag tag-collab">Collaborative</span>
+                            <span class="pitch-step-tag tag-output">Output: user flows + 151 screens in Adobe XD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 06 -->
+                <div class="pitch-step">
+                    <div class="pitch-step-img" style="padding:0; overflow:hidden;">
+                        <img src="images/Pitch-DesignProcess-06.png" alt="Real device testing & iteration" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    </div>
+                    <div class="pitch-step-body">
+                        <p class="pitch-step-num">Step 06</p>
+                        <p class="pitch-step-title">Real device testing &amp; iteration</p>
+                        <ul class="pitch-step-list">
+                            <li>
+                                <span class="pitch-step-list-num">01</span>
+                                <span><strong style="color:var(--pitch-text);">Installed the app on my own phone</strong> — tested every flow across both user types (Startup and Scout) as a real user would, not as the designer who built it.</span>
+                            </li>
+                            <li>
+                                <span class="pitch-step-list-num">02</span>
+                                <span><strong style="color:var(--pitch-text);">Documented every issue found</strong> — written reports capturing what broke, what felt wrong, and what didn't match the intended UX. Shared directly in the project group with the dev team.</span>
+                            </li>
+                            <li>
+                                <span class="pitch-step-list-num">03</span>
+                                <span><strong style="color:var(--pitch-text);">Discussed findings with the dev team</strong> — some issues were resolved in conversation, others required design changes. I stayed involved until each fix was confirmed.</span>
+                            </li>
+                            <li>
+                                <span class="pitch-step-list-num">04</span>
+                                <span><strong style="color:var(--pitch-text);">Tested multiple build rounds</strong> — each fixed build was re-tested to confirm the issue was resolved and no new issues were introduced. Tracked fixes to completion.</span>
+                            </li>
+                        </ul>
+                        <p class="pitch-step-lesson">Testing on a real device revealed things that <strong style="color:var(--pitch-pink);">no prototype or review session could catch</strong> — real load times, actual gesture friction, and edge cases that only appear in a live build. <strong style="color:var(--pitch-text);">This round of real-device testing was the final quality gate before the product was handed off.</strong></p>
+                        <div class="pitch-step-tags" style="margin-top:16px;">
+                            <span class="pitch-step-tag tag-led">I led</span>
+                            <span class="pitch-step-tag tag-collab">Collaborative</span>
+                            <span class="pitch-step-tag tag-output">Output: issue reports</span>
+                            <span class="pitch-step-tag tag-output">Output: tested &amp; verified build</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Closing lesson -->
             <blockquote class="pitch-process-lesson">
                 <p class="pitch-process-lesson-label">What this process taught me</p>
-                <p>The most valuable step wasn't the sketching or the UI — it was the <em>Dev Q&amp;A sessions.</em> Surfacing technical constraints before high-fidelity work saved weeks of rework. If I could change one thing, I'd run those sessions even earlier — immediately after competitive analysis, before a single sketch.</p>
+                <p>The most valuable step wasn't the sketching or the UI — it was the <em>Dev Q&amp;A interactions.</em> Surfacing technical constraints before high-fidelity work saved weeks of rework. If I could change one thing, I'd run those interactions even earlier — immediately after competitive analysis, before a single sketch.</p>
             </blockquote>
 
         </div>
@@ -2333,82 +2696,6 @@
                     <div class="pitch-decision-head">
                         <span class="pitch-decision-num">03</span>
                         <div>
-                            <p class="pitch-decision-title">URL format — replacing @username inputs</p>
-                            <p class="pitch-decision-subtitle">Startup &amp; Scout setup — social media fields</p>
-                        </div>
-                    </div>
-                    <div class="pitch-decision-body">
-                        <div>
-                            <p class="pitch-db-col-title">The Problem</p>
-                            <p class="pitch-db-col-text">Using @username format created <strong>ambiguity and broken links</strong> — users weren't sure which platform the handle belonged to, and the system couldn't reliably construct a working profile URL from just a username.</p>
-                        </div>
-                        <div>
-                            <p class="pitch-db-col-title">The Decision</p>
-                            <div class="pitch-before-after">
-                                <div class="pitch-ba-item pitch-ba-before">
-                                    <p class="pitch-ba-label">Before</p>
-                                    <p class="pitch-ba-text">@username field — ambiguous, platform-dependent</p>
-                                </div>
-                                <div class="pitch-ba-item pitch-ba-after">
-                                    <p class="pitch-ba-label">After</p>
-                                    <p class="pitch-ba-text">Full URL input — unambiguous, directly clickable</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="pitch-db-col-title">Why It Mattered</p>
-                            <p class="pitch-db-col-text">Investors clicking a broken LinkedIn link would immediately <strong>lose trust in the platform's reliability.</strong> A small input change with a large trust impact — exactly the kind of detail that separates a polished product from an unfinished one.</p>
-                        </div>
-                    </div>
-                    <div class="pitch-decision-footer">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                        <p class="pitch-decision-lesson"><strong>Lesson:</strong> Error prevention at the input level is cheaper than error recovery after submission.</p>
-                    </div>
-                </div>
-
-                <!-- 04 -->
-                <div class="pitch-decision-card">
-                    <div class="pitch-decision-head">
-                        <span class="pitch-decision-num">04</span>
-                        <div>
-                            <p class="pitch-decision-title">Structured 10-step onboarding</p>
-                            <p class="pitch-decision-subtitle">Startup setup — full registration flow</p>
-                        </div>
-                    </div>
-                    <div class="pitch-decision-body">
-                        <div>
-                            <p class="pitch-db-col-title">The Problem</p>
-                            <p class="pitch-db-col-text">An open-ended registration form overwhelmed founders — <strong>no sense of progress, no clear end point.</strong> Drop-off during setup would mean incomplete profiles, which directly reduced the quality of investor matches.</p>
-                        </div>
-                        <div>
-                            <p class="pitch-db-col-title">The Decision</p>
-                            <div class="pitch-before-after">
-                                <div class="pitch-ba-item pitch-ba-before">
-                                    <p class="pitch-ba-label">Before</p>
-                                    <p class="pitch-ba-text">Long-form open registration — unclear length and progress</p>
-                                </div>
-                                <div class="pitch-ba-item pitch-ba-after">
-                                    <p class="pitch-ba-label">After</p>
-                                    <p class="pitch-ba-text">10 clearly numbered steps with a visible progress indicator</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="pitch-db-col-title">Why It Mattered</p>
-                            <p class="pitch-db-col-text">Progress visibility reduces anxiety and increases completion. <strong>Each step had a single clear goal</strong> — startup info, location, industry, team, funding stage — making the process feel manageable rather than overwhelming.</p>
-                        </div>
-                    </div>
-                    <div class="pitch-decision-footer">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                        <p class="pitch-decision-lesson"><strong>Lesson:</strong> Completion rates depend as much on perceived effort as actual effort. Show the path clearly.</p>
-                    </div>
-                </div>
-
-                <!-- 05 -->
-                <div class="pitch-decision-card">
-                    <div class="pitch-decision-head">
-                        <span class="pitch-decision-num">05</span>
-                        <div>
                             <p class="pitch-decision-title">Complete system states for auth flows</p>
                             <p class="pitch-decision-subtitle">Sign up &amp; Sign in — all input and error states</p>
                         </div>
@@ -2465,6 +2752,100 @@
                 product thinking behind Pitch — not just how it looks, but why each screen works the way it does.
             </p>
 
+            <!-- Solution summary -->
+            <div class="pitch-solution-block">
+                <p class="pitch-solution-label">What we built — and why</p>
+                <div class="pitch-solution-cols">
+
+                    <!-- Founder side -->
+                    <div class="pitch-solution-col">
+                        <p class="pitch-solution-col-title">For Founders</p>
+                        <div class="pitch-solution-features">
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Frictionless Registration</p>
+                                    <p class="pitch-solution-feature-desc">24-hour approval — founders go live fast without lengthy vetting delays</p>
+                                </div>
+                            </div>
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Curated Video Pitches</p>
+                                    <p class="pitch-solution-feature-desc">5-minute pitch videos matched to investors by industry and stage interest</p>
+                                </div>
+                            </div>
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Integrated Communication</p>
+                                    <p class="pitch-solution-feature-desc">Swipe to express interest, then message directly — no cold outreach</p>
+                                </div>
+                            </div>
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Cost Effective</p>
+                                    <p class="pitch-solution-feature-desc">Founders pitch free — flat-fee SaaS model for investors only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Investor side -->
+                    <div class="pitch-solution-col">
+                        <p class="pitch-solution-col-title">For Investors</p>
+                        <div class="pitch-solution-features">
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Vetted Startups via AI/ML</p>
+                                    <p class="pitch-solution-feature-desc">NLP-powered vetting filters out noise before it reaches the investor feed</p>
+                                </div>
+                            </div>
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Chat Face-to-Face</p>
+                                    <p class="pitch-solution-feature-desc">Connect directly with founders after expressing interest — no intermediaries</p>
+                                </div>
+                            </div>
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Personal Analytics</p>
+                                    <p class="pitch-solution-feature-desc">Portfolio management dashboard with data on views, matches, and engagement</p>
+                                </div>
+                            </div>
+                            <div class="pitch-solution-feature">
+                                <div class="pitch-solution-icon">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                                </div>
+                                <div>
+                                    <p class="pitch-solution-feature-title">Filter &amp; Connect</p>
+                                    <p class="pitch-solution-feature-desc">Anonymous until matched — investors stay private until they choose to connect</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <!-- Stats bar -->
             <div class="pitch-screen-bar">
                 <div class="pitch-screen-stat">
@@ -2498,10 +2879,7 @@
                     <strong>Everything had to communicate trust and relevance instantly</strong> — startup name,
                     industry tag, video thumbnail, and action hierarchy all competing for limited space on a mobile screen.
                 </p>
-                <div class="pitch-img-placeholder">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3 8 3"/><circle cx="12" cy="14" r="3"/></svg>
-                    <p>Replace with project screenshot</p>
-                </div>
+                <img src="images/Pitch-FinalUI-01.png" alt="Home feed and pitch video — core investor experience" style="width:100%; border-radius:12px; display:block;">
                 <div class="pitch-ui-caption">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     <p><strong>Design decision visible here:</strong> The action hierarchy places Like above Message — because an investor should express interest before initiating contact. This mirrors the trust-first principle: signal intent, then connect.</p>
@@ -2519,10 +2897,7 @@
                     <strong>feedback on how their pitch was performing.</strong>
                     The statistics screen gave them views, matches, and comparative data against other startups in their category.
                 </p>
-                <div class="pitch-img-placeholder">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3 8 3"/><circle cx="12" cy="14" r="3"/></svg>
-                    <p>Replace with project screenshot</p>
-                </div>
+                <img src="images/Pitch-FinalUI-02.png" alt="Statistics — giving founders real signal" style="width:100%; border-radius:12px; display:block;">
                 <div class="pitch-ui-caption">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     <p><strong>Design decision visible here:</strong> Three tabs — Summary, Views, Compare — give founders progressively deeper insight. The Compare tab was intentional: showing performance relative to peers creates motivation to improve the pitch, which benefits investors too.</p>
@@ -2540,10 +2915,7 @@
                     <strong>personal identity and a business card.</strong>
                     It needed to show the pitch video, team, documents, and posts — all without overwhelming an investor who might be reviewing dozens of profiles.
                 </p>
-                <div class="pitch-img-placeholder">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3 8 3"/><circle cx="12" cy="14" r="3"/></svg>
-                    <p>Replace with project screenshot</p>
-                </div>
+                <img src="images/Pitch-FinalUI-03.png" alt="Founder profile — the full startup identity" style="width:100%; border-radius:12px; display:block;">
                 <div class="pitch-ui-caption">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     <p><strong>Design decision visible here:</strong> The 4-tab profile (Info, Posts, Team, Docs) was designed so an investor could go as deep as they needed — or stop at Info if they already had enough context. Progressive disclosure keeps the experience light without removing depth.</p>
@@ -2557,7 +2929,7 @@
                     <p class="pitch-proto-title">151 screens — interactive prototype in Adobe XD</p>
                     <p class="pitch-proto-sub">All 3 user types · All states · Full flows</p>
                 </div>
-                <a href="https://xd.adobe.com/view/5db7ef4f-d5ab-4479-9fc7-770cfe85d2bd-08e4/grid" target="_blank" rel="noopener noreferrer" class="pitch-proto-btn">
+                <a href="https://xd.adobe.com/view/5db7ef4f-d5ab-4479-9fc7-770cfe85d2bd-08e4/screen/428e7431-966d-42ee-9344-e65ca7c93a91/" target="_blank" rel="noopener noreferrer" class="pitch-proto-btn">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                     View prototype
                 </a>
@@ -2565,6 +2937,8 @@
 
         </div>
     </section>
+
+   
 
 </main>
 

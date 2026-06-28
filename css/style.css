@@ -7,8 +7,8 @@
   --elevated:  #20202e;
   --text-main: #e8e8e8;
   --text-sec:  #888580;
-  --accent:    #d4c96a;   /* gold — links, text highlights, decorative */
-  --accent-2:  #9b55e0;   /* purple — buttons, badges, tags */
+  --accent:    #f0b429;   /* amber gold — links, buttons, CTAs */
+  --accent-2:  #9b55e0;   /* purple — badges, tags */
   --nav-h:     80px;
 }
 

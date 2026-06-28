@@ -11,33 +11,194 @@
     <style>
         /* ── CoreView — Indigo system ── */
         :root {
-            --accent:       #6366f1;   /* Indigo — primary */
-            --accent-light: #818cf8;   /* Indigo light — tags, highlights */
-            --accent-deep:  #1e1b4b;   /* Indigo deep — section bg tint */
+            --accent:       #6366f1;
+            --accent-light: #818cf8;
+            --accent-deep:  #1e1b4b;
         }
 
-        /* Tags use indigo-light */
-        .cs-tag {
+        /* Shared indigo overrides */
+        .cs-tag            { color: var(--accent-light); border-color: rgba(129,140,248,0.25); background: rgba(99,102,241,0.07); }
+        .cs-challenge-num  { color: var(--accent-light); }
+        .cs-constraints    { background: var(--accent-deep); border-top-color: rgba(129,140,248,0.15); border-bottom-color: rgba(129,140,248,0.15); }
+
+        /* ── Hero wrapper — matches .nav-container exactly ── */
+        .cs-hero-wrap {
+            background: #111114;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .cs-hero-wrap .breadcrumb {
+            padding-top: 24px;
+            padding-bottom: 0;
+        }
+
+        /* ── Hero layout ── */
+        .cs-hero {
+            display: grid;
+            grid-template-columns: 7fr 4fr;
+            gap: 60px;
+            align-items: center;
+            min-height: calc(100vh - var(--nav-h));
+            padding: 48px 0 40px;
+        }
+
+        /* ── LEFT column ── */
+        .cv-hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .cv-eyebrow {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
             color: var(--accent-light);
-            border-color: rgba(129, 140, 248, 0.25);
-            background: rgba(99, 102, 241, 0.07);
+            margin-bottom: 18px;
         }
 
-        /* Challenge number uses indigo-light */
-        .cs-challenge-num {
+        .cv-title {
+            font-size: clamp(2rem, 3.6vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: #f0f0f0;
+            margin-bottom: 20px;
+        }
+
+        .cv-subtitle {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: rgba(232,232,232,0.5);
+            margin-bottom: 28px;
+            max-width: 500px;
+        }
+
+        .cv-confidential {
+            font-size: 0.88rem;
+            color: rgba(232,232,232,0.38);
+            border-left: 3px solid rgba(129,140,248,0.4);
+            padding-left: 14px;
+            font-style: italic;
+            margin-bottom: 36px;
+        }
+
+        /* 2×2 meta grid */
+        .cv-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 32px;
+            margin-bottom: 32px;
+        }
+
+        .cv-meta-label {
+            display: block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(232,232,232,0.35);
+            margin-bottom: 6px;
+        }
+
+        .cv-meta-value {
+            font-size: 0.93rem;
+            font-weight: 600;
+            color: #e8e8e8;
+            line-height: 1.45;
+        }
+
+        /* Tags */
+        .cv-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cv-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 100px;
+            border: 1px solid rgba(129,140,248,0.3);
             color: var(--accent-light);
+            background: transparent;
+            transition: 0.2s;
         }
 
-        /* Eyebrow uses indigo-light */
-        .cs-hero-eyebrow {
-            color: var(--accent-light);
+        .cv-tag:hover {
+            background: rgba(99,102,241,0.12);
         }
 
-        /* Constraints dark section uses indigo-deep as bg */
-        .cs-constraints {
-            background: var(--accent-deep);
-            border-top-color:    rgba(129, 140, 248, 0.15);
-            border-bottom-color: rgba(129, 140, 248, 0.15);
+        /* ── RIGHT column ── */
+        .cv-hero-right {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 420px;
+        }
+
+        /* Blob decorations */
+        .cv-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            pointer-events: none;
+        }
+
+        .cv-blob-1 {
+            width: 340px; height: 340px;
+            background: rgba(99,102,241,0.18);
+            top: -40px; right: -20px;
+        }
+
+        .cv-blob-2 {
+            width: 260px; height: 260px;
+            background: rgba(129,140,248,0.12);
+            bottom: 0; left: 10px;
+        }
+
+        .cv-blob-3 {
+            width: 180px; height: 180px;
+            background: rgba(167,139,250,0.1);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Device composition */
+        .cv-devices {
+            position: relative;
+            width: 100%;
+            max-width: 520px;
+            z-index: 1;
+        }
+
+        .cv-tablet {
+            width: 100%;
+            border-radius: 16px;
+            display: block;
+            
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .cs-hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 36px 0 48px;
+            }
+
+            .cv-hero-right {
+                order: -1;
+                min-height: 240px;
+            }
+
+            .cv-blob { display: none; }
+
+            .cv-title { font-size: 2rem; }
         }
     </style>
 </head>
@@ -82,7 +243,7 @@
 </header>
 
 
-<main class="cs-page">
+<div class="cs-hero-wrap">
 
     <!-- BREADCRUMB -->
     <div class="breadcrumb">
@@ -96,55 +257,57 @@
     <!-- ── HERO ── -->
     <section class="cs-hero">
 
-        <div class="cs-hero-top">
-            <!-- LEFT -->
-            <div class="cs-hero-left">
-                <p class="cs-hero-eyebrow">Case Study</p>
-                <h1 class="cs-title">CoreView —<br>Workforce Health<br>Monitoring</h1>
-                <p class="cs-subtitle">A B2B SaaS platform built for real-time employee health screening and risk control — not HR management. Designed to help managers identify and respond to workforce health risks before they escalate.</p>
-                <p class="cs-confidential"><em>Product name changed for confidentiality.</em></p>
-            </div>
+        <!-- LEFT: all text content -->
+        <div class="cv-hero-left">
+            <span class="cv-eyebrow">Case Study</span>
+            <h1 class="cv-title">CoreView —<br>Workforce Health<br>Monitoring</h1>
+            <p class="cv-subtitle">A B2B SaaS platform built for real-time employee health screening and risk control — not HR management. Designed to help managers identify and respond to workforce health risks before they escalate.</p>
+            <p class="cv-confidential"><em>Product name changed for confidentiality.</em></p>
 
-            <!-- RIGHT -->
-            <div class="cs-hero-right">
-                <div class="cs-hero-visual">
-                    <img src="images/CoreView-about.png" alt="CoreView Dashboard">
+            <!-- 2×2 meta grid -->
+            <div class="cv-meta">
+                <div>
+                    <span class="cv-meta-label">My Role</span>
+                    <span class="cv-meta-value">UX Designer — strategy, conversational UI, wireframing, dev handoff</span>
+                </div>
+                <div>
+                    <span class="cv-meta-label">Team</span>
+                    <span class="cv-meta-value">1 UX Researcher + 1 UI Designer + Engineering team</span>
+                </div>
+                <div>
+                    <span class="cv-meta-label">Timeline</span>
+                    <span class="cv-meta-value">May – July 2021</span>
+                </div>
+                <div>
+                    <span class="cv-meta-label">Type</span>
+                    <span class="cv-meta-value">MVP / Enterprise Web App</span>
                 </div>
             </div>
+
         </div>
 
-        <!-- BOTTOM: INFO + TAGS -->
-        <div class="cs-hero-bottom">
-            <div class="cs-info-row">
-                <div class="cs-info-item">
-                    <span class="cs-info-label">My Role</span>
-                    <span class="cs-info-value">UX Designer — strategy, conversational UI (survey bot), wireframing, dev handoff</span>
+        <!-- RIGHT: device mockup with blob decoration + tags below -->
+        <div class="cv-hero-right">
+            <div class="cv-blob cv-blob-1"></div>
+            <div class="cv-blob cv-blob-2"></div>
+            <div class="cv-blob cv-blob-3"></div>
+            <div class="cv-devices">
+                <img class="cv-tablet" src="images/CoreView-Intro.png" alt="CoreView dashboard on tablet">
+                <!-- Tags below image -->
+                <div class="cv-tags" style="margin-top: 20px;">
+                    <span class="cv-tag">UX Design</span>
+                    <span class="cv-tag">Information Architecture</span>
+                    <span class="cv-tag">Conversational UI</span>
+                    <span class="cv-tag">B2B SaaS</span>
                 </div>
-                <div class="cs-info-divider"></div>
-                <div class="cs-info-item">
-                    <span class="cs-info-label">Team</span>
-                    <span class="cs-info-value">1 UX Researcher & Client Liaison + 1 UI Designer + Engineering team</span>
-                </div>
-                <div class="cs-info-divider"></div>
-                <div class="cs-info-item">
-                    <span class="cs-info-label">Timeline</span>
-                    <span class="cs-info-value">May - July 2021</span>
-                </div>
-                <div class="cs-info-divider"></div>
-                <div class="cs-info-item">
-                    <span class="cs-info-label">Type</span>
-                    <span class="cs-info-value">MVP / Enterprise Web App</span>
-                </div>
-            </div>
-            <div class="cs-tags">
-                <span class="cs-tag">UX Design</span>
-                <span class="cs-tag">Information Architecture</span>
-                <span class="cs-tag">Conversational UI</span>
-                <span class="cs-tag">B2B SaaS</span>
             </div>
         </div>
 
     </section>
+
+</div><!-- /cs-hero-wrap -->
+
+<main class="cs-page">
 
     <!-- ── STRATEGIC CHALLENGE ── -->
     <section class="cs-section">
@@ -573,7 +736,7 @@
     <!-- NEXT PROJECT -->
     <section class="cs-next">
         <span class="cs-next-label">Next project</span>
-        <a href="visual-strategy.html" class="cs-next-link">Visual Strategy →</a>
+        <a href="pitch.html" class="cs-next-link">Pitch →</a>
     </section>
 
     <!-- CTA -->
