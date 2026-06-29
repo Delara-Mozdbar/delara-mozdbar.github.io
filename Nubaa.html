@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delara Mozdbar | Nubaa Health — Case Study</title>
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/works.css">
+    <style>
+
+        /* ══════════════════════════════════════
+           NUBAA — COLOR SYSTEM
+        ══════════════════════════════════════ */
+        :root {
+            /* Primary — brand blue */
+            --nb-navy:      #0D2B6E;
+            --nb-royal:     #1B4FBF;
+            --nb-mid:       #3B82E8;
+            --nb-tint:      #D6E4FF;
+
+            /* Accent — orange */
+            --nb-orange-d:  #C85000;
+            --nb-orange:    #F07000;
+            --nb-orange-l:  #FFB266;
+            --nb-orange-bg: #FFF0E0;
+
+            /* Neutrals */
+            --nb-ink:       #1A1A2E;
+            --nb-slate:     #5A6478;
+            --nb-border-l:  #E8ECF2;
+            --nb-page-bg:   #F4F6FA;
+
+            /* Semantic */
+            --nb-success:   #12A05C;
+            --nb-danger:    #E53935;
+            --nb-white:     #FFFFFF;
+
+            /* Page surface (dark portfolio bg) */
+            --nb-bg:        #07090f;
+            --nb-surface:   #0e1420;
+            --nb-card:      #111827;
+            --nb-border:    rgba(59,130,232,0.14);
+            --nb-text:      #eef2ff;
+            --nb-muted:     rgba(238,242,255,0.48);
+        }
+
+        /* ══════════════════════════════════════
+           HERO SECTION
+        ══════════════════════════════════════ */
+        .nb-hero {
+            background: var(--nb-bg);
+            color: var(--nb-text);
+            padding: 16px 8% 40px;
+            min-height: calc(100vh - var(--nav-h));
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Breadcrumb */
+        .nb-hero .breadcrumb { margin-bottom: 40px; }
+        .nb-hero .breadcrumb a,
+        .nb-hero .breadcrumb span { color: var(--nb-muted); }
+        .nb-hero .breadcrumb a:hover   { color: var(--nb-mid); }
+        .nb-hero .breadcrumb .current  { color: var(--nb-text); }
+
+        /* Two-column body */
+        .nb-hero-body {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 64px;
+            align-items: start;
+            flex: 1;
+        }
+
+        /* ── LEFT column ── */
+        .nb-eyebrow {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--nb-mid);
+            margin-bottom: 18px;
+        }
+
+        .nb-title {
+            font-size: clamp(1.9rem, 4vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--nb-text);
+            margin-bottom: 20px;
+        }
+
+        .nb-title em {
+            font-style: normal;
+            color: var(--nb-mid);
+        }
+
+        .nb-subtitle {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--nb-muted);
+            max-width: 560px;
+            margin-bottom: 36px;
+        }
+
+        /* Role snapshot */
+        .nb-role-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(59,130,232,0.6);
+            margin-bottom: 14px;
+        }
+
+        .nb-role-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+
+        .nb-role-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 0.9rem;
+            line-height: 1.55;
+            color: var(--nb-muted);
+        }
+
+        .nb-role-num {
+            flex-shrink: 0;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--nb-mid);
+            min-width: 18px;
+            margin-top: 3px;
+        }
+
+        .nb-role-list li strong {
+            color: var(--nb-text);
+            font-weight: 600;
+        }
+
+        /* 2×2 project facts grid */
+        .nb-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            border-top: 1px solid var(--nb-border);
+            border-bottom: 1px solid var(--nb-border);
+            padding: 16px 0;
+            margin-bottom: 28px;
+        }
+
+        .nb-meta-item {
+            padding: 10px 18px 10px 0;
+            border-right: 1px solid var(--nb-border);
+        }
+        .nb-meta-item:nth-child(even) {
+            padding-left: 18px;
+            border-right: none;
+        }
+        .nb-meta-item:nth-child(1),
+        .nb-meta-item:nth-child(2) {
+            border-bottom: 1px solid var(--nb-border);
+            padding-bottom: 14px;
+        }
+        .nb-meta-item:nth-child(3),
+        .nb-meta-item:nth-child(4) {
+            padding-top: 14px;
+        }
+
+        .nb-meta-label {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--nb-mid);
+            margin-bottom: 6px;
+            opacity: 0.7;
+        }
+
+        .nb-meta-value {
+            font-size: 0.88rem;
+            color: var(--nb-text);
+            font-weight: 500;
+            line-height: 1.45;
+        }
+
+        .nb-meta-dot {
+            color: var(--nb-mid);
+            opacity: 0.5;
+        }
+
+        /* ── RIGHT column: hero visual ── */
+        .nb-hero-visual {
+            position: sticky;
+            top: calc(var(--nav-h) + 32px);
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--nb-surface);
+            border: 1px solid var(--nb-border);
+            aspect-ratio: 4 / 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nb-hero-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Placeholder state (no image yet) */
+        .nb-visual-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .nb-visual-placeholder svg {
+            color: var(--nb-mid);
+            opacity: 0.25;
+        }
+
+        .nb-visual-placeholder span {
+            font-size: 0.68rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(59,130,232,0.3);
+        }
+
+        /* ── Outcome highlights — full-width row below columns ── */
+        .nb-outcomes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 40px;
+            padding-top: 36px;
+            border-top: 1px solid var(--nb-border);
+        }
+
+        .nb-outcome-card {
+            background: var(--nb-surface);
+            border: 1px solid var(--nb-border);
+            border-radius: 14px;
+            padding: 22px 20px;
+            position: relative;
+        }
+
+        .nb-outcome-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            border-radius: 14px 14px 0 0;
+            background: var(--nb-royal);
+        }
+
+        .nb-outcome-num {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--nb-mid);
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        .nb-outcome-text {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--nb-muted);
+        }
+
+        .nb-outcome-text strong {
+            color: var(--nb-text);
+            font-weight: 600;
+        }
+
+        /* ── Scroll hint ── */
+        .nb-hero-footer {
+            border-top: 1px solid rgba(59,130,232,0.1);
+            padding: 20px 0 28px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nb-scroll-hint {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--nb-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nb-scroll-arrow {
+            display: inline-flex;
+            animation: nb-bounce 1.8s ease-in-out infinite;
+        }
+
+        @keyframes nb-bounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(4px); }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1100px) {
+            .nb-hero-body { grid-template-columns: 1fr 320px; gap: 40px; }
+        }
+
+        @media (max-width: 900px) {
+            .nb-hero {
+                padding-top: calc(var(--nav-h) + 36px);
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .nb-hero-body { grid-template-columns: 1fr; }
+
+            .nb-hero-visual {
+                position: static;
+                aspect-ratio: 16 / 7;
+                max-height: 220px;
+                order: -1;
+            }
+
+            .nb-outcomes { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .nb-title    { font-size: 1.8rem; }
+            .nb-subtitle { font-size: 0.95rem; }
+            .nb-meta     { grid-template-columns: 1fr; }
+            .nb-meta-item,
+            .nb-meta-item:nth-child(even) {
+                padding: 12px 0;
+                border-right: none;
+                border-bottom: 1px solid var(--nb-border);
+            }
+            .nb-meta-item:last-child { border-bottom: none; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                <a href="index.html"><img src="images/Logo.png" alt="Delara Logo"></a>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
+
+            <div class="nav-center menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+
+                <div class="dropdown">
+                    <a class="dropbtn">Work ▾</a>
+                    <div class="dropdown-content">
+                        <a href="ux-ui.html">UX/UI Design</a>
+                        <a href="visual-strategy.html">Visual Strategy</a>
+                        <a href="frontend.html">Frontend Development</a>
+                    </div>
+                </div>
+
+                <a href="impact.html">Impact</a>
+                <a href="library.html">Library</a>
+
+                <a href="contact.html" class="mobile-contact-link">Let's Talk</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="contact.html" class="contact-img-btn"><img src="images/Let's Talk.png" alt="Let's Talk"></a>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- ── HERO ── -->
+    <section class="nb-hero">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="ux-ui.html">UX/UI Design</a>
+            <span aria-hidden="true">/</span>
+            <span class="current">Nubaa Health</span>
+        </div>
+
+        <div class="nb-hero-body">
+
+            <!-- LEFT: all text content -->
+            <div class="nb-hero-left">
+
+                <span class="nb-eyebrow">Case Study</span>
+
+                <h1 class="nb-title">Nubaa Health —<br><em>unified medical</em><br>booking platform</h1>
+
+                <p class="nb-subtitle">
+                    A B2B2C platform connecting patients to doctors, dentists, labs,
+                    pharmacies, and home care services — designed across three separate apps
+                    with a team of 7, from kickoff to delivery in 7 months.
+                </p>
+
+                <!-- Role snapshot -->
+                <p class="nb-role-label">my role — 4 hats worn</p>
+                <ul class="nb-role-list">
+                    <li>
+                        <span class="nb-role-num">01</span>
+                        <span><strong>Lead UX designer</strong> — user flows, wireframes, information architecture, usability testing</span>
+                    </li>
+                    <li>
+                        <span class="nb-role-num">02</span>
+                        <span><strong>UI contributor</strong> — admin panel design and iteration</span>
+                    </li>
+                    <li>
+                        <span class="nb-role-num">03</span>
+                        <span><strong>Client liaison</strong> — ran 13 review sessions directly with the client from July–December 2021</span>
+                    </li>
+                    <li>
+                        <span class="nb-role-num">04</span>
+                        <span><strong>Informal PM</strong> — coordinated 4 developers and 2 UI designers across delivery phases</span>
+                    </li>
+                </ul>
+
+                <!-- Project facts 2×2 grid -->
+                <div class="nb-meta">
+
+                    <div class="nb-meta-item">
+                        <span class="nb-meta-label">Timeline</span>
+                        <span class="nb-meta-value">August 2021 – March 2022</span>
+                    </div>
+
+                    <div class="nb-meta-item">
+                        <span class="nb-meta-label">Team</span>
+                        <span class="nb-meta-value">7 people — me + 2 UI designers + 4 developers</span>
+                    </div>
+
+                    <div class="nb-meta-item">
+                        <span class="nb-meta-label">Platforms</span>
+                        <span class="nb-meta-value">Patient app <span class="nb-meta-dot">·</span> Provider app <span class="nb-meta-dot">·</span> Admin portal</span>
+                    </div>
+
+                    <div class="nb-meta-item">
+                        <span class="nb-meta-label">Languages</span>
+                        <span class="nb-meta-value">English, Arabic, Kurdish (RTL support)</span>
+                    </div>
+
+                </div>
+
+                <!-- Outcome highlights -->
+                <div class="nb-outcomes">
+
+                    <div class="nb-outcome-card">
+                        <p class="nb-outcome-num">Outcome 01</p>
+                        <p class="nb-outcome-text">All major UX decisions approved across <strong>13 client review sessions</strong> — zero full redesign cycles after prototype stage</p>
+                    </div>
+
+                    <div class="nb-outcome-card">
+                        <p class="nb-outcome-num">Outcome 02</p>
+                        <p class="nb-outcome-text"><strong>12+ service categories</strong> — doctors, dentists, labs, ambulance, pharmacy, veterinarian, home care — organized under one coherent home screen</p>
+                    </div>
+
+                    <div class="nb-outcome-card">
+                        <p class="nb-outcome-num">Outcome 03</p>
+                        <p class="nb-outcome-text">Provider app shipped with <strong>offline capability</strong> — designed for low-connectivity clinical environments in Kurdistan</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT: hero visual placeholder -->
+            <div class="nb-hero-visual">
+                <div class="nb-visual-placeholder">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/>
+                        <path d="M8 21h8M12 17v4"/>
+                    </svg>
+                    <span>Hero image placeholder</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="nb-hero-footer">
+            <span class="nb-scroll-hint">
+                Scroll to explore
+                <span class="nb-scroll-arrow" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                </span>
+            </span>
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-col">
+            <span class="footer-status">● Available for international collaborations</span>
+        </div>
+        <div class="footer-col">
+            <div class="footer-links">
+                <a href="mailto:delara.mozdbar@gmail.com">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/delara-mozdbar/" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <span class="footer-copy">© 2026 Delara Mozdbar — Designed with 🫶🏻☕️🎧</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
