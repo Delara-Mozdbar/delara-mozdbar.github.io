@@ -1134,6 +1134,24 @@
             border-radius: 12px;
         }
 
+        .nubaa-case-study .nb-decision-visual--image {
+            background: none;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 0;
+            display: block;
+            aspect-ratio: 1 / 1;
+        }
+
+        .nubaa-case-study .nb-decision-visual--image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+        }
+
         .nubaa-case-study .nb-decision-visual:hover {
             background: rgba(59,130,232,0.06);
             border-color: #3B82E8;
@@ -1433,6 +1451,30 @@
             border-color: #3B82E8;
         }
 
+        .nb-screen-placeholder--image {
+            background: none;
+            border: none;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .nb-screen-placeholder--image:hover {
+            background: none;
+            border: none;
+        }
+
+        .nb-screen-placeholder--image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 16px;
+        }
+
+        .nb-screen-placeholder--patient {
+            aspect-ratio: 830 / 520;
+        }
+
         .nb-screen-placeholder.mobile  { aspect-ratio: 9 / 19.5; }
         .nb-screen-placeholder.desktop { aspect-ratio: 16 / 10; }
 
@@ -1582,11 +1624,12 @@
            SECTION 06 — OUTCOMES
         ══════════════════════════════════════ */
         .nb-outcomes {
+            display: block;
             background: var(--nb-bg);
             padding: 96px 8% 80px;
             border-top: 0.5px solid rgba(255,255,255,0.08);
         }
-        .nb-outcomes-inner { max-width: 1440px; margin: 0 auto; }
+        .nb-outcomes-inner { width: 100%; }
 
         .nb-outcomes-heading {
             font-size: clamp(28px, 3.5vw, 40px);
@@ -1597,17 +1640,18 @@
             margin-bottom: 48px;
         }
 
+        /* Row 1 — 3 metric cards */
         .nb-metric-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 48px;
+            gap: 24px;
+            margin-bottom: 32px;
         }
         .nb-metric-card {
             background: rgba(255,255,255,0.04);
             border: 0.5px solid rgba(255,255,255,0.08);
             border-radius: 12px;
-            padding: 32px 24px;
+            padding: 40px 32px;
             text-align: center;
         }
         .nb-metric-number {
@@ -1616,48 +1660,58 @@
             color: #fff;
             letter-spacing: -2px;
             line-height: 1;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         .nb-metric-label {
             font-size: 14px;
             font-weight: 400;
             color: #A0A8B8;
-            line-height: 1.5;
+            line-height: 1.55;
             max-width: 160px;
             margin: 0 auto;
         }
 
-        .nb-outcome-statements { margin-bottom: 32px; }
-        .nb-outcome-statement {
-            border-left: 2px solid rgba(255,255,255,0.12);
-            padding-left: 20px;
-            margin-bottom: 24px;
-            font-size: 16px;
+        /* Row 2 — 2-column outcome text */
+        .nb-outcome-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            padding: 32px 0;
+            border-top: 0.5px solid rgba(255,255,255,0.08);
+            border-bottom: 0.5px solid rgba(255,255,255,0.08);
+            margin-bottom: 0;
+        }
+        .nb-outcome-col {
+            border-left: 2px solid rgba(255,255,255,0.14);
+            padding-left: 24px;
+        }
+        .nb-outcome-col p {
+            font-size: 15px;
             font-weight: 400;
             color: #A0A8B8;
-            line-height: 1.75;
-            max-width: 640px;
+            line-height: 1.8;
+            margin: 0;
         }
-        .nb-outcome-statement:last-child { margin-bottom: 0; }
 
+        /* Row 3 — full-width closing statement */
         .nb-outcome-closing {
-            margin-top: 32px;
+            padding: 32px 0 0;
             font-size: 15px;
             font-weight: 400;
             color: #7A8499;
-            line-height: 1.7;
-            max-width: 600px;
+            line-height: 1.75;
         }
 
         /* ══════════════════════════════════════
            SECTION 07 — REFLECTION
         ══════════════════════════════════════ */
         .nb-reflection {
+            display: block;
             background: var(--nb-bg);
             padding: 96px 8% 120px;
             border-top: 0.5px solid rgba(255,255,255,0.08);
         }
-        .nb-reflection-inner { max-width: 1440px; margin: 0 auto; }
+        .nb-reflection-inner { width: 100%; }
 
         .nb-reflection-heading {
             font-size: clamp(28px, 3.5vw, 40px);
@@ -1692,7 +1746,6 @@
             font-weight: 400;
             color: #A0A8B8;
             line-height: 1.75;
-            max-width: 600px;
             margin-bottom: 48px;
         }
 
@@ -1704,7 +1757,6 @@
             font-weight: 400;
             color: #7A8499;
             line-height: 1.7;
-            max-width: 560px;
         }
 
         /* ══════════════════════════════════════
@@ -1748,6 +1800,7 @@
 
         @media (max-width: 900px) {
             .nb-metric-grid { grid-template-columns: 1fr; gap: 12px; }
+            .nb-outcome-cols { grid-template-columns: 1fr; gap: 24px; }
             .nb-outcomes { padding: 64px 5% 56px; }
             .nb-reflection { padding: 64px 5% 80px; }
             .nb-next-case { padding: 48px 5%; }
@@ -2153,12 +2206,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="nb-decision-visual">
-                        <div class="nb-visual-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21v-16a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-3-2l-2 2l-2-2l-2 2l-2-2l-3 2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="15" x2="12" y2="15"/></svg>
-                        </div>
-                        <p class="nb-visual-label">Booking confirmation screen</p>
-                        <p class="nb-visual-sublabel">Patient app · Confirmation flow</p>
+                    <div class="nb-decision-visual nb-decision-visual--image">
+                        <img src="images/Nubaa-Section04-01.png" alt="Booking confirmation screen — Patient app, confirmation flow" loading="lazy">
                     </div>
                 </div>
 
@@ -2182,12 +2231,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="nb-decision-visual">
-                        <div class="nb-visual-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86l-8.57 14.86a1 1 0 0 0 .86 1.5h17.14a1 1 0 0 0 .86-1.5l-8.57-14.86a1 1 0 0 0-1.72 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        </div>
-                        <p class="nb-visual-label">Urgent vs regular booking</p>
-                        <p class="nb-visual-sublabel">Patient app · Doctor profile screen</p>
+                    <div class="nb-decision-visual nb-decision-visual--image">
+                        <img src="images/Nubaa-Section04-02.png" alt="Urgent vs regular booking — Patient app, doctor profile screen" loading="lazy">
                     </div>
                 </div>
 
@@ -2195,41 +2240,14 @@
                 <div class="nb-decision">
                     <div class="nb-decision-text">
                         <p class="nb-decision-num">03 —</p>
-                        <h3 class="nb-decision-title">Provider app dark mode — context, not preference</h3>
-                        <div class="nb-decision-rows">
-                            <div class="nb-dl-row">
-                                <span class="nb-dl-prefix">Problem</span>
-                                <p class="nb-dl">Providers use this app in clinical environments — examination rooms, dental clinics, laboratories. Many are intentionally dimmed. A bright interface causes eye strain and reduces readability at arm's length.</p>
-                            </div>
-                            <div class="nb-dl-row">
-                                <span class="nb-dl-prefix">Decision</span>
-                                <p class="nb-dl nb-dl-choice">Dark mode as the designed default, not a user setting. Navy (#0D2B6E) as the app's background surface. The only app in the system designed this way.</p>
-                            </div>
-                            <div class="nb-dl-row">
-                                <span class="nb-dl-prefix">Why it mattered</span>
-                                <p class="nb-dl">The provider app is a professional tool used in a specific physical environment. Designing for that environment is the difference between a UI decision and a UX decision.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nb-decision-visual">
-                        <div class="nb-visual-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79a9 9 0 1 1-8.79-8.79 7 7 0 0 0 8.79 8.79z"/></svg>
-                        </div>
-                        <p class="nb-visual-label">Provider app — dark default</p>
-                        <p class="nb-visual-sublabel">Provider app · Request queue screen</p>
-                    </div>
-                </div>
-
-                <!-- 04 — visual left / text right -->
-                <div class="nb-decision">
-                    <div class="nb-decision-text">
-                        <p class="nb-decision-num">04 —</p>
                         <h3 class="nb-decision-title">Offline capability — clinical reliability over technical convenience</h3>
                         <div class="nb-decision-rows">
                             <div class="nb-dl-row">
                                 <span class="nb-dl-prefix">Problem</span>
-                                <p class="nb-dl">Providers in Kurdistan work in clinics with unstable internet. A missed appointment request due to a dropped connection is not a UX inconvenience — it is a clinical failure with real consequences for patients.</p>
-                            </div>
+                                <p class="nb-dl">
+                                    Providers in Kurdistan work in clinics with unstable internet. A missed appointment request due to a dropped connection is not a UX inconvenience — it is a clinical failure with real consequences for patients.
+                                    </p>
+                                </div>
                             <div class="nb-dl-row">
                                 <span class="nb-dl-prefix">Decision</span>
                                 <p class="nb-dl nb-dl-choice">Offline sync built into the provider app from v1. Not a phase 2 feature. Requests queue offline and sync when connection restores. Providers never lose data.</p>
@@ -2240,14 +2258,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="nb-decision-visual">
-                        <div class="nb-visual-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.56 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-                        </div>
-                        <p class="nb-visual-label">Offline sync indicator</p>
-                        <p class="nb-visual-sublabel">Provider app · Home screen header</p>
+                    <div class="nb-decision-visual nb-decision-visual--image">
+                        <img src="images/Nubaa-Section04-03.png" alt="Provider app dark default — Request queue screen" loading="lazy">
                     </div>
                 </div>
+
 
             </div>
 
@@ -2288,19 +2303,13 @@
                     <p class="nb-screen-platform">01 — Patient app</p>
                     <h3 class="nb-screen-title">Home screen — 12 services, one entry point</h3>
                     <p class="nb-screen-body">The central challenge was organising 12 service categories under one home screen without overwhelming a patient who just needs a cardiologist. The solution was a two-tier structure — primary services visible immediately, secondary services below. Location selector anchored at top because patients in this market think "who is near me" before "which specialty do I need."</p>
-                    <div class="nb-screen-callout">
-                        <p>Urgent booking uses orange exclusively — a patient can never accidentally book urgent when they meant regular.</p>
-                    </div>
+                    
                 </div>
                 <div class="nb-screen-visual">
-                    <div class="nb-screen-placeholder mobile">
-                        <div class="nb-visual-icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                        </div>
-                        <p class="nb-visual-label">Patient app — Home screen</p>
-                        <p class="nb-visual-sublabel">Replace with Figma screenshot</p>
+                    <div class="nb-screen-placeholder nb-screen-placeholder--image nb-screen-placeholder--patient">
+                        <img src="images/Nubaa-Solution-01.png" alt="Patient app — Home screen, 12 services in a two-tier structure" loading="lazy">
                     </div>
-                    <p class="nb-screen-caption">Patient app · Home screen · Mobile</p>
+                   
                 </div>
             </div>
 
@@ -2310,9 +2319,7 @@
                     <p class="nb-screen-platform">02 — Provider app</p>
                     <h3 class="nb-screen-title">Request queue — what's next, nothing else</h3>
                     <p class="nb-screen-body">The provider app's home screen is a request list, not a dashboard. Providers don't need statistics when they open the app — they need to know what's next. Three tabs: Upcoming, Active, Closed. Each request card shows only what matters: patient name, date, time, accept or reject. Nothing else on the primary view.</p>
-                    <div class="nb-screen-callout">
-                        <p>Dark navy (#0D2B6E) as the default surface — designed for dimmed clinical environments, not as a style preference.</p>
-                    </div>
+                    
                 </div>
                 <div class="nb-screen-visual">
                     <div class="nb-screen-placeholder mobile">
@@ -2322,7 +2329,7 @@
                         <p class="nb-visual-label">Provider app — Request queue</p>
                         <p class="nb-visual-sublabel">Replace with Figma screenshot</p>
                     </div>
-                    <p class="nb-screen-caption">Provider app · Request queue · Dark default</p>
+                    
                 </div>
             </div>
 
@@ -2332,9 +2339,7 @@
                     <p class="nb-screen-platform">03 — Admin portal</p>
                     <h3 class="nb-screen-title">Doctor management — one form, every provider detail</h3>
                     <p class="nb-screen-body">The admin portal was the most complex surface in the system — managing every provider, patient, booking, and financial transaction across the platform. The doctor management page shows the density challenge: 15+ fields organised into clear sections so an admin can onboard a new doctor without missing critical information. Three login roles, three different experiences, one codebase.</p>
-                    <div class="nb-screen-callout">
-                        <p>Input field heights were reduced after a December 2021 review — the admin team used a 15-inch desktop and the original layout pushed critical fields below the fold.</p>
-                    </div>
+                   
                 </div>
                 <div class="nb-screen-visual">
                     <div class="nb-screen-placeholder desktop">
@@ -2344,67 +2349,11 @@
                         <p class="nb-visual-label">Admin portal — Doctor management</p>
                         <p class="nb-visual-sublabel">Replace with browser screenshot</p>
                     </div>
-                    <p class="nb-screen-caption">Admin portal · Doctor management · Web</p>
+                    
                 </div>
             </div>
 
-            <!-- Design system strip -->
-            <div class="nb-ds-strip">
-
-                <div class="nb-ds-col">
-                    <p class="nb-ds-title">Color</p>
-                    <div class="nb-swatch-row">
-                        <div class="nb-swatch" style="background:#1B4FBF;"></div>
-                        <div class="nb-swatch" style="background:#3B82E8;"></div>
-                        <div class="nb-swatch" style="background:#F07000;"></div>
-                        <div class="nb-swatch" style="background:#A0A8B8;"></div>
-                        <div class="nb-swatch" style="background:#FFFFFF;"></div>
-                    </div>
-                    <p class="nb-ds-note">One system across all three apps</p>
-                </div>
-
-                <div class="nb-ds-col">
-                    <p class="nb-ds-title">Typography</p>
-                    <div class="nb-type-demo">
-                        <span style="font-size:20px;font-weight:500;color:#fff;line-height:1.2;">Heading</span>
-                        <span style="font-size:15px;font-weight:400;color:#A0A8B8;line-height:1.5;">Body copy</span>
-                        <span style="font-size:11px;font-weight:500;color:#3B82E8;letter-spacing:0.08em;text-transform:uppercase;">Label</span>
-                    </div>
-                    <p class="nb-ds-note">Inter · 400 and 500 weight only</p>
-                </div>
-
-                <div class="nb-ds-col">
-                    <p class="nb-ds-title">Status</p>
-                    <div class="nb-status-pills">
-                        <span class="nb-status-pill" style="background:rgba(18,160,92,0.15);color:#12A05C;border-color:rgba(18,160,92,0.3);">Confirmed</span>
-                        <span class="nb-status-pill" style="background:rgba(240,112,0,0.15);color:#F07000;border-color:rgba(240,112,0,0.3);">Urgent</span>
-                        <span class="nb-status-pill" style="background:rgba(229,57,53,0.15);color:#E53935;border-color:rgba(229,57,53,0.3);">Cancelled</span>
-                    </div>
-                    <p class="nb-ds-note">Color carries meaning, not decoration</p>
-                </div>
-
-                <div class="nb-ds-col">
-                    <p class="nb-ds-title">Platforms</p>
-                    <div class="nb-platform-chips">
-                        <span class="nb-platform-chip">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                            Patient app
-                        </span>
-                        <span class="nb-platform-chip">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                            Provider app
-                        </span>
-                        <span class="nb-platform-chip">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-                            Admin portal
-                        </span>
-                    </div>
-                    <p class="nb-ds-note">3 apps · 1 design language</p>
-                </div>
-
             </div>
-
-        </div>
     </section>
 
     <!-- Section 06 — Outcomes -->
@@ -2413,26 +2362,33 @@
             <p class="nb-section-label">Section 06</p>
             <h2 class="nb-outcomes-heading">What changed</h2>
 
+            <!-- Row 1: 3 equal metric cards -->
             <div class="nb-metric-grid">
-                <div class="nb-metric-card">
+                <article class="nb-metric-card">
                     <p class="nb-metric-number">13</p>
                     <p class="nb-metric-label">client review sessions, zero full redesigns</p>
-                </div>
-                <div class="nb-metric-card">
+                </article>
+                <article class="nb-metric-card">
                     <p class="nb-metric-number">30+</p>
                     <p class="nb-metric-label">v1 features shipped across 3 platforms</p>
-                </div>
-                <div class="nb-metric-card">
+                </article>
+                <article class="nb-metric-card">
                     <p class="nb-metric-number">14</p>
                     <p class="nb-metric-label">bugs resolved within 3 weeks of final review</p>
+                </article>
+            </div>
+
+            <!-- Row 2: 2-column outcome text with left accent lines -->
+            <div class="nb-outcome-cols">
+                <div class="nb-outcome-col">
+                    <p>Every v2 feature — pharmacy ordering, veterinarian, telemedicine video — was wireframed and handed off as a ready-to-build backlog. The platform was designed to scale, not just to ship.</p>
+                </div>
+                <div class="nb-outcome-col">
+                    <p>The provider app reached clinicians in low-connectivity areas of Kurdistan through offline sync — a feature treated as a core requirement from day one, not added after the fact.</p>
                 </div>
             </div>
 
-            <div class="nb-outcome-statements">
-                <p class="nb-outcome-statement">Every v2 feature — pharmacy ordering, veterinarian, telemedicine video — was wireframed and handed off as a ready-to-build backlog. The platform was designed to scale, not just to ship.</p>
-                <p class="nb-outcome-statement">The provider app reached clinicians in low-connectivity areas of Kurdistan through offline sync — a feature treated as a core requirement from day one, not added after the fact.</p>
-            </div>
-
+            <!-- Row 3: full-width closing statement -->
             <p class="nb-outcome-closing">Scope discipline kept v1 on time. The client request tracker logged every new request with a clear response — implemented, out of scope, or deferred. That discipline is the outcome no metric captures.</p>
         </div>
     </section>
