@@ -10,155 +10,139 @@
 
 <body>
 <header>
-    <nav>
-        <div class="nav-container">
+  <nav>
+    <div class="nav-container">
 
-            <div class="logo">
-                <a href="index.html"><img src="images/Logo.png" alt="Delara Logo"></a>
-            </div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Logo.png" alt="Delara Mozdbar">
+        </a>
+      </div>
 
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger">☰</label>
+      <!-- Hamburger -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">&#x2630;</label>
 
-            <div class="nav-center menu">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+      <!-- Menu -->
+      <div class="nav-center menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ai-labs.html" class="nav-link">AI Labs</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
 
-                <div class="dropdown">
-                    <a class="dropbtn">Work ▾</a>
-                    <div class="dropdown-content">
-                        <a href="ux-ui.html">UX/UI Design</a>
-                        <a href="visual-strategy.html">Visual Strategy</a>
-                        <a href="frontend.html">Frontend Development</a>
-                    </div>
-                </div>
+      <!-- Resume Button -->
+      <div class="nav-right">
+        <a href="Delara Mozdbar - Resume - Product Designer (UI_UX) - 2026.pdf" class="resume-btn" download>My Resume</a>
+      </div>
 
-                <a href="impact.html">Impact</a>
-                <a href="library.html">Library</a>
-                
-                <a href="contact.html" class="mobile-contact-link">Let's Talk</a>
-            </div>
-
-            <div class="nav-right">
-                <a href="contact.html" class="contact-img-btn"><img src="images/Let's Talk.png" alt="Let's Talk"></a>
-            </div>
-
-        </div>
-    </nav>
+    </div>
+  </nav>
 </header>
 
 <main>
     <section class="hero" id="home">
         <div class="hero-content">
+            <span class="hero-availability">● Available for global roles</span>
             <h1>Delara Mozdbar</h1>
             <p class="hero-description">
-                Senior Product Designer with an Engineering Soul.
-                Specializing in complex SaaS ecosystems and human-centered logic.
+                Senior Product Designer with an Engineering Soul. 10 years in IT · SaaS · Australia & Africa
             </p>
-            <a href="work.html" class="explore-img-btn">
-                <img src="images/Explore My Work.png" alt="Explore My Work">
-            </a>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-num">10+</span>
+                <span class="hero-stat-lbl">Years in IT</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">6+</span>
+                <span class="hero-stat-lbl">Years UX/UI</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">4+</span>
+                <span class="hero-stat-lbl">International</span>
+                <span class="hero-stat-sub">Companies</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">20+</span>
+                <span class="hero-stat-lbl">Projects</span>
+                <span class="hero-stat-sub">Delivered</span>
+              </div>
+            </div>
+            <a href="#featured-work" class="key-btn">Explore My Work</a>
         </div>
         <div class="hero-image">
             <img src="images/Hero-Imge.png" alt="Delara Mozdbar Profile">
         </div>
     </section>
 
+
+    <!-- FEATURED WORK -->
+    <section id="featured-work" class="featured-work">
+      <div class="featured-work-inner">
+
+        <div class="featured-work-header">
+          <h2 class="featured-work-title">Featured Work</h2>
+          <a href="work.html" class="view-all-link">View all projects →</a>
+        </div>
+
+        <div class="showcase-grid">
+
+          <!-- CoreView -->
+          <article class="showcase-card">
+            <div class="showcase-img-wrap">
+              <img src="images/CoreView/CoreView-Intro.png" alt="CoreView SaaS Dashboard">
+              <div class="showcase-overlay"></div>
+            </div>
+            <p class="showcase-tag">Enterprise SaaS · UX/UI Design</p>
+            <h3 class="showcase-title">CoreView</h3>
+            <p class="showcase-desc">Redesigning a Microsoft 365 governance platform for enterprise IT teams across 40+ countries.</p>
+            <a href="coreview.html" class="showcase-link">View Case Study →</a>
+          </article>
+
+          <!-- Nubaa Health -->
+          <article class="showcase-card">
+            <div class="showcase-img-wrap">
+              <img src="images/Nubaa/Nubaa-Intro.png" alt="Nubaa Health Mobile App">
+              <div class="showcase-overlay"></div>
+            </div>
+            <p class="showcase-tag">HealthTech · Mobile UX</p>
+            <h3 class="showcase-title">Nubaa Health</h3>
+            <p class="showcase-desc">A three-sided healthcare platform connecting patients, providers, and administrators in one design system.</p>
+            <a href="Nubaa.html" class="showcase-link">View Case Study →</a>
+          </article>
+
+          <!-- Pitch -->
+          <article class="showcase-card">
+            <div class="showcase-img-wrap">
+              <img src="images/Pitch/Pitch-Intro.png" alt="Pitch Presentation Tool">
+              <div class="showcase-overlay"></div>
+            </div>
+            <p class="showcase-tag">Productivity · Visual Strategy</p>
+            <h3 class="showcase-title">Pitch</h3>
+            <p class="showcase-desc">Crafting a collaborative presentation experience that balances power with simplicity.</p>
+            <a href="pitch.html" class="showcase-link">View Case Study →</a>
+          </article>
+
+        </div>
+
     
-    <!-- ABOUT -->
-    <section id="about" class="about-section">
-        <div class="about-grid">
 
-            <!-- LEFT -->
-            <div>
-                <h2 class="section-title">Impact & Journey</h2>
-                <p>
-                    Since 2015, I've navigated the intersection of code and canvas.
-                    Starting as a Frontend Developer, I built a foundation of
-                    technical feasibility that now powers my strategic design decisions.
-                </p>
-                <br>
-                <p>
-                    I thrive in complex ecosystems, leading design initiatives for
-                    international SaaS platforms across Australia and Africa.
-                </p>
-                <a href="about.html" class="case-study-link">Know about me →</a>
-            </div>
-
-            <!-- RIGHT -->
-            <div>
-                <div class="strength-card">
-                    <h4>Bridging the Gap</h4>
-                    <p>I eliminate handoff friction by speaking the language of engineering.</p>
-                </div>
-                <div class="strength-card">
-                    <h4>Strategic Design Systems</h4>
-                    <p>Building scalable systems for consistency and speed.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CORE EXPERTISE -->
-    <section id="work" class="expertise-section">
-        <h2 class="expertise-title">Core Expertise</h2>
-
-        <div class="work-grid">
-
-            <div class="work-card">
-                <div class="card-image">
-                    <img src="images/UXUI-Design.png" alt="UX UI Design">
-                </div>
-                <h3>UX/UI Design</h3>
-                <p>SaaS, Dashboards, Mobile Apps</p>
-                <a href="ux-ui.html" class="case-study-link">View Case Study →</a>
-            </div>
-
-            <div class="work-card">
-                <div class="card-image">
-                    <img src="images/Graphic-Design.png" alt="Visual Strategy">
-                </div>
-                <h3>Visual Strategy</h3>
-                <p>Brand identity & visual systems</p>
-                <a href="visual-strategy.html" class="case-study-link">View Case Study →</a>
-            </div>
-
-            <div class="work-card">
-                <div class="card-image">
-                    <img src="images/Coding.png" alt="Frontend Development">
-                </div>
-                <h3>Frontend Development</h3>
-                <p>Design to Code (HTML/CSS)</p>
-                <a href="frontend.html" class="case-study-link">View Case Study →</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- TOOLS -->
-    <section class="tools-section">
-        <h2 class="tools-title">Tech Stack</h2>
-        <p class="tools-subtitle">Tools I use to design, prototype, and build products.</p>
-
-        <div class="tools-grid">
-            <div class="tool-box"><img src="images/Figma.png" alt="Figma"></div>
-            <div class="tool-box"><img src="images/ChatGPT.png" alt="ChatGPT"></div>
-            <div class="tool-box"><img src="images/Affinity.png" alt="Affinity"></div>
-            <div class="tool-box"><img src="images/Gemini.png" alt="Gemini"></div>
-            <div class="tool-box"><img src="images/DaVinci-Resolve.png" alt="DaVinci"></div>
-            <div class="tool-box"><img src="images/SUNO.png" alt="Suno"></div>
-            <div class="tool-box"><img src="images/GitHub.png" alt="GitHub"></div>
-            <div class="tool-box"><img src="images/Google-Doc.png" alt="Google Docs"></div>
-        </div>
+      </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
 
-            <div class="contact-visual">
-                <img src="images/Connect.png" alt="Contact Delara">
+            <div class="contact-editorial">
+              <p class="contact-editorial-label">Get in touch</p>
+              <h2 class="contact-editorial-heading">Let's work<br>together.</h2>
+              <p class="contact-editorial-sub">Open to senior product design roles, HCI research collaborations, and international SaaS projects.</p>
             </div>
 
             <div>
@@ -196,7 +180,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-col">
-            <span class="footer-status">● Available for international collaborations</span>
+            <span class="hero-availability">● Available for global roles</span>
         </div>
         <div class="footer-col">
             <div class="footer-links">

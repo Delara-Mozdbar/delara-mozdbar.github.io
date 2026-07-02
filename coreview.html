@@ -8,238 +8,41 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/works.css">
-    <style>
-        /* ── CoreView — Indigo system ── */
-        :root {
-            --accent:       #6366f1;
-            --accent-light: #818cf8;
-            --accent-deep:  #1e1b4b;
-        }
-
-        /* Shared indigo overrides */
-        .cs-tag            { color: var(--accent-light); border-color: rgba(129,140,248,0.25); background: rgba(99,102,241,0.07); }
-        .cs-challenge-num  { color: var(--accent-light); }
-        .cs-constraints    { background: var(--accent-deep); border-top-color: rgba(129,140,248,0.15); border-bottom-color: rgba(129,140,248,0.15); }
-
-        /* ── Hero wrapper — matches .nav-container exactly ── */
-        .cs-hero-wrap {
-            background: #111114;
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 5%;
-        }
-
-        .cs-hero-wrap .breadcrumb {
-            padding-top: 24px;
-            padding-bottom: 0;
-        }
-
-        /* ── Hero layout ── */
-        .cs-hero {
-            display: grid;
-            grid-template-columns: 7fr 4fr;
-            gap: 60px;
-            align-items: center;
-            min-height: calc(100vh - var(--nav-h));
-            padding: 48px 0 40px;
-        }
-
-        /* ── LEFT column ── */
-        .cv-hero-left {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .cv-eyebrow {
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--accent-light);
-            margin-bottom: 18px;
-        }
-
-        .cv-title {
-            font-size: clamp(2rem, 3.6vw, 3.2rem);
-            font-weight: 800;
-            line-height: 1.1;
-            color: #f0f0f0;
-            margin-bottom: 20px;
-        }
-
-        .cv-subtitle {
-            font-size: 1rem;
-            line-height: 1.75;
-            color: rgba(232,232,232,0.5);
-            margin-bottom: 28px;
-            max-width: 500px;
-        }
-
-        .cv-confidential {
-            font-size: 0.88rem;
-            color: rgba(232,232,232,0.38);
-            border-left: 3px solid rgba(129,140,248,0.4);
-            padding-left: 14px;
-            font-style: italic;
-            margin-bottom: 36px;
-        }
-
-        /* 2×2 meta grid */
-        .cv-meta {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px 32px;
-            margin-bottom: 32px;
-        }
-
-        .cv-meta-label {
-            display: block;
-            font-size: 0.68rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: rgba(232,232,232,0.35);
-            margin-bottom: 6px;
-        }
-
-        .cv-meta-value {
-            font-size: 0.93rem;
-            font-weight: 600;
-            color: #e8e8e8;
-            line-height: 1.45;
-        }
-
-        /* Tags */
-        .cv-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .cv-tag {
-            font-size: 0.75rem;
-            font-weight: 500;
-            padding: 6px 14px;
-            border-radius: 100px;
-            border: 1px solid rgba(129,140,248,0.3);
-            color: var(--accent-light);
-            background: transparent;
-            transition: 0.2s;
-        }
-
-        .cv-tag:hover {
-            background: rgba(99,102,241,0.12);
-        }
-
-        /* ── RIGHT column ── */
-        .cv-hero-right {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 420px;
-        }
-
-        /* Blob decorations */
-        .cv-blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(70px);
-            pointer-events: none;
-        }
-
-        .cv-blob-1 {
-            width: 340px; height: 340px;
-            background: rgba(99,102,241,0.18);
-            top: -40px; right: -20px;
-        }
-
-        .cv-blob-2 {
-            width: 260px; height: 260px;
-            background: rgba(129,140,248,0.12);
-            bottom: 0; left: 10px;
-        }
-
-        .cv-blob-3 {
-            width: 180px; height: 180px;
-            background: rgba(167,139,250,0.1);
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        /* Device composition */
-        .cv-devices {
-            position: relative;
-            width: 100%;
-            max-width: 520px;
-            z-index: 1;
-        }
-
-        .cv-tablet {
-            width: 100%;
-            border-radius: 16px;
-            display: block;
-            
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .cs-hero {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 36px 0 48px;
-            }
-
-            .cv-hero-right {
-                order: -1;
-                min-height: 240px;
-            }
-
-            .cv-blob { display: none; }
-
-            .cv-title { font-size: 2rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/coreview.css">
 </head>
 
 <body>
 <header>
-    <nav>
-        <div class="nav-container">
+  <nav>
+    <div class="nav-container">
 
-            <div class="logo">
-                <a href="index.html"><img src="images/Logo.png" alt="Delara Logo"></a>
-            </div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Logo.png" alt="Delara Mozdbar">
+        </a>
+      </div>
 
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger" aria-label="Open menu">☰</label>
+      <!-- Hamburger -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">&#x2630;</label>
 
-            <div class="nav-center menu">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
+      <!-- Menu -->
+      <div class="nav-center menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="work.html" class="nav-link active">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ai-labs.html" class="nav-link">AI Labs</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
 
-                <div class="dropdown">
-                    <a class="dropbtn">Work ▾</a>
-                    <div class="dropdown-content">
-                        <a href="ux-ui.html">UX/UI Design</a>
-                        <a href="visual-strategy.html">Visual Strategy</a>
-                        <a href="frontend.html">Frontend Development</a>
-                    </div>
-                </div>
+      <!-- Resume Button -->
+      <div class="nav-right">
+        <a href="resume.pdf" class="resume-btn" download>My Resume</a>
+      </div>
 
-                <a href="impact.html">Impact</a>
-                <a href="library.html">Library</a>
-                
-                <a href="contact.html" class="mobile-contact-link">Let's Talk</a>
-            </div>
-
-            <div class="nav-right">
-                <a href="contact.html" class="contact-img-btn"><img src="images/Let's Talk.png" alt="Let's Talk"></a>
-            </div>
-
-        </div>
-    </nav>
+    </div>
+  </nav>
 </header>
 
 
@@ -292,7 +95,7 @@
             <div class="cv-blob cv-blob-2"></div>
             <div class="cv-blob cv-blob-3"></div>
             <div class="cv-devices">
-                <img class="cv-tablet" src="images/CoreView-Intro.png" alt="CoreView dashboard on tablet">
+                <img class="cv-tablet" src="images/CoreView/CoreView-Intro.png" alt="CoreView dashboard on tablet">
                 <!-- Tags below image -->
                 <div class="cv-tags" style="margin-top: 20px;">
                     <span class="cv-tag">UX Design</span>
@@ -331,7 +134,7 @@
                         <p class="cs-challenge-text" style="margin-top:12px;">A manager needed risk status at a glance. An employee just needed to answer a daily survey. A director needed to delegate without losing oversight.</p>
                     </div>
                     <div class="cs-challenge-image">
-                        <img src="images/CoreView-TheChallenge-01.png" alt="Five distinct user roles, one platform">
+                        <img src="images/CoreView/CoreView-TheChallenge-01.png" alt="Five distinct user roles, one platform">
                     </div>
                 </div>
 
@@ -341,7 +144,7 @@
                         <p class="cs-challenge-text">The survey system was a conversational chatbot with conditional branching — questions appeared in random order, each answer could trigger a different follow-up. Designing this logic visually, so both the client and the dev team could understand it, was one of the core UX challenges.</p>
                     </div>
                     <div class="cs-challenge-image">
-                        <img src="images/CoreView-TheChallenge-02.png" alt="A survey that wasn't a form">
+                        <img src="images/CoreView/CoreView-TheChallenge-02.png" alt="A survey that wasn't a form">
                     </div>
                 </div>
 
@@ -351,7 +154,7 @@
                         <p class="cs-challenge-text">The dashboard needed to surface real-time screening data alongside risk scores — making sure the right information reached the right person at the right moment.</p>
                     </div>
                     <div class="cs-challenge-image">
-                        <img src="images/CoreView-TheChallenge-03.png" alt="Real-time data, right person, right moment">
+                        <img src="images/CoreView/CoreView-TheChallenge-03.png" alt="Real-time data, right person, right moment">
                     </div>
                 </div>
 
@@ -376,7 +179,7 @@
 
             <div class="cs-approach-layout">
             <div class="cs-approach-image">
-                <img src="images/CoreView-MyApproach.png" alt="My Approach">
+                <img src="images/CoreView/CoreView-MyApproach.png" alt="My Approach">
             </div>
 
             <div class="cs-steps">
@@ -460,7 +263,7 @@
                         </div>
                     </div>
                     <div class="cs-kd-visual">
-                        <div class="cs-kd-placeholder"><img src="images/CoreView-KeyDesignDecisions-01.png" alt="Survey"></div>
+                        <div class="cs-kd-placeholder"><img src="images/CoreView/CoreView-KeyDesignDecisions-01.png" alt="Survey"></div>
                     </div>
                 </div>
             </div>
@@ -655,7 +458,7 @@
             <div class="cs-final-grid">
 
                 <div class="cs-final-item">
-                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Dashboard.png" alt="Dashboard"></div>
+                    <div class="cs-final-image"><img src="images/CoreView/CoreView-FinalDesign-Dashboard.png" alt="Dashboard"></div>
                     <div class="cs-final-caption">
                         <h3 class="cs-final-title">Dashboard</h3>
                         <p class="cs-final-desc">Designed around a two-layer hierarchy: immediate action items first, historical trends second. Managers see today's risk status at a glance — no scrolling required.</p>
@@ -663,7 +466,7 @@
                 </div>
 
                 <div class="cs-final-item">
-                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Onboarding.png" alt="Onboarding"></div>
+                    <div class="cs-final-image"><img src="images/CoreView/CoreView-FinalDesign-Onboarding.png" alt="Onboarding"></div>
                     <div class="cs-final-caption">
                         <h3 class="cs-final-title">Onboarding</h3>
                         <p class="cs-final-desc">Simplified from 7 steps to 3 by grouping related configuration tasks. Account, Employees, and Survey — each step represents a complete mental unit, not just a data category.</p>
@@ -671,7 +474,7 @@
                 </div>
 
                 <div class="cs-final-item">
-                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Survey-Bot-Mobile.png" alt="Survey Bot"></div>
+                    <div class="cs-final-image"><img src="images/CoreView/CoreView-FinalDesign-Survey-Bot-Mobile.png" alt="Survey Bot"></div>
                     <div class="cs-final-caption">
                         <h3 class="cs-final-title">Survey Bot — Mobile</h3>
                         <p class="cs-final-desc">A conversational chatbot replaced a traditional form to support conditional branching logic. Each answer could trigger a different follow-up question, displayed in random order to reduce bias.</p>
@@ -679,7 +482,7 @@
                 </div>
 
                 <div class="cs-final-item">
-                    <div class="cs-final-image"><img src="images/CoreView-FinalDesign-Survey-Result.png" alt="Survey Result"></div>
+                    <div class="cs-final-image"><img src="images/CoreView/CoreView-FinalDesign-Survey-Result.png" alt="Survey Result"></div>
                     <div class="cs-final-caption">
                         <h3 class="cs-final-title">Survey Result on Dashboard</h3>
                         <p class="cs-final-desc">Once employees complete the conversational survey, results are immediately available to managers. Each response is scored and translated into a risk level — Low, Moderate, or High — enabling direct action without manual analysis.</p>
@@ -758,7 +561,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-col">
-            <span class="footer-status">● Available for international collaborations</span>
+            <span class="hero-availability">● Available for global roles</span>
         </div>
         <div class="footer-col">
             <div class="footer-links">

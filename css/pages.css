@@ -23,7 +23,7 @@
 }
 
 .breadcrumb .current {
-  color: #fff;
+  color: #e2e0dd;
   font-weight: 500;
 }
 
@@ -88,7 +88,7 @@
 
 .thinking-grid div {
   padding: 20px;
-  border: 1px solid #20202e;
+  border: 1px solid #2e2e38;
   border-radius: 10px;
   color: var(--text-sec);
 }
@@ -186,13 +186,13 @@
 .brief-item strong {
   display: block;
   margin-bottom: 5px;
-  color: #fff;
+  color: #e2e0dd;
   font-size: 0.9rem;
 }
 
 .project-details {
   margin: 25px 0;
-  border-top: 1px solid #20202e;
+  border-top: 1px solid #2e2e38;
   padding-top: 20px;
 }
 
@@ -202,7 +202,7 @@
 
 .detail-item strong {
   display: block;
-  color: #fff;
+  color: #e2e0dd;
   font-size: 0.9rem;
   margin-bottom: 4px;
 }
@@ -221,7 +221,7 @@
 }
 
 .timeline-row strong {
-  color: #fff;
+  color: #e2e0dd;
   font-size: 0.9rem;
   white-space: nowrap;
 }
@@ -291,7 +291,7 @@
 }
 
 .breadcrumb .current {
-  color: #fff;
+  color: #e2e0dd;
   font-weight: 500;
 }
 
@@ -413,7 +413,7 @@
 
 .testimonial .name {
   font-weight: 600;
-  color: #fff;
+  color: #e2e0dd;
 }
 
 .testimonial .role {
