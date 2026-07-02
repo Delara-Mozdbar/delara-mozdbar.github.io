@@ -920,7 +920,7 @@
         ══════════════════════════════════════ */
 
         .nubaa-case-study {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         /* — Hero title — */
