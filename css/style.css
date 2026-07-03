@@ -699,15 +699,10 @@ footer .hero-availability {
 }
 
 .hero-stat-lbl {
-  font-size: 0.75rem;
-  color: var(--text-sec);
+  font-size: 0.8rem;
+  color: #e2e0dd;
   line-height: 1.4;
-}
-
-.hero-stat-sub {
-  font-size: 0.7rem;
-  color: #3e3e4a;
-  margin-top: 1px;
+  font-weight: 400;
 }
 
 .hero-stat-divider {
