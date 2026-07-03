@@ -1,4 +1,3 @@
-﻿<<<<<<< HEAD
 /* =========================
    BREADCRUMB
 ========================= */
@@ -57,40 +56,51 @@
   max-width: 550px;
 }
 
-.intro-image {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.intro-image img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 20px;
-}
-
 /* =========================
-   THINKING SECTION
+   THINKING INLINE (in hero)
 ========================= */
-.thinking {
-  text-align: center;
-  margin-bottom: 100px;
+.thinking-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
 }
 
-.thinking h2 {
-  margin-bottom: 40px;
+.thinking-inline-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
 }
 
-.thinking-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.thinking-inline-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.thinking-grid div {
-  padding: 20px;
+.thinking-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
   border: 1px solid #2e2e38;
-  border-radius: 10px;
+  border-radius: 12px;
   color: var(--text-sec);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.thinking-card:hover {
+  border-color: var(--accent);
+  color: var(--text-main);
+}
+
+.thinking-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 /* =========================
@@ -101,7 +111,9 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 60px;
   align-items: center;
-  margin-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 1px solid #2e2e38;
 }
 
 .work-row.reverse {
@@ -243,17 +255,14 @@
     gap: 30px;
   }
 
-  .intro-image { order: 1; justify-content: center; }
-  .intro-content { order: 2; }
-  .intro-image img { max-width: 320px; }
   .intro-content h1 { font-size: 1.8rem; }
-
-  .thinking-grid { grid-template-columns: 1fr; }
 
   .work-row,
   .work-row.reverse {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .work-row.reverse .work-image,
@@ -266,176 +275,3 @@
 
   .project-brief-grid { grid-template-columns: 1fr; }
 }
-=======
-/* =========================
-   BREADCRUMB
-========================= */
-.breadcrumb {
-  max-width: 1440px;
-  margin: 20px auto 30px;
-  font-size: 0.85rem;
-  color: var(--text-sec);
-}
-
-.breadcrumb a {
-  color: var(--text-sec);
-  transition: 0.2s;
-}
-
-.breadcrumb a:hover {
-  color: var(--accent);
-}
-
-.breadcrumb .separator {
-  margin: 0 8px;
-}
-
-.breadcrumb .current {
-  color: #e2e0dd;
-  font-weight: 500;
-}
-
-/* =========================
-   work PAGE
-========================= */
-.work-page {
-  padding: 20px 8% 0;
-}
-
-.work-title {
-  font-size: 20px;
-  margin-bottom: 60px;
-}
-
-/* ROW STRUCTURE */
-.work-row {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
-  align-items: center;
-  margin-bottom: 120px;
-}
-
-/* Reverse layout */
-.work-row.reverse {
-  grid-template-columns: 1fr 1.2fr;
-}
-
-.work-row.reverse .work-image {
-  order: 2;
-}
-
-.work-row.reverse .work-text {
-  order: 1;
-}
-
-/* IMAGE */
-.work-image img {
-  width: 100%;
-  border-radius: 20px;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
-.work-image img:hover {
-  transform: scale(1.02);
-}
-
-/* TEXT BLOCK */
-.work-text h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.work-text p {
-  color: var(--text-sec);
-  margin-bottom: 15px;
-}
-
-.work-text a {
-  color: var(--accent);
-}
-
-.work-text ul {
-  list-style: none;
-  margin-bottom: 15px;
-}
-
-.work-text ul li {
-  color: var(--text-sec);
-  padding: 6px 0;
-  padding-left: 16px;
-  position: relative;
-}
-
-.work-text ul li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-}
-
-/* =========================
-   TESTIMONIAL
-========================= */
-.testimonial {
-  background: var(--card-bg);
-  border-left: 4px solid var(--accent);
-  padding: 20px 24px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  position: relative;
-}
-
-.testimonial::before {
-  content: "\201C";
-  font-size: 40px;
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  color: var(--accent);
-  opacity: 0.2;
-}
-
-.testimonial .quote {
-  font-style: italic;
-  color: var(--text-main);
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.testimonial .author {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.85rem;
-}
-
-.testimonial .name {
-  font-weight: 600;
-  color: #e2e0dd;
-}
-
-.testimonial .role {
-  color: var(--text-sec);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .work-row,
-  .work-row.reverse {
-    grid-template-columns: 1fr;
-  }
-
-  .work-row.reverse .work-image,
-  .work-row.reverse .work-text {
-    order: unset;
-  }
-
-  .work-title {
-    font-size: 20px;
-  }
-}
->>>>>>> 772f306e1c8316f828cedcbc886d82bc2219ad08
