@@ -49,7 +49,7 @@
 <main class="labs-page">
 
     <!-- ═══════════════════════════
-         HERO STATEMENT
+         HERO
     ═══════════════════════════ -->
     <section class="labs-hero">
         <div class="labs-badge">
@@ -59,12 +59,12 @@
         <h1 class="labs-title">AI Labs</h1>
         <p class="labs-statement">
             Investigating the intersection of human intuition and generative technology.
-            This space serves as an open R&D notebook, documenting interactive experiments,
-            cross-medium asset translation, and the evolving role of AI within advanced
+            This space serves as an open R&D notebook — documenting interactive experiments,
+            design-driven prototypes, and the evolving role of AI within advanced
             product design workflows.
         </p>
         <div class="labs-meta">
-            <span class="labs-meta-item">Research Areas: 2</span>
+            <span class="labs-meta-item">Experiments: 3</span>
             <span class="labs-meta-divider"></span>
             <span class="labs-meta-item">Status: Active</span>
             <span class="labs-meta-divider"></span>
@@ -73,200 +73,112 @@
     </section>
 
     <!-- ═══════════════════════════
-         EXPERIMENT 01
-         HUMAN-AI CO-CREATION
+         LIVE EXPERIMENTS GRID
     ═══════════════════════════ -->
-    <section class="labs-section">
+    <section class="labs-grid-section">
+
         <div class="labs-section-header">
-            <span class="labs-num">Experiment 01</span>
-            <h2 class="labs-h2">Human-AI Co-Creation</h2>
+            <span class="labs-num">Live Experiments</span>
+            <h2 class="labs-h2">Built, deployed, and open to explore</h2>
             <p class="labs-focus">
-                <strong>Research focus:</strong> Exploring how to maintain artistic authenticity
-                in the transition from analog media to generative tools.
+                Each experiment starts with a design question and ends with a working product.
+                These are shipped projects — not mockups.
             </p>
         </div>
 
-        <p class="labs-body">
-            My hand-drawn sketches serve as base inputs for generative AI systems.
-            The question isn't whether AI can enhance them — but whether the output
-            still carries the original human intent. Three experiments below pair
-            each analog source with its AI-augmented result.
-        </p>
+        <div class="labs-grid">
 
-        <!-- DRAWING 1 -->
-        <div class="labs-exp-pair">
-            <div class="labs-exp-item">
-                <div class="labs-exp-tag tag-input">Base Input — Analog</div>
-                <div class="labs-exp-image">
-                    <img src="images/labs-drawing-01.png" alt="Original hand drawing 1">
+            <!-- CARD 01 — MOOD VERSES -->
+            <article class="labs-card">
+                <div class="labs-card-img labs-card-img--poetry">
+                    <span class="labs-card-img-icon">🌙</span>
+                    <span class="labs-card-img-label">Experiment 01</span>
                 </div>
-                <p class="labs-exp-caption">Original hand drawing</p>
-            </div>
-            <div class="labs-exp-arrow">→</div>
-            <div class="labs-exp-item">
-                <div class="labs-exp-tag tag-output">AI Output — Digital</div>
-                <div class="labs-exp-image">
-                    <img src="images/labs-ai-01.png" alt="AI enhanced version 1">
+                <div class="labs-card-body">
+                    <span class="labs-card-exp">Experiment 01 — AI Poetry</span>
+                    <h3 class="labs-card-title">Mood Verses</h3>
+                    <p class="labs-card-desc">
+                        A poetry generator that responds to your emotional state, drawing from
+                        Rumi's Masnavi. Type how this moment feels — receive a verse that meets
+                        you there.
+                    </p>
+                    <div class="labs-card-tags">
+                        <span>Emotion-Aware AI</span>
+                        <span>Rumi</span>
+                        <span>Generative Poetry</span>
+                    </div>
+                    <a href="https://delara-mozdbar.github.io/labs/rumi-mood-verses/"
+                       class="labs-card-link"
+                       target="_blank"
+                       rel="noopener">
+                        View Project →
+                    </a>
                 </div>
-                <p class="labs-exp-caption">AI-enhanced version preserving composition</p>
-            </div>
-        </div>
+            </article>
 
-        <!-- DRAWING 2 -->
-        <div class="labs-exp-pair" style="margin-top: 50px;">
-            <div class="labs-exp-item">
-                <div class="labs-exp-tag tag-input">Base Input — Analog</div>
-                <div class="labs-exp-image">
-                    <img src="images/labs-drawing-02.png" alt="Original hand drawing 2">
+            <!-- CARD 02 — ACCESSIBILITY SIMULATOR -->
+            <article class="labs-card">
+                <div class="labs-card-img labs-card-img--a11y">
+                    <span class="labs-card-img-icon">👁</span>
+                    <span class="labs-card-img-label">Experiment 02</span>
                 </div>
-                <p class="labs-exp-caption">Original hand drawing</p>
-            </div>
-            <div class="labs-exp-arrow">→</div>
-            <div class="labs-exp-item">
-                <div class="labs-exp-tag tag-output">AI Output — Digital</div>
-                <div class="labs-exp-image">
-                    <img src="images/labs-ai-02.png" alt="AI enhanced version 2">
+                <div class="labs-card-body">
+                    <span class="labs-card-exp">Experiment 02 — Inclusive Design</span>
+                    <h3 class="labs-card-title">Accessibility Simulator</h3>
+                    <p class="labs-card-desc">
+                        Experience interfaces through four disability perspectives — low vision,
+                        color blindness, essential tremor, and ADHD — with an adjustable severity
+                        slider and side-by-side WCAG 1.4.3 comparisons.
+                    </p>
+                    <div class="labs-card-tags">
+                        <span>WCAG 1.4.3</span>
+                        <span>Inclusive Design</span>
+                        <span>Empathy Tool</span>
+                    </div>
+                    <a href="https://delara-mozdbar.github.io/labs/accessibility-simulator/"
+                       class="labs-card-link"
+                       target="_blank"
+                       rel="noopener">
+                        View Project →
+                    </a>
                 </div>
-                <p class="labs-exp-caption">AI-enhanced version preserving composition</p>
-            </div>
-        </div>
+            </article>
 
-        <!-- DRAWING 3 -->
-        <div class="labs-exp-pair" style="margin-top: 50px;">
-            <div class="labs-exp-item">
-                <div class="labs-exp-tag tag-input">Base Input — Analog</div>
-                <div class="labs-exp-image">
-                    <img src="images/labs-drawing-03.png" alt="Original hand drawing 3">
+            <!-- CARD 03 — EXHALE -->
+            <article class="labs-card">
+                <div class="labs-card-img labs-card-img--exhale">
+                    <span class="labs-card-img-icon">🌿</span>
+                    <span class="labs-card-img-label">Experiment 03</span>
                 </div>
-                <p class="labs-exp-caption">Original hand drawing</p>
-            </div>
-            <div class="labs-exp-arrow">→</div>
-            <div class="labs-exp-item">
-                <div class="labs-exp-tag tag-output">AI Output — Digital</div>
-                <div class="labs-exp-image">
-                    <img src="images/labs-ai-03.png" alt="AI enhanced version 3">
+                <div class="labs-card-body">
+                    <span class="labs-card-exp">Experiment 03 — Calm Technology</span>
+                    <h3 class="labs-card-title">Exhale</h3>
+                    <p class="labs-card-desc">
+                        A breathing-synchronized calm technology dashboard. Metrics and activity
+                        feeds that respond to your breath — designed to reduce cognitive load
+                        through somaesthetic interaction.
+                    </p>
+                    <div class="labs-card-tags">
+                        <span>Calm Technology</span>
+                        <span>Somaesthetic</span>
+                        <span>Dashboard UI</span>
+                    </div>
+                    <a href="https://delara-mozdbar.github.io/labs/exhale"
+                       class="labs-card-link"
+                       target="_blank"
+                       rel="noopener">
+                        View Project →
+                    </a>
                 </div>
-                <p class="labs-exp-caption">AI-enhanced version preserving composition</p>
-            </div>
-        </div>
+            </article>
 
-        <!-- ACCORDION — FULL DETAILS -->
-        <details class="labs-accordion">
-            <summary class="labs-accordion-toggle">
-                <span>Read full experiment details</span>
-                <span class="labs-accordion-icon">+</span>
-            </summary>
-            <div class="labs-accordion-content">
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">Hypothesis</span>
-                    <p>If the original composition, line weight, and color decisions are preserved as constraints, AI enhancement will amplify the artistic intent rather than replace it.</p>
-                </div>
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">Method</span>
-                    <p>Each hand drawing was photographed and used as a base input across multiple generative models. The same source image was tested with varied prompt structures — from minimal ("enhance this sketch") to constrained ("preserve line weight, composition, and color palette").</p>
-                </div>
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">Observations</span>
-                    <p>Minimal prompts produced technically impressive but generic results — the AI's style overwrote mine. Constrained prompts preserved authorship: the output felt like an evolution of my drawing, not a replacement. The tighter the constraints, the more the result honored the original intent.</p>
-                </div>
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">What's next</span>
-                    <p>Testing the same methodology with animation tools — can motion be added to analog drawings while preserving their hand-made character?</p>
-                </div>
-
-            </div>
-        </details>
-
-        <!-- KEY FINDING -->
-        <div class="labs-findings">
-            <span class="labs-findings-label">Key finding</span>
-            <p>Preserving line weight and composition from the analog source maintains authorship — the AI amplifies rather than replaces the artistic decision.</p>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════
-         EXPERIMENT 02
-         VIBE-CODING WITH AI
-    ═══════════════════════════ -->
-    <section class="labs-section labs-dark">
-        <div class="labs-section-header">
-            <span class="labs-num">Experiment 02</span>
-            <h2 class="labs-h2">Vibe-Coding: From Design Intent to Working Product</h2>
-            <p class="labs-focus">
-                <strong>Research focus:</strong> Investigating whether AI coding tools can translate
-                a designer's intent directly into functional interfaces — accelerating the
-                journey from concept to working prototype.
-            </p>
-        </div>
-
-        <p class="labs-body">
-            A planning and time-management web project built with HTML, CSS, and AI-assisted
-            development. Instead of handing off designs to engineers, I collaborated directly
-            with AI coding tools — testing how far design intent survives the translation
-            to functional code.
-        </p>
-
-        <!-- PROJECT PREVIEW -->
-        <div class="labs-exp-single">
-            <div class="labs-exp-tag tag-experiment">Live Project</div>
-            <div class="labs-exp-image labs-exp-wide">
-                <img src="images/labs-planner-preview.png" alt="Planning project preview">
-            </div>
-            <p class="labs-exp-caption">Time management & planning interface — designed and built with AI collaboration</p>
-        </div>
-
-        <!-- DEMO BUTTONS -->
-        <div class="labs-demo-actions">
-            <a href="#" class="cs-btn-primary" target="_blank" rel="noopener">View Live Demo →</a>
-            <a href="https://github.com/Delara-Mozdbar" class="cs-btn-secondary" target="_blank" rel="noopener">View Code</a>
-        </div>
-
-        <!-- ACCORDION — FULL DETAILS -->
-        <details class="labs-accordion">
-            <summary class="labs-accordion-toggle">
-                <span>Read full experiment details</span>
-                <span class="labs-accordion-icon">+</span>
-            </summary>
-            <div class="labs-accordion-content">
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">Hypothesis</span>
-                    <p>A designer with engineering fluency can direct AI coding tools to produce production-quality interfaces — without writing every line manually.</p>
-                </div>
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">Method</span>
-                    <p>Designed the planning interface concept first, then collaborated with AI coding tools (Claude, ChatGPT) through iterative prompts. Each iteration was reviewed against design intent: spacing, hierarchy, interaction states, and responsive behavior.</p>
-                </div>
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">Observations</span>
-                    <p>AI accelerated the build dramatically — but only because I could evaluate the code quality and correct the direction. Vague prompts produced generic layouts; specific design-language prompts ("8px spacing system, muted borders, single accent color") produced results faithful to intent. The bottleneck isn't the AI — it's the clarity of the design direction.</p>
-                </div>
-
-                <div class="labs-detail-row">
-                    <span class="labs-detail-label">What's next</span>
-                    <p>Expanding the project with data persistence and testing whether AI can maintain design-system consistency across a growing codebase.</p>
-                </div>
-
-            </div>
-        </details>
-
-        <!-- KEY FINDING -->
-        <div class="labs-findings">
-            <span class="labs-findings-label">Key finding</span>
-            <p>AI coding tools excel at translating clear design intent into working code — but the critical decisions remain fundamentally human. The designer who can direct AI fluently ships faster without sacrificing quality.</p>
         </div>
     </section>
 
     <!-- ═══════════════════════════
          METHODOLOGY
     ═══════════════════════════ -->
-    <section class="labs-section">
+    <section class="labs-section labs-dark">
         <div class="labs-method">
             <span class="labs-num">Methodology</span>
             <h2 class="labs-h2">How I document experiments</h2>
@@ -279,12 +191,12 @@
                 <div class="labs-method-step">
                     <span class="labs-method-num">02</span>
                     <h3>Controlled input</h3>
-                    <p>Consistent base materials — same sketch, same prompt structure, varied tools.</p>
+                    <p>Consistent base materials — same source, same structure, varied tools.</p>
                 </div>
                 <div class="labs-method-step">
                     <span class="labs-method-num">03</span>
                     <h3>Documented output</h3>
-                    <p>Results captured with process notes, not just final images.</p>
+                    <p>Results captured with process notes, not just final products.</p>
                 </div>
                 <div class="labs-method-step">
                     <span class="labs-method-num">04</span>

@@ -1252,17 +1252,145 @@ html {
 /* =========================
    AI LABS — RESPONSIVE
 ========================= */
+/* =========================
+   LABS PROJECT CARDS
+========================= */
+.labs-grid-section {
+  padding: 80px 0;
+}
+
+.labs-grid-section .labs-section-header {
+  margin-bottom: 48px;
+}
+
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.labs-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.labs-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 169, 110, 0.4);
+}
+
+.labs-card-img {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.labs-card-img--poetry {
+  background: linear-gradient(135deg, #221608 0%, #3d2b12 60%, #1a1009 100%);
+}
+
+.labs-card-img--a11y {
+  background: linear-gradient(135deg, #091422 0%, #0e2a3d 60%, #06111a 100%);
+}
+
+.labs-card-img--exhale {
+  background: linear-gradient(135deg, #081a14 0%, #0c3328 60%, #061510 100%);
+}
+
+.labs-card-img-icon {
+  font-size: 3.2rem;
+  opacity: 0.35;
+  user-select: none;
+}
+
+.labs-card-img-label {
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-sec);
+  opacity: 0.6;
+}
+
+.labs-card-body {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.labs-card-exp {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.labs-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.labs-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.75;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.labs-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.labs-card-tags span {
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(201, 169, 110, 0.1);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.labs-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  transition: gap 0.2s;
+}
+
+.labs-card-link:hover {
+  gap: 10px;
+}
+
 @media (max-width: 900px) {
   .labs-hero { padding: 60px 0 50px; }
 
-  .labs-exp-pair {
+  .labs-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .labs-exp-arrow {
-    transform: rotate(90deg);
-    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .labs-method-grid { grid-template-columns: 1fr 1fr; }
@@ -1274,8 +1402,7 @@ html {
 
 @media (max-width: 500px) {
   .labs-method-grid { grid-template-columns: 1fr; }
-  .labs-demo-actions { flex-direction: column; }
-  .labs-demo-actions a { text-align: center; }
+  .labs-grid { max-width: 100%; }
 }
 
 /* =========================
