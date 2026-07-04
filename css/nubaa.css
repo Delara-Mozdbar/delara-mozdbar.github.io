@@ -97,48 +97,6 @@
             margin-bottom: 36px;
         }
 
-        /* Role snapshot */
-        .nb-role-label {
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: rgba(59,130,232,0.6);
-            margin-bottom: 14px;
-        }
-
-        .nb-role-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 36px;
-        }
-
-        .nb-role-list li {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            font-size: 0.9rem;
-            line-height: 1.55;
-            color: var(--nb-muted);
-        }
-
-        .nb-role-num {
-            flex-shrink: 0;
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--nb-mid);
-            min-width: 18px;
-            margin-top: 3px;
-        }
-
-        .nb-role-list li strong {
-            color: var(--nb-text);
-            font-weight: 600;
-        }
-
         /* 2×2 project facts grid */
         .nb-meta {
             display: grid;
@@ -208,77 +166,6 @@
             height: 100%;
             object-fit: cover;
             display: block;
-        }
-
-        /* Placeholder state (no image yet) */
-        .nb-visual-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 32px;
-            text-align: center;
-        }
-
-        .nb-visual-placeholder svg {
-            color: var(--nb-mid);
-            opacity: 0.25;
-        }
-
-        .nb-visual-placeholder span {
-            font-size: 0.68rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: rgba(59,130,232,0.3);
-        }
-
-        /* ── Outcome highlights — full-width row below columns ── */
-        .nb-outcomes {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin-top: 40px;
-            padding-top: 36px;
-            border-top: 1px solid var(--nb-border);
-        }
-
-        .nb-outcome-card {
-            background: var(--nb-surface);
-            border: 1px solid var(--nb-border);
-            border-radius: 14px;
-            padding: 22px 20px;
-            position: relative;
-        }
-
-        .nb-outcome-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 3px;
-            border-radius: 14px 14px 0 0;
-            background: var(--nb-royal);
-        }
-
-        .nb-outcome-num {
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--nb-mid);
-            margin-bottom: 10px;
-            opacity: 0.7;
-        }
-
-        .nb-outcome-text {
-            font-size: 0.88rem;
-            line-height: 1.65;
-            color: var(--nb-muted);
-        }
-
-        .nb-outcome-text strong {
-            color: var(--nb-text);
-            font-weight: 600;
         }
 
         /* ── Scroll hint ── */
@@ -991,27 +878,6 @@
             color: #3B82E8;
         }
 
-        /* — Role snapshot — */
-        .nubaa-case-study .nb-role-label {
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #3B82E8;
-            opacity: 1;
-        }
-
-        .nubaa-case-study .nb-role-list li {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #A0A8B8;
-        }
-
-        .nubaa-case-study .nb-role-list li strong {
-            font-weight: 500;
-            color: #e2e0dd;
-        }
-
         /* — Meta grid — */
         .nubaa-case-study .nb-meta-label {
             font-size: 11px;
@@ -1025,28 +891,6 @@
             font-size: 15px;
             font-weight: 400;
             color: #A0A8B8;
-        }
-
-        /* — Outcome cards — */
-        .nubaa-case-study .nb-outcome-num {
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #3B82E8;
-            opacity: 1;
-        }
-
-        .nubaa-case-study .nb-outcome-text {
-            font-size: 15px;
-            font-weight: 400;
-            line-height: 1.7;
-            color: #A0A8B8;
-        }
-
-        .nubaa-case-study .nb-outcome-text strong {
-            font-weight: 500;
-            color: #e2e0dd;
         }
 
         /* — Constraint cards — */
@@ -1144,18 +988,6 @@
         .nubaa-case-study .nb-decision-visual:hover {
             background: rgba(59,130,232,0.06);
             border-color: #3B82E8;
-        }
-
-        .nubaa-case-study .nb-visual-label {
-            font-size: 13px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.3);
-        }
-
-        .nubaa-case-study .nb-visual-sublabel {
-            font-size: 11px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.2);
         }
 
         /* — Research section — */
@@ -1297,16 +1129,14 @@
         /* — Cards: hover treatment — */
         .nubaa-case-study .nb-constraint-card,
         .nubaa-case-study .nb-model-card,
-        .nubaa-case-study .nb-ia-card,
-        .nubaa-case-study .nb-outcome-card {
+        .nubaa-case-study .nb-ia-card {
             border-radius: 12px;
             transition: border-color 200ms ease, background 200ms ease;
         }
 
         .nubaa-case-study .nb-constraint-card:hover,
         .nubaa-case-study .nb-model-card:hover,
-        .nubaa-case-study .nb-ia-card:hover,
-        .nubaa-case-study .nb-outcome-card:hover {
+        .nubaa-case-study .nb-ia-card:hover {
             border-color: rgba(59,130,232,0.3);
             background: rgba(59,130,232,0.04);
         }
@@ -1407,21 +1237,6 @@
             margin-bottom: 24px;
         }
 
-        .nb-screen-callout {
-            border-left: 2px solid #3B82E8;
-            padding-left: 14px;
-            max-width: 400px;
-        }
-
-        .nb-screen-callout p {
-            font-size: 14px;
-            font-weight: 400;
-            color: #A0A8B8;
-            line-height: 1.65;
-            margin: 0;
-            max-width: none;
-        }
-
         /* Screen placeholder */
         .nb-screen-placeholder {
             background: rgba(255,255,255,0.04);
@@ -1467,123 +1282,6 @@
         .nb-screen-placeholder.mobile  { aspect-ratio: 9 / 19.5; }
         .nb-screen-placeholder.desktop { aspect-ratio: 16 / 10; }
 
-        .nb-screen-placeholder .nb-visual-icon {
-            color: rgba(255,255,255,0.2);
-            margin-bottom: 4px;
-        }
-
-        .nb-screen-placeholder .nb-visual-label {
-            font-size: 14px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.3);
-            text-align: center;
-        }
-
-        .nb-screen-placeholder .nb-visual-sublabel {
-            font-size: 12px;
-            font-weight: 400;
-            color: rgba(255,255,255,0.2);
-            text-align: center;
-        }
-
-        .nb-screen-caption {
-            font-size: 13px;
-            font-weight: 400;
-            color: #7A8499;
-            margin-top: 12px;
-            letter-spacing: 0.01em;
-        }
-
-        /* Design system strip */
-        .nb-ds-strip {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-top: 0.5px solid rgba(255,255,255,0.08);
-            border-bottom: 0.5px solid rgba(255,255,255,0.08);
-            padding: 40px 0;
-            margin-top: 80px;
-        }
-
-        .nb-ds-col {
-            padding: 0 32px;
-            border-right: 0.5px solid rgba(255,255,255,0.08);
-        }
-
-        .nb-ds-col:first-child { padding-left: 0; }
-        .nb-ds-col:last-child  { border-right: none; padding-right: 0; }
-
-        .nb-ds-title {
-            font-size: 14px;
-            font-weight: 500;
-            color: #e2e0dd;
-            margin-bottom: 20px;
-        }
-
-        .nb-ds-note {
-            font-size: 12px;
-            font-weight: 400;
-            color: #7A8499;
-            margin-top: 14px;
-        }
-
-        .nb-swatch-row {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .nb-swatch {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            border: 0.5px solid rgba(255,255,255,0.12);
-            flex-shrink: 0;
-        }
-
-        .nb-type-demo {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .nb-status-pills {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .nb-status-pill {
-            display: inline-flex;
-            align-items: center;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 400;
-            width: fit-content;
-            border: 0.5px solid;
-        }
-
-        .nb-platform-chips {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .nb-platform-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 0.5px solid rgba(255,255,255,0.12);
-            font-size: 13px;
-            font-weight: 400;
-            color: #A0A8B8;
-            width: fit-content;
-        }
-
-        .nb-platform-chip svg { color: #3B82E8; flex-shrink: 0; }
-
         /* Section 05 responsive */
         @media (max-width: 900px) {
             .nb-screen,
@@ -1602,11 +1300,6 @@
         @media (max-width: 640px) {
             .nb-solution { padding: 64px 5%; }
             .nb-screen    { margin-bottom: 64px; }
-            .nb-ds-strip  { grid-template-columns: 1fr 1fr; }
-            .nb-ds-col    { padding: 20px 16px; border-right: none; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
-            .nb-ds-col:first-child { padding-left: 0; }
-            .nb-ds-col:nth-child(odd) { border-right: 0.5px solid rgba(255,255,255,0.08); }
-            .nb-ds-col:nth-last-child(-n+2) { border-bottom: none; }
         }
 
         /* ══════════════════════════════════════
@@ -1748,54 +1441,10 @@
             line-height: 1.7;
         }
 
-        /* ══════════════════════════════════════
-           NEXT CASE STUDY TEASER
-        ══════════════════════════════════════ */
-        .nb-next-case {
-            border-top: 0.5px solid rgba(255,255,255,0.08);
-            padding: 64px 8%;
-        }
-        .nb-next-case-inner {
-            max-width: 1440px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 32px;
-        }
-        .nb-next-label {
-            font-size: 11px;
-            font-weight: 500;
-            color: #3B82E8;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 8px;
-        }
-        .nb-next-text {
-            font-size: 24px;
-            font-weight: 500;
-            color: #e2e0dd;
-            line-height: 1.2;
-        }
-        .nb-next-arrow {
-            font-size: 24px;
-            color: #e2e0dd;
-            text-decoration: none;
-            display: inline-block;
-            transition: color 200ms ease, transform 200ms ease;
-            flex-shrink: 0;
-        }
-        .nb-next-arrow:hover { color: #3B82E8; transform: translateX(4px); }
-
         @media (max-width: 900px) {
             .nb-metric-grid { grid-template-columns: 1fr; gap: 12px; }
             .nb-outcome-cols { grid-template-columns: 1fr; gap: 24px; }
             .nb-outcomes { padding: 64px 5% 56px; }
             .nb-reflection { padding: 64px 5% 80px; }
-            .nb-next-case { padding: 48px 5%; }
-        }
-        @media (max-width: 640px) {
-            .nb-next-case-inner { flex-direction: column; align-items: flex-start; }
-            .nb-next-arrow { align-self: flex-start; }
         }
 

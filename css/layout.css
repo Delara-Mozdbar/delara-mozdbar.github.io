@@ -114,53 +114,6 @@ nav {
 }
 
 /* =========================
-   DROPDOWN
-========================= */
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--card-bg);
-  min-width: 220px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 10px 0;
-}
-
-.dropdown-content a {
-  padding: 12px 20px;
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-sec);
-}
-
-.dropdown-content a:hover {
-  color: var(--accent);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-@media (min-width: 901px) {
-  .dropdown:hover .dropdown-content {
-    display: block;
-    animation: navFade 0.25s ease;
-  }
-}
-
-@keyframes navFade {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* =========================
    FOOTER
 ========================= */
 footer {

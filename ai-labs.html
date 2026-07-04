@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/layout.css">
 </head>
-
 <body>
+
 <header>
   <nav>
     <div class="nav-container">
@@ -48,7 +48,9 @@
 
 <main class="labs-page">
 
-    <!-- HERO STATEMENT -->
+    <!-- ═══════════════════════════
+         HERO STATEMENT
+    ═══════════════════════════ -->
     <section class="labs-hero">
         <div class="labs-badge">
             <span class="labs-badge-dot"></span>
@@ -70,7 +72,10 @@
         </div>
     </section>
 
-    <!-- PART 1: HUMAN-AI CO-CREATION -->
+    <!-- ═══════════════════════════
+         EXPERIMENT 01
+         HUMAN-AI CO-CREATION
+    ═══════════════════════════ -->
     <section class="labs-section">
         <div class="labs-section-header">
             <span class="labs-num">Experiment 01</span>
@@ -82,74 +87,185 @@
         </div>
 
         <p class="labs-body">
-            My hand-drawn sketches — colored pencil, ink, analog textures — serve as base inputs
-            for generative AI systems. The question isn't whether AI can enhance them, but whether
-            the output still carries the original human intent. Each experiment below pairs the
-            analog source with its AI-augmented result.
+            My hand-drawn sketches serve as base inputs for generative AI systems.
+            The question isn't whether AI can enhance them — but whether the output
+            still carries the original human intent. Three experiments below pair
+            each analog source with its AI-augmented result.
         </p>
 
-        <!-- BEFORE/AFTER EXPERIMENT GRID -->
-        <div class="labs-experiment">
-            <div class="labs-exp-pair">
-                <div class="labs-exp-item">
-                    <div class="labs-exp-tag tag-input">Base Input — Analog</div>
-                    <div class="labs-exp-image">
-                        <img src="images/labs-sketch-01.png" alt="Hand-drawn sketch">
-                    </div>
-                    <p class="labs-exp-caption">Original colored pencil sketch</p>
+        <!-- DRAWING 1 -->
+        <div class="labs-exp-pair">
+            <div class="labs-exp-item">
+                <div class="labs-exp-tag tag-input">Base Input — Analog</div>
+                <div class="labs-exp-image">
+                    <img src="images/labs-drawing-01.png" alt="Original hand drawing 1">
                 </div>
-                <div class="labs-exp-arrow">→</div>
-                <div class="labs-exp-item">
-                    <div class="labs-exp-tag tag-output">AI Output — Digital</div>
-                    <div class="labs-exp-image">
-                        <img src="images/labs-result-01.png" alt="AI enhanced result">
-                    </div>
-                    <p class="labs-exp-caption">Generative enhancement preserving original composition</p>
-                </div>
+                <p class="labs-exp-caption">Original hand drawing</p>
             </div>
+            <div class="labs-exp-arrow">→</div>
+            <div class="labs-exp-item">
+                <div class="labs-exp-tag tag-output">AI Output — Digital</div>
+                <div class="labs-exp-image">
+                    <img src="images/labs-ai-01.png" alt="AI enhanced version 1">
+                </div>
+                <p class="labs-exp-caption">AI-enhanced version preserving composition</p>
+            </div>
+        </div>
 
-            <div class="labs-findings">
-                <span class="labs-findings-label">Key finding</span>
-                <p>Preserving line weight and composition from the analog source maintains authorship — the AI amplifies rather than replaces the artistic decision.</p>
+        <!-- DRAWING 2 -->
+        <div class="labs-exp-pair" style="margin-top: 50px;">
+            <div class="labs-exp-item">
+                <div class="labs-exp-tag tag-input">Base Input — Analog</div>
+                <div class="labs-exp-image">
+                    <img src="images/labs-drawing-02.png" alt="Original hand drawing 2">
+                </div>
+                <p class="labs-exp-caption">Original hand drawing</p>
             </div>
+            <div class="labs-exp-arrow">→</div>
+            <div class="labs-exp-item">
+                <div class="labs-exp-tag tag-output">AI Output — Digital</div>
+                <div class="labs-exp-image">
+                    <img src="images/labs-ai-02.png" alt="AI enhanced version 2">
+                </div>
+                <p class="labs-exp-caption">AI-enhanced version preserving composition</p>
+            </div>
+        </div>
+
+        <!-- DRAWING 3 -->
+        <div class="labs-exp-pair" style="margin-top: 50px;">
+            <div class="labs-exp-item">
+                <div class="labs-exp-tag tag-input">Base Input — Analog</div>
+                <div class="labs-exp-image">
+                    <img src="images/labs-drawing-03.png" alt="Original hand drawing 3">
+                </div>
+                <p class="labs-exp-caption">Original hand drawing</p>
+            </div>
+            <div class="labs-exp-arrow">→</div>
+            <div class="labs-exp-item">
+                <div class="labs-exp-tag tag-output">AI Output — Digital</div>
+                <div class="labs-exp-image">
+                    <img src="images/labs-ai-03.png" alt="AI enhanced version 3">
+                </div>
+                <p class="labs-exp-caption">AI-enhanced version preserving composition</p>
+            </div>
+        </div>
+
+        <!-- ACCORDION — FULL DETAILS -->
+        <details class="labs-accordion">
+            <summary class="labs-accordion-toggle">
+                <span>Read full experiment details</span>
+                <span class="labs-accordion-icon">+</span>
+            </summary>
+            <div class="labs-accordion-content">
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">Hypothesis</span>
+                    <p>If the original composition, line weight, and color decisions are preserved as constraints, AI enhancement will amplify the artistic intent rather than replace it.</p>
+                </div>
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">Method</span>
+                    <p>Each hand drawing was photographed and used as a base input across multiple generative models. The same source image was tested with varied prompt structures — from minimal ("enhance this sketch") to constrained ("preserve line weight, composition, and color palette").</p>
+                </div>
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">Observations</span>
+                    <p>Minimal prompts produced technically impressive but generic results — the AI's style overwrote mine. Constrained prompts preserved authorship: the output felt like an evolution of my drawing, not a replacement. The tighter the constraints, the more the result honored the original intent.</p>
+                </div>
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">What's next</span>
+                    <p>Testing the same methodology with animation tools — can motion be added to analog drawings while preserving their hand-made character?</p>
+                </div>
+
+            </div>
+        </details>
+
+        <!-- KEY FINDING -->
+        <div class="labs-findings">
+            <span class="labs-findings-label">Key finding</span>
+            <p>Preserving line weight and composition from the analog source maintains authorship — the AI amplifies rather than replaces the artistic decision.</p>
         </div>
     </section>
 
-    <!-- PART 2: INTERFACE & UX EXPERIMENTS -->
+    <!-- ═══════════════════════════
+         EXPERIMENT 02
+         VIBE-CODING WITH AI
+    ═══════════════════════════ -->
     <section class="labs-section labs-dark">
         <div class="labs-section-header">
             <span class="labs-num">Experiment 02</span>
-            <h2 class="labs-h2">Interface & UX Experiments</h2>
+            <h2 class="labs-h2">Vibe-Coding: From Design Intent to Working Product</h2>
             <p class="labs-focus">
-                <strong>Research focus:</strong> Investigating the role of artificial intelligence
-                in optimizing and accelerating the product ideation process (Rapid Prototyping).
+                <strong>Research focus:</strong> Investigating whether AI coding tools can translate
+                a designer's intent directly into functional interfaces — accelerating the
+                journey from concept to working prototype.
             </p>
         </div>
 
         <p class="labs-body">
-            Testing how generative tools — from image models to AI coding assistants — compress
-            the distance between concept and prototype. These experiments measure not just speed,
-            but quality: does AI-accelerated ideation produce better design decisions, or just
-            faster ones?
+            A planning and time-management web project built with HTML, CSS, and AI-assisted
+            development. Instead of handing off designs to engineers, I collaborated directly
+            with AI coding tools — testing how far design intent survives the translation
+            to functional code.
         </p>
 
-        <div class="labs-experiment">
-            <div class="labs-exp-single">
-                <div class="labs-exp-tag tag-experiment">UI Concept Testing</div>
-                <div class="labs-exp-image labs-exp-wide">
-                    <img src="images/labs-ui-01.png" alt="AI-assisted UI experiment">
-                </div>
-                <p class="labs-exp-caption">Design system components generated and refined through AI-assisted workflows</p>
+        <!-- PROJECT PREVIEW -->
+        <div class="labs-exp-single">
+            <div class="labs-exp-tag tag-experiment">Live Project</div>
+            <div class="labs-exp-image labs-exp-wide">
+                <img src="images/labs-planner-preview.png" alt="Planning project preview">
             </div>
+            <p class="labs-exp-caption">Time management & planning interface — designed and built with AI collaboration</p>
+        </div>
 
-            <div class="labs-findings">
-                <span class="labs-findings-label">Key finding</span>
-                <p>AI tools excel at generating variations, but the critical design judgment — hierarchy, accessibility, brand fit — remains fundamentally human. The optimal workflow is AI-generated breadth with human-curated depth.</p>
+        <!-- DEMO BUTTONS -->
+        <div class="labs-demo-actions">
+            <a href="#" class="cs-btn-primary" target="_blank" rel="noopener">View Live Demo →</a>
+            <a href="https://github.com/Delara-Mozdbar" class="cs-btn-secondary" target="_blank" rel="noopener">View Code</a>
+        </div>
+
+        <!-- ACCORDION — FULL DETAILS -->
+        <details class="labs-accordion">
+            <summary class="labs-accordion-toggle">
+                <span>Read full experiment details</span>
+                <span class="labs-accordion-icon">+</span>
+            </summary>
+            <div class="labs-accordion-content">
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">Hypothesis</span>
+                    <p>A designer with engineering fluency can direct AI coding tools to produce production-quality interfaces — without writing every line manually.</p>
+                </div>
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">Method</span>
+                    <p>Designed the planning interface concept first, then collaborated with AI coding tools (Claude, ChatGPT) through iterative prompts. Each iteration was reviewed against design intent: spacing, hierarchy, interaction states, and responsive behavior.</p>
+                </div>
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">Observations</span>
+                    <p>AI accelerated the build dramatically — but only because I could evaluate the code quality and correct the direction. Vague prompts produced generic layouts; specific design-language prompts ("8px spacing system, muted borders, single accent color") produced results faithful to intent. The bottleneck isn't the AI — it's the clarity of the design direction.</p>
+                </div>
+
+                <div class="labs-detail-row">
+                    <span class="labs-detail-label">What's next</span>
+                    <p>Expanding the project with data persistence and testing whether AI can maintain design-system consistency across a growing codebase.</p>
+                </div>
+
             </div>
+        </details>
+
+        <!-- KEY FINDING -->
+        <div class="labs-findings">
+            <span class="labs-findings-label">Key finding</span>
+            <p>AI coding tools excel at translating clear design intent into working code — but the critical decisions remain fundamentally human. The designer who can direct AI fluently ships faster without sacrificing quality.</p>
         </div>
     </section>
 
-    <!-- METHODOLOGY NOTE -->
+    <!-- ═══════════════════════════
+         METHODOLOGY
+    ═══════════════════════════ -->
     <section class="labs-section">
         <div class="labs-method">
             <span class="labs-num">Methodology</span>
