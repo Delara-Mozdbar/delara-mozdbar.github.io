@@ -16,19 +16,11 @@
 <header>
   <nav>
     <div class="nav-container">
-
-      <!-- Logo -->
       <div class="logo">
-        <a href="index.html">
-          <img src="images/Logo.png" alt="Delara Mozdbar">
-        </a>
+        <a href="index.html"><img src="images/Logo.png" alt="Delara Mozdbar"></a>
       </div>
-
-      <!-- Hamburger -->
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="hamburger">&#x2630;</label>
-
-      <!-- Menu -->
       <div class="nav-center menu">
         <a href="index.html" class="nav-link">Home</a>
         <a href="work.html" class="nav-link">Work</a>
@@ -36,93 +28,139 @@
         <a href="ai-labs.html" class="nav-link">AI Labs</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </div>
-
-      <!-- Resume Button -->
       <div class="nav-right">
         <a href="Delara Mozdbar - Resume - Product Designer (UI_UX) - 2026.pdf" class="resume-btn" download>My Resume</a>
       </div>
-
     </div>
   </nav>
 </header>
 
 <main class="about-page">
 
-    <!-- 01 HERO -->
+    <!-- ═══════════════════════════
+         01 HERO
+    ═══════════════════════════ -->
     <section class="about-hero">
         <div class="about-hero-photo">
             <img src="images/Hero-Imge.png" alt="Delara Mozdbar">
         </div>
         <div class="about-hero-content">
             <p class="about-label">About me</p>
-            <h1 class="about-title">I've spent 10 years at the intersection of code and canvas — and I still get excited by a good idea.</h1>
-            <p class="about-intro">I'm Delara, a Senior Product Designer based in Iran, open to global opportunities. My path wasn't linear — and that's exactly what makes my design perspective different.</p>
+            <h1 class="about-title">I've spent 10+ years at the intersection of code and canvas — and I still get excited by a good idea.</h1>
+            <p class="about-intro">I'm Delara, a Senior Product Designer based in Iran, open to global opportunities. My path started with analog art, evolved through frontend code, UX research, and international product teams — and that full-stack perspective shapes every design decision I make.</p>
         </div>
     </section>
 
-    <!-- 02 TIMELINE -->
+    <!-- ═══════════════════════════
+         02 TIMELINE
+    ═══════════════════════════ -->
     <section class="about-section-block">
         <p class="about-label">The journey</p>
         <h2 class="about-h2">From code to canvas</h2>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <span class="timeline-year">2015</span>
-                <div class="timeline-dot active"></div>
-                <div class="timeline-content">
-                    <h3>Started as a Frontend Web Developer</h3>
-                    <p>My first years in IT — coding responsive interfaces with HTML, CSS, and Bootstrap. This technical foundation still powers every design decision I make today.</p>
-                </div>
+        <p class="about-body">
+            I grew up surrounded by art. My mother was always creating artwork, so I constantly
+            witnessed different forms of art at home. An artistic spirit has always lived within
+            me — and it eventually found its way into technology.
+        </p>
+
+        <!-- HORIZONTAL TIMELINE CAROUSEL -->
+        <div class="tl-carousel">
+
+            <!-- TIMELINE NAV -->
+            <div class="tl-nav">
+                <button class="tl-node active" data-era="0"><span class="tl-node-year">1993–2002</span><span class="tl-node-dot"></span></button>
+                <span class="tl-connector"></span>
+                <button class="tl-node" data-era="1"><span class="tl-node-year">2003–2011</span><span class="tl-node-dot"></span></button>
+                <span class="tl-connector"></span>
+                <button class="tl-node" data-era="2"><span class="tl-node-year">2012–2017</span><span class="tl-node-dot"></span></button>
+                <span class="tl-connector"></span>
+                <button class="tl-node" data-era="3"><span class="tl-node-year">2018–2020</span><span class="tl-node-dot"></span></button>
+                <span class="tl-connector"></span>
+                <button class="tl-node" data-era="4"><span class="tl-node-year">2021–2023</span><span class="tl-node-dot"></span></button>
+                <span class="tl-connector"></span>
+                <button class="tl-node" data-era="5"><span class="tl-node-year">2024–2026</span><span class="tl-node-dot"></span></button>
             </div>
 
-            <div class="timeline-item">
-                <span class="timeline-year">2016</span>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Falling in love with ideas — IdeaBaran</h3>
-                    <p>For six months, I curated and published creative ideas at IdeaBaran — startup innovations, product concepts, and creative advertising from around the world. Long before I was a designer, I was a collector of ideas.</p>
+            <!-- CONTENT STAGE -->
+            <div class="tl-stage">
+                <button class="tl-arrow tl-arrow-prev" aria-label="Previous era">←</button>
+
+                <div class="tl-panels">
+
+                    <div class="tl-panel active">
+                        <div class="tl-panel-text">
+                            <h3>Early years — Discovering the world</h3>
+                            <p>I was born in Ahvaz, Iran, into a home filled with my mother's art — the smell of glue, vibrant beads, crafting tools everywhere. I was too young to create; I was busy discovering. At six, life took our family to Qatar, where I attended my first year of school — new language, new faces, new world. A year and a half later, we returned to Iran, and I finished first grade in Tehran before coming home to Ahvaz.</p>
+                        </div>
+                        <div class="tl-panel-image">
+                            <img src="images/1993–2011.png" alt="Childhood — Ahvaz and Qatar">
+                        </div>
+                    </div>
+
+                    <div class="tl-panel">
+                        <div class="tl-panel-text">
+                            <h3>Learning through media & logic</h3>
+<p>I learned to draw and paint from my mother, my first teacher. Around the same time, satellite TV — especially German channels like Super RTL — sparked a fascination with structure, strategy, and problem-solving, even in a language I didn't yet understand. Off-screen, I spent hours with puzzles like Mastermind and tactical games, unknowingly training my mind in logic and geometry. This dual love for art and systems naturally led me to prepare for university entrance exams in both Mathematical Sciences and Art.</p>
+                        </div>
+                        <div class="tl-panel-image">
+                            <img src="images/2003-2011.png" alt="Learning through media">
+                        </div>
+                    </div>
+
+                    <div class="tl-panel">
+                        <div class="tl-panel-text">
+                            <h3>The Front-end era begins</h3>
+                            <p>My professional journey began in 2015 with an Advanced Web Design certification in HTML and CSS. Over the next three years, I took on a mix of freelance and studio work — including about two years managing and designing the Dual Engineers Studio website, running my own portfolio site, and spending six months curating startup content for IdeaBaran. I also volunteered as a Front-end Developer at the Ferdowsi University of Mashhad's startup marathon in 2016. This period shaped me into the digital generalist I am today — part designer, part storyteller, always curious.</p>
+                        </div>
+                        <div class="tl-panel-image">
+                            <img src="images/2012-2017.png" alt="Frontend developer era">
+                        </div>
+                    </div>
+
+                    <div class="tl-panel">
+                        <div class="tl-panel-text">
+                            <h3>From code to UX</h3>
+                            <p>At Arsalweb (2018–2020) I evolved from Frontend Developer to Digital Marketer to UX Designer — creating user flows, wireframes, and prototypes for B2B, B2C, and C2C projects, including a Ramadan food-ordering campaign that broke user engagement records. I graduated from Shiraz University in February 2019, freelanced as a UI/UX Designer on Ponisha, designed at 9 Sobh Studio, and in September 2020 joined Apsaaz as a User Experience Designer.</p>
+                        </div>
+                        <div class="tl-panel-image">
+                            <img src="images/2018–2020.png" alt="Transition to UX design">
+                        </div>
+                    </div>
+
+                    <div class="tl-panel">
+                        <div class="tl-panel-text">
+                            <h3>Design leadership &amp; going global</h3>
+                            <p>I continued at Apsaaz until February 2022 — leading UX initiatives, hiring and training junior designers, and learning that great design is also about great collaboration. In May 2022 I went international, joining Engenesis in Sydney: designing end-to-end UX/UI flows and building reusable component systems with developers across time zones, through March 2024.</p>
+                        </div>
+                        <div class="tl-panel-image">
+                            <img src="images/2021–2023.png" alt="Design leadership and Engenesis">
+                        </div>
+                    </div>
+
+                    <div class="tl-panel">
+                        <div class="tl-panel-text">
+                            <h3>Triply, AI Labs &amp; what's next</h3>
+                            <p>From May 2024 to February 2026 I designed for Triply in Nairobi — revamping interfaces, building design systems, and shipping product features for an Africa-focused travel platform. Alongside, I explored Human-AI Co-Creation research in AI Labs. Now I'm planning my next chapter — actively looking for my next senior product design role or graduate research in HCI.</p>
+                        </div>
+                        <div class="tl-panel-image">
+                            <img src="images/2024–2026.png" alt="Triply and AI Labs">
+                        </div>
+                    </div>
+
                 </div>
+
+                <button class="tl-arrow tl-arrow-next" aria-label="Next era">→</button>
             </div>
 
-            <div class="timeline-item">
-                <span class="timeline-year">2018</span>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>The transition to UX Design</h3>
-                    <p>Joined Arsalweb as a UX Designer — creating user flows, wireframes, and prototypes for B2B, B2C, and C2C products in a fast-moving startup environment.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <span class="timeline-year">2020</span>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Growing as a design leader</h3>
-                    <p>At Apsaaz and 9am Studio, I led UX initiatives, trained junior designers, and streamlined design processes — learning that great design is also about great collaboration.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <span class="timeline-year">2022</span>
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Going international — Engenesis, Australia</h3>
-                    <p>Designed end-to-end UX/UI flows for a Sydney-based platform, building reusable component systems and collaborating with developers across time zones.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <span class="timeline-year">2024</span>
-                <div class="timeline-dot active"></div>
-                <div class="timeline-content">
-                    <h3>Triply, Africa + AI Labs</h3>
-                    <p>Currently designing for Triply in Nairobi while researching Human-AI Co-Creation — exploring how generative workflows can transform the design process itself.</p>
-                </div>
-            </div>
         </div>
+
+
     </section>
 
-    <!-- 03 STRENGTHS -->
+    <!-- ═══════════════════════════
+         03 STRENGTHS
+    ═══════════════════════════ -->
     <section class="about-section-block about-dark">
         <p class="about-label">What I bring</p>
         <h2 class="about-h2">An engineering mindset in a designer's hands</h2>
@@ -144,43 +182,178 @@
         </div>
     </section>
 
-    <!-- 04 TESTIMONIALS -->
+    <!-- ═══════════════════════════
+         04 TESTIMONIALS
+    ═══════════════════════════ -->
     <section class="about-section-block">
         <p class="about-label">Social proof</p>
         <h2 class="about-h2">What others say</h2>
 
-        <div class="testimonials-grid">
-            <blockquote class="testimonial">
-                <p class="quote">"Delara brought clarity to our complex product and significantly improved the user experience."</p>
-                <div class="author">
-                    <span class="name">Sarah Johnson</span>
-                    <span class="role">Product Manager, Fintech Company</span>
+        <div class="ts-carousel">
+
+            <!-- MAIN STAGE -->
+            <div class="ts-main">
+                <div class="ts-featured">
+                    <!-- Filled by JS -->
                 </div>
-            </blockquote>
+                <div class="ts-arrows">
+                    <button class="ts-arrow ts-prev" aria-label="Previous">←</button>
+                    <button class="ts-arrow ts-next" aria-label="Next">→</button>
+                </div>
+            </div>
+
+            <!-- SIDEBAR LIST -->
+            <div class="ts-list">
+                <!-- Filled by JS -->
+            </div>
+
         </div>
+
+        <p style="margin-top: 24px;">
+            <a href="https://www.linkedin.com/in/delara-mozdbar/details/recommendations/" target="_blank" rel="noopener" class="case-study-link">Verify all recommendations on LinkedIn →</a>
+        </p>
+
+        <script>
+        const testimonials = [
+          {
+            name: "Odette Abrenica",
+            role: "Lead Product Designer at Engenesis Ventures",
+            initials: "OA",
+            quote: "I highly recommend Delara as a UX UI Designer. She has consistently demonstrated her adaptability to the fast-paced nature of our work and her responsiveness to changing requirements. One of Delara's most commendable traits is her unwavering accountability, both to herself and the team."
+          },
+          {
+            name: "Ersa Khorsandi",
+            role: "UI/UX Designer — reported directly to Delara",
+            initials: "EK",
+            quote: "I worked directly under Delara's management. She was actually the person who hired me. Her compassion is like no other person I have seen. She would take time out of her busy schedule to meet with everyone one on one. I have learned a great deal from Delara and not just about work. Anyone working with her is truly lucky!"
+          },
+          {
+            name: "Tooraj Helmi",
+            role: "Tech Exec | PhD | YC & Techstars Alum",
+            initials: "TH",
+            quote: "Delara is a highly responsible and organized person. She takes her job seriously. If that requires working 24 hours a day, she works 24 hours a day, no kidding. She works hard and produces super high-quality outcomes. Having Delara in any team would be a blessing."
+          },
+          {
+            name: "Erfan Tehranifar",
+            role: "Senior Product Designer — reported to Delara",
+            initials: "ET",
+            quote: "Delara is a great example of perseverance & determination at doing work. She follows the tasks to the last step until she is completely sure they are fully delivered. Delara makes you want to learn more. She is also accurate in timing and managing the team on the road to all goals!"
+          },
+          {
+            name: "Nazanin Parivar",
+            role: "Product Designer & AI Enthusiast | Women in Tech Advocate",
+            initials: "NP",
+            quote: "I have worked with Delara on many projects. She is an awesome designer who pays attention to details. She is also a great team player. One of the great things about Delara is she is very organized. Thanks for all your hard work."
+          },
+          {
+            name: "Sadeq Shajari",
+            role: "Dotnet Developer",
+            initials: "SS",
+            quote: "Delara is a professional and patient UI/UX designer that if she is present in any company, could help them to have an advantage of the best user experience and clean designs. I recommend her persistently."
+          },
+          {
+            name: "Ardalan Mirshani",
+            role: "Data & AI Product | MyLens.ai — managed Delara directly",
+            initials: "AM",
+            quote: "Delara's ability to handle multiple projects and manage the time was great. She has a great knowledge of design and open to new ideas. She believed team-working and can work hard in an agile system. No matter how tense a meeting, Delara was productive and energetic. As a team member or leader, I highly recommend Delara."
+          }
+        ];
+
+        (function () {
+          const featured = document.querySelector('.ts-featured');
+          const list     = document.querySelector('.ts-list');
+          const prevBtn  = document.querySelector('.ts-prev');
+          const nextBtn  = document.querySelector('.ts-next');
+          let current = 0;
+
+          function renderFeatured(i) {
+            const t = testimonials[i];
+            featured.innerHTML = `
+              <div class="ts-featured-header">
+                <span class="ts-avatar">${t.initials}</span>
+                <div>
+                  <span class="ts-name">${t.name}</span>
+                  <span class="ts-role">${t.role}</span>
+                </div>
+              </div>
+              <p class="ts-quote">"${t.quote}"</p>
+            `;
+          }
+
+          function renderList() {
+            list.innerHTML = testimonials.map((t, i) => `
+              <button class="ts-item ${i === current ? 'active' : ''}" data-index="${i}">
+                <span class="ts-avatar ts-avatar-sm">${t.initials}</span>
+                <div>
+                  <span class="ts-name-sm">${t.name}</span>
+                  <span class="ts-role-sm">${t.role}</span>
+                </div>
+              </button>
+            `).join('');
+            list.querySelectorAll('.ts-item').forEach(item => {
+              item.addEventListener('click', () => show(parseInt(item.dataset.index)));
+            });
+          }
+
+          function show(i) {
+            current = (i + testimonials.length) % testimonials.length;
+            renderFeatured(current);
+            renderList();
+          }
+
+          prevBtn.addEventListener('click', () => show(current - 1));
+          nextBtn.addEventListener('click', () => show(current + 1));
+
+          show(0);
+        })();
+        </script>
+
     </section>
 
-    <!-- 05 SOCIAL IMPACT -->
+    <!-- ═══════════════════════════
+         05 SOCIAL IMPACT
+    ═══════════════════════════ -->
     <section class="about-section-block about-dark">
         <p class="about-label">Social impact</p>
         <h2 class="about-h2">Design that gives back</h2>
-        <p class="about-body">I believe senior design skills carry a responsibility — to apply them where they matter most, not only where they pay best.</p>
+        <p class="about-body">Not all meaningful work comes with a paycheck. These are two projects I chose to take on — one through a handshake agreement, one through a voluntary contract where payment was optional at the client's discretion. I believe senior design skills carry a responsibility to be applied where they matter, not only where they pay.</p>
 
-        <div class="impact-grid">
-            <div class="impact-card">
-                <span class="impact-tag">Volunteer</span>
-                <h3>Triply — UX/UI Designer</h3>
-                <p>Designed landing pages and improved mobile UI consistency, collaborating directly with founders to define product requirements.</p>
+        <div class="impact-zigzag">
+
+            <!-- ROW 1: image left, text right -->
+            <div class="impact-row">
+                <div class="impact-row-img">
+                    <img src="images/Maraton.png" alt="Ferdowsi University Startup Marathon">
+                </div>
+                <div class="impact-row-text">
+                    <span class="impact-tag">Volunteer</span>
+                    <h3>Frontend Web Developer — Ferdowsi University of Mashhad</h3>
+                    <p class="impact-meta">Nov 2016 · 1 month · Science and Technology Park</p>
+                    <p>Contributed as a volunteer Frontend Web Developer for a startup marathon conference, designing web interfaces using HTML, CSS, and Bootstrap under the supervision of the university's Science and Technology Park. No formal contract — carried out through a direct agreement with the executive director.</p>
+                    <a href="https://www.instagram.com/startupmarathon/" class="impact-link" target="_blank" rel="noopener">View on Instagram →</a>
+                </div>
             </div>
-            <div class="impact-card">
-                <span class="impact-tag">Teaching</span>
-                <h3>Ferdowsi University — Frontend Workshop</h3>
-                <p>Taught web design fundamentals with HTML, CSS, and Bootstrap — helping students build their first real projects.</p>
+
+            <!-- ROW 2: text left, image right -->
+            <div class="impact-row impact-row-reversed">
+                <div class="impact-row-text">
+                    <span class="impact-tag">Pro Bono</span>
+                    <h3>UI/UX Designer — Triply.co</h3>
+                    <p class="impact-meta">May 2024 – Jun 2024 · 2 months · Science and Technology</p>
+                    <p>Improved the existing UI and designed new interfaces for an Africa-focused travel booking platform, enhancing usability and visual appeal for travelers and travel businesses. Worked under a voluntary cooperation contract — payment was entirely at the client's discretion.</p>
+                    <a href="https://www.linkedin.com/showcase/triply-business/" class="impact-link" target="_blank" rel="noopener">View on LinkedIn →</a>
+                </div>
+                <div class="impact-row-img">
+                    <img src="images/Triply.png" alt="Triply">
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- 06 BEYOND THE GRID -->
+    <!-- ═══════════════════════════
+         06 BEYOND THE GRID
+    ═══════════════════════════ -->
     <section class="about-section-block">
         <p class="about-label">Beyond the grid</p>
         <h2 class="about-h2">What keeps me curious</h2>
@@ -191,6 +364,7 @@
             <span class="interest-pill">💡 Idea generation</span>
             <span class="interest-pill">🎨 Analog sketching</span>
             <span class="interest-pill">🤖 Human-AI co-creation</span>
+            <span class="interest-pill">🏛️ System thinking</span>
         </div>
 
         <div class="about-cta">
@@ -224,5 +398,38 @@
     </div>
 </footer>
 
+
+<script>
+(function () {
+    const nodes   = document.querySelectorAll('.tl-node');
+    const panels  = document.querySelectorAll('.tl-panel');
+    const prevBtn = document.querySelector('.tl-arrow-prev');
+    const nextBtn = document.querySelector('.tl-arrow-next');
+    let current = 0;
+
+    function show(index, doScroll) {
+        current = Math.max(0, Math.min(index, panels.length - 1));
+        nodes.forEach((n, i)  => n.classList.toggle('active', i === current));
+        panels.forEach((p, i) => p.classList.toggle('active', i === current));
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === panels.length - 1;
+        // Only scroll the nav horizontally on user action — never the page vertically.
+        if (doScroll) {
+            const nav = nodes[current].parentElement;
+            const target = nodes[current];
+            const navRect = nav.getBoundingClientRect();
+            const nodeRect = target.getBoundingClientRect();
+            const left = nav.scrollLeft + (nodeRect.left - navRect.left) - (nav.clientWidth - nodeRect.width) / 2;
+            nav.scrollTo({ left, behavior: 'smooth' });
+        }
+    }
+
+    nodes.forEach((n, i) => n.addEventListener('click', () => show(i, true)));
+    prevBtn.addEventListener('click', () => show(current - 1, true));
+    nextBtn.addEventListener('click', () => show(current + 1, true));
+
+    show(0, false);
+})();
+</script>
 </body>
 </html>
