@@ -1,0 +1,231 @@
+/* =========================
+   BREADCRUMB
+========================= */
+.breadcrumb {
+  max-width: 1440px;
+  margin: 20px auto 30px;
+  font-size: 0.85rem;
+  color: var(--text-sec);
+}
+
+.breadcrumb a {
+  color: var(--text-sec);
+  transition: 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.breadcrumb .current {
+  color: #e2e0dd;
+  font-weight: 500;
+}
+
+/* =========================
+   WORK PAGE WRAPPER
+========================= */
+.work-page {
+  padding: 40px 8%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+/* =========================
+   INTRO LAYOUT
+========================= */
+.work-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.intro-content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.intro-content p {
+  color: var(--text-sec);
+  max-width: 550px;
+}
+
+/* =========================
+   THINKING INLINE (in hero)
+========================= */
+.thinking-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.thinking-inline-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.thinking-inline-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.thinking-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
+  border: 1px solid #2e2e38;
+  border-radius: 12px;
+  color: var(--text-sec);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.thinking-card:hover {
+  border-color: var(--accent);
+  color: var(--text-main);
+}
+
+.thinking-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* =========================
+   WORK ROW
+========================= */
+.work-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 1px solid #2e2e38;
+}
+
+.work-row.reverse {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.work-row.reverse .work-image {
+  order: 2;
+}
+
+.work-row.reverse .work-text {
+  order: 1;
+}
+
+/* =========================
+   WORK IMAGE & TEXT
+========================= */
+.work-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.work-image img:hover {
+  transform: scale(1.02);
+}
+
+.work-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.work-text p {
+  color: var(--text-sec);
+  margin-bottom: 10px;
+}
+
+.work-meta {
+  margin: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   SHARED COMPONENTS
+========================= */
+.case-study-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--accent);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.case-study-link:hover {
+  opacity: 0.8;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.project-tags span {
+  background: rgba(74, 108, 247, 0.1);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.project-brief-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.brief-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #e2e0dd;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .work-intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .intro-content h1 { font-size: 1.8rem; }
+
+  .work-row,
+  .work-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .work-row.reverse .work-image,
+  .work-row.reverse .work-text {
+    order: unset;
+  }
+
+  .work-image { order: -1; }
+  .work-text h3 { font-size: 1.5rem; }
+
+  .project-brief-grid { grid-template-columns: 1fr; }
+}
