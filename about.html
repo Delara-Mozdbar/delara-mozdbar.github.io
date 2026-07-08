@@ -189,6 +189,7 @@
         <p class="about-label">Social proof</p>
         <h2 class="about-h2">What others say</h2>
 
+<<<<<<< HEAD
         <div class="ts-widget">
 
             <!-- FEATURED — large quote box on the left -->
@@ -218,12 +219,29 @@
             </div>
 
             <!-- LIST — compact cards on the right -->
+=======
+        <div class="ts-carousel">
+
+            <!-- MAIN STAGE -->
+            <div class="ts-main">
+                <div class="ts-featured">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="ts-arrows">
+                    <button class="ts-arrow ts-prev" aria-label="Previous">←</button>
+                    <button class="ts-arrow ts-next" aria-label="Next">→</button>
+                </div>
+            </div>
+
+            <!-- SIDEBAR LIST -->
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
             <div class="ts-list">
                 <!-- Filled by JS -->
             </div>
 
         </div>
 
+<<<<<<< HEAD
         <script>
         // To show a real photo, set `photo` to its path (e.g. "images/testimonials/odette.jpg").
         // Leave it empty to fall back to the person's initials.
@@ -250,43 +268,87 @@
             initials: "TH",
             photo: "images/Tooraj Helmi.png",
             date: "March 1, 2022",
+=======
+        <p style="margin-top: 24px;">
+            <a href="https://www.linkedin.com/in/delara-mozdbar/details/recommendations/" target="_blank" rel="noopener" class="case-study-link">Verify all recommendations on LinkedIn →</a>
+        </p>
+
+        <script>
+        const testimonials = [
+          {
+            name: "Odette Abrenica",
+            role: "Lead Product Designer at Engenesis Ventures",
+            initials: "OA",
+            quote: "I highly recommend Delara as a UX UI Designer. She has consistently demonstrated her adaptability to the fast-paced nature of our work and her responsiveness to changing requirements. One of Delara's most commendable traits is her unwavering accountability, both to herself and the team."
+          },
+          {
+            name: "Ersa Khorsandi",
+            role: "UI/UX Designer — reported directly to Delara",
+            initials: "EK",
+            quote: "I worked directly under Delara's management. She was actually the person who hired me. Her compassion is like no other person I have seen. She would take time out of her busy schedule to meet with everyone one on one. I have learned a great deal from Delara and not just about work. Anyone working with her is truly lucky!"
+          },
+          {
+            name: "Tooraj Helmi",
+            role: "Tech Exec | PhD | YC & Techstars Alum",
+            initials: "TH",
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
             quote: "Delara is a highly responsible and organized person. She takes her job seriously. If that requires working 24 hours a day, she works 24 hours a day, no kidding. She works hard and produces super high-quality outcomes. Having Delara in any team would be a blessing."
           },
           {
             name: "Erfan Tehranifar",
+<<<<<<< HEAD
             role: "Senior Product Designer | Helping Startups Validate Ideas & Optimize UX",
             initials: "ET",
             photo: "images/Erfan Tehranifar.jpeg",
             date: "February 17, 2022, Erfan reported to Delara directly",
+=======
+            role: "Senior Product Designer — reported to Delara",
+            initials: "ET",
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
             quote: "Delara is a great example of perseverance & determination at doing work. She follows the tasks to the last step until she is completely sure they are fully delivered. Delara makes you want to learn more. She is also accurate in timing and managing the team on the road to all goals!"
           },
           {
             name: "Nazanin Parivar",
+<<<<<<< HEAD
             role: "Product Designer & AI + SemiCon Enthusiast | Data-Driven Storytelling | Women in Tech Advocate | Founder @ Lil'Nikky | Persian & Dutch at Heart",
             initials: "NP",
             photo: "images/Nazanin (Naz) Parivar.jpeg",
             date: "February 17, 2022",
+=======
+            role: "Product Designer & AI Enthusiast | Women in Tech Advocate",
+            initials: "NP",
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
             quote: "I have worked with Delara on many projects. She is an awesome designer who pays attention to details. She is also a great team player. One of the great things about Delara is she is very organized. Thanks for all your hard work."
           },
           {
             name: "Sadeq Shajari",
             role: "Dotnet Developer",
             initials: "SS",
+<<<<<<< HEAD
             photo: "images/Sadeq Shajari.jpeg",
             date: "February 16, 2022",
+=======
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
             quote: "Delara is a professional and patient UI/UX designer that if she is present in any company, could help them to have an advantage of the best user experience and clean designs. I recommend her persistently."
           },
           {
             name: "Ardalan Mirshani",
+<<<<<<< HEAD
             role: "Data & AI Product | MyLens.ai",
             initials: "AM",
             photo: "images/Ardalan Mirshani.jpeg",
             date: "September 11, 2019, Ardalan managed Delara directly",
             quote: "Delara's ability to handle multiple projects and manage the time was great. I had the pleasure of working with her for two months on designing UI/UX of a social network. She has a great knowledge of design and open to new ideas. She believed team-working and can work hard in an agile system. She could greatly chunk the project to smaller tasks and meet deadlines. No matter how tense a meeting, Delara was productive and energetic. As a team member or leader, I highly recommend Delara."
+=======
+            role: "Data & AI Product | MyLens.ai — managed Delara directly",
+            initials: "AM",
+            quote: "Delara's ability to handle multiple projects and manage the time was great. She has a great knowledge of design and open to new ideas. She believed team-working and can work hard in an agile system. No matter how tense a meeting, Delara was productive and energetic. As a team member or leader, I highly recommend Delara."
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
           }
         ];
 
         (function () {
+<<<<<<< HEAD
           const listEl       = document.querySelector('.ts-list');
           const featuredBox  = document.querySelector('.ts-featured-box');
           const avatarEl     = featuredBox.querySelector('.ts-avatar-lg');
@@ -392,6 +454,53 @@
           });
 
           show(current, false);
+=======
+          const featured = document.querySelector('.ts-featured');
+          const list     = document.querySelector('.ts-list');
+          const prevBtn  = document.querySelector('.ts-prev');
+          const nextBtn  = document.querySelector('.ts-next');
+          let current = 0;
+
+          function renderFeatured(i) {
+            const t = testimonials[i];
+            featured.innerHTML = `
+              <div class="ts-featured-header">
+                <span class="ts-avatar">${t.initials}</span>
+                <div>
+                  <span class="ts-name">${t.name}</span>
+                  <span class="ts-role">${t.role}</span>
+                </div>
+              </div>
+              <p class="ts-quote">"${t.quote}"</p>
+            `;
+          }
+
+          function renderList() {
+            list.innerHTML = testimonials.map((t, i) => `
+              <button class="ts-item ${i === current ? 'active' : ''}" data-index="${i}">
+                <span class="ts-avatar ts-avatar-sm">${t.initials}</span>
+                <div>
+                  <span class="ts-name-sm">${t.name}</span>
+                  <span class="ts-role-sm">${t.role}</span>
+                </div>
+              </button>
+            `).join('');
+            list.querySelectorAll('.ts-item').forEach(item => {
+              item.addEventListener('click', () => show(parseInt(item.dataset.index)));
+            });
+          }
+
+          function show(i) {
+            current = (i + testimonials.length) % testimonials.length;
+            renderFeatured(current);
+            renderList();
+          }
+
+          prevBtn.addEventListener('click', () => show(current - 1));
+          nextBtn.addEventListener('click', () => show(current + 1));
+
+          show(0);
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
         })();
         </script>
 

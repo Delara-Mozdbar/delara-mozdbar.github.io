@@ -104,6 +104,7 @@
             border-radius: 16px;
         }
 
+<<<<<<< HEAD
         .pitch-hero-visual img {
             width: 100%;
             height: 100%;
@@ -112,6 +113,8 @@
             border-radius: inherit;
         }
 
+=======
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
         .pitch-hero-visual svg { opacity: 0.5; }
 
         .pitch-hero-visual span {
@@ -255,7 +258,11 @@
 
         @media (max-width: 900px) {
             .pitch-hero {
+<<<<<<< HEAD
                 padding-top: 0;
+=======
+                padding-top: calc(var(--nav-h) + 36px);
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
                 padding-left: 5%;
                 padding-right: 5%;
             }
@@ -269,6 +276,7 @@
 
             .pitch-hero-visual {
                 position: static;
+<<<<<<< HEAD
                 aspect-ratio: auto;
                 max-height: none;
                 order: -1;
@@ -277,6 +285,13 @@
             /* Show the full hero image (natural ratio), like CoreView */
             .pitch-hero-visual img { height: auto; }
 
+=======
+                aspect-ratio: 16 / 7;
+                max-height: 200px;
+                order: -1;
+            }
+
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
             .pitch-meta {
                 grid-template-columns: 1fr 1fr;
             }

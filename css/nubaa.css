@@ -776,7 +776,11 @@
 
         @media (max-width: 900px) {
             .nb-hero {
+<<<<<<< HEAD
                 padding-top: 0;
+=======
+                padding-top: calc(var(--nav-h) + 36px);
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
                 padding-left: 5%;
                 padding-right: 5%;
             }
@@ -787,6 +791,7 @@
 
             .nb-hero-visual {
                 position: static;
+<<<<<<< HEAD
                 aspect-ratio: auto;
                 max-height: none;
                 order: -1;
@@ -795,6 +800,13 @@
             /* Show the full hero image (natural ratio), like CoreView */
             .nb-hero-visual img { height: auto; }
 
+=======
+                aspect-ratio: 16 / 7;
+                max-height: 220px;
+                order: -1;
+            }
+
+>>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
             .nb-outcomes { grid-template-columns: 1fr; }
         }
 
