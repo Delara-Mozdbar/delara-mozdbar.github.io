@@ -944,84 +944,161 @@ html {
   margin: 0;
 }
 
-/* TESTIMONIALS */
 /* =========================
-   TESTIMONIAL CAROUSEL
+   TESTIMONIALS
+   Desktop: featured (left) + vertical list (right)
+   Tablet/Mobile: featured + horizontal picker strip
+   Long quotes: clamp + "Read full recommendation"
 ========================= */
-.ts-carousel {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
-  align-items: start;
+.ts-widget {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
+/* --- Featured quote box --- */
 .ts-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.ts-featured-box {
   background: var(--card-bg);
   border: 1.5px solid var(--accent);
-  border-radius: 18px;
-  padding: 32px;
-  min-height: 280px;
+  border-radius: 20px;
+  padding: 24px 20px;
 }
 
 .ts-featured-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-.ts-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(201, 169, 110, 0.15);
-  color: var(--accent);
+.ts-featured-meta {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ts-featured-meta .ts-name {
   font-weight: 700;
-  font-size: 0.95rem;
-  flex-shrink: 0;
-}
-
-.ts-avatar-sm {
-  width: 38px;
-  height: 38px;
-  font-size: 0.8rem;
-}
-
-.ts-name {
-  display: block;
-  font-weight: 600;
   color: var(--text-main);
-  font-size: 0.98rem;
+  font-size: 1rem;
+  line-height: 1.3;
 }
 
-.ts-role {
-  display: block;
+.ts-featured-meta .ts-role {
   font-size: 0.8rem;
   color: var(--text-sec);
+  line-height: 1.45;
+}
+
+.ts-featured-meta .ts-date {
+  font-size: 0.75rem;
+  color: var(--text-sec);
+  opacity: 0.75;
   margin-top: 2px;
 }
 
-.ts-quote {
-  color: var(--text-sec);
-  line-height: 1.85;
-  font-size: 0.98rem;
-  font-style: italic;
+/* Quote — collapsed by default on mobile/tablet; scroll on desktop */
+.ts-quote-wrap {
+  position: relative;
 }
 
-.ts-arrows {
+.ts-quote {
+  margin: 0;
+  color: var(--text-sec);
+  font-style: italic;
+  line-height: 1.75;
+  font-size: 0.92rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+
+.ts-quote.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.ts-read-more {
+  margin-top: 12px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ts-read-more:hover { opacity: 0.75; }
+
+/* --- Avatar — swap in a real photo via `photo` in the data array --- */
+.ts-avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+  align-items: center;
   justify-content: center;
+  background: rgba(201, 169, 110, 0.15);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.ts-avatar-lg {
+  width: 52px;
+  height: 52px;
+  font-size: 0.95rem;
+}
+
+.ts-avatar-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ts-avatar:has(.ts-avatar-img) .ts-initials {
+  display: none;
+}
+
+/* --- Nav: arrows + counter --- */
+.ts-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ts-counter {
+  flex: 1;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  letter-spacing: 0.04em;
 }
 
 .ts-arrow {
-  width: 44px;
-  height: 44px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--elevated);
   background: var(--card-bg);
@@ -1030,67 +1107,178 @@ html {
   cursor: pointer;
   transition: 0.25s;
 }
-
 .ts-arrow:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
+/* --- Selection list --- */
 .ts-list {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 6px;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--elevated) transparent;
+  padding-bottom: 4px;
 }
 
-.ts-item {
+.ts-list::-webkit-scrollbar { height: 4px; }
+.ts-list::-webkit-scrollbar-thumb {
+  background: var(--elevated);
+  border-radius: 4px;
+}
+
+.ts-card {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 200px;
+  max-width: 260px;
+  padding: 12px 14px;
   background: var(--card-bg);
-  border: 1px solid var(--elevated);
+  border: 1.5px solid transparent;
   border-radius: 14px;
-  padding: 14px 16px;
   cursor: pointer;
-  transition: 0.25s;
   text-align: left;
   font-family: 'Inter', sans-serif;
-  width: 100%;
+  scroll-snap-align: center;
+  transition: border-color 0.25s, background 0.25s;
 }
 
-.ts-item:hover { border-color: var(--text-sec); }
+.ts-card:hover {
+  border-color: rgba(201, 169, 110, 0.35);
+}
 
-.ts-item.active {
+.ts-card.active {
   border-color: var(--accent);
-  background: rgba(201, 169, 110, 0.05);
 }
 
-.ts-name-sm {
-  display: block;
-  font-weight: 600;
+.ts-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.ts-card-info .ts-name {
+  font-weight: 700;
   color: var(--text-main);
-  font-size: 0.85rem;
-}
-
-.ts-role-sm {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--text-sec);
-  margin-top: 2px;
+  font-size: 0.88rem;
+  line-height: 1.3;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
 }
 
-.testimonial-meta {
+.ts-card-info .ts-role {
   font-size: 0.72rem;
   color: var(--text-sec);
-  opacity: 0.7;
-  margin-top: 2px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ts-linkedin {
+  margin: 0;
+  padding-top: 4px;
+}
+
+/* --- Tablet: wider cards, slightly more quote lines --- */
+@media (min-width: 768px) and (max-width: 991px) {
+  .ts-featured-box {
+    padding: 28px 28px;
+  }
+
+  .ts-quote {
+    -webkit-line-clamp: 6;
+    font-size: 0.95rem;
+  }
+
+  .ts-card {
+    min-width: 240px;
+    max-width: 300px;
+  }
+
+  .ts-widget {
+    gap: 28px;
+  }
+}
+
+/* --- Desktop: two columns, vertical list, scrollable quote --- */
+@media (min-width: 992px) {
+  .ts-widget {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .ts-featured-box {
+    padding: 32px 36px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ts-quote-wrap {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ts-quote {
+    display: block;
+    -webkit-line-clamp: unset;
+    font-size: 1rem;
+    max-height: 280px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--elevated) transparent;
+    flex: 1;
+  }
+
+  .ts-quote::-webkit-scrollbar { width: 4px; }
+  .ts-quote::-webkit-scrollbar-thumb {
+    background: var(--elevated);
+    border-radius: 4px;
+  }
+
+  /* On desktop, read-more only if quote exceeds scroll area */
+  .ts-read-more { margin-top: 14px; }
+
+  .ts-counter { display: none; }
+
+  .ts-nav { gap: 12px; }
+
+  .ts-list {
+    flex-direction: column;
+    overflow-x: visible;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--elevated) transparent;
+    height: 420px;
+  }
+
+  .ts-list::-webkit-scrollbar { width: 4px; height: auto; }
+
+  .ts-card {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    scroll-snap-align: none;
+  }
+
+  .ts-card-info .ts-name {
+    white-space: normal;
+  }
 }
 
 /* IMPACT ZIGZAG */
@@ -1313,23 +1501,6 @@ html {
 
   .strengths-grid {
     grid-template-columns: 1fr;
-  }
-
-  .ts-carousel {
-    grid-template-columns: 1fr;
-  }
-
-  .ts-list {
-    flex-direction: row;
-    overflow-x: auto;
-    max-height: none;
-    padding-bottom: 8px;
-    padding-right: 0;
-  }
-
-  .ts-item {
-    min-width: 220px;
-    flex-shrink: 0;
   }
 
   .impact-grid {
