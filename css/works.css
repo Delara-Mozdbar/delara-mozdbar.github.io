@@ -119,23 +119,6 @@
 
 .cs-btn-secondary:hover { background: var(--accent-2); color: #e2e0dd; }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .cs-page { padding: 0 5%; }
-  .cs-hero { min-height: unset; padding: 32px 0 24px; }
-  .cs-challenge-card { grid-template-columns: 1fr; }
-  .cs-challenge-image { display: none; }
-  .cs-approach-layout { grid-template-columns: 1fr; }
-  .cs-constraints-two-col { grid-template-columns: 1fr; gap: 32px; }
-  .cs-kd-layout { grid-template-columns: 1fr; gap: 32px; }
-  .cs-chain { flex-direction: column; }
-  .cs-section-dark { margin: 0 -5%; padding: 80px 5%; }
-}
-
-@media (max-width: 480px) {
-  .cs-btn-primary, .cs-btn-secondary { text-align: center; width: 100%; }
-}
-
 /* =========================
    APPROACH LAYOUT
 ========================= */
@@ -875,4 +858,28 @@
   border-radius: 20px;
   padding: 5px 14px;
   letter-spacing: 0.02em;
+}
+
+/* =========================
+   RESPONSIVE
+   (placed at end of file so these overrides win the cascade
+    over the base component rules declared above)
+========================= */
+@media (max-width: 900px) {
+  .cs-page { padding: 0 5%; }
+  .cs-hero { min-height: unset; padding: 32px 0 24px; }
+  .cs-challenge-card { grid-template-columns: 1fr; }
+  .cs-challenge-image { display: none; }
+  .cs-approach-layout { grid-template-columns: 1fr; }
+  .cs-approach-image { position: static; top: auto; min-height: 0; }
+  .cs-constraints-two-col { grid-template-columns: 1fr; gap: 32px; }
+  .cs-kd-layout { grid-template-columns: 1fr; gap: 32px; }
+  .cs-chain { flex-direction: column; }
+  .cs-section-dark { margin: 0 -5%; padding: 80px 5%; }
+  /* full-bleed sections must match the reduced 5% page padding */
+  .cs-constraints { margin: 0 -5%; padding: 80px 5%; }
+}
+
+@media (max-width: 480px) {
+  .cs-btn-primary, .cs-btn-secondary { text-align: center; width: 100%; }
 }

@@ -56,6 +56,12 @@
         .nb-hero .breadcrumb a:hover   { color: var(--nb-mid); }
         .nb-hero .breadcrumb .current  { color: var(--nb-text); }
 
+        /* Page breadcrumb — align to the content column (matches hero padding) */
+        .nubaa-case-study > .breadcrumb {
+            margin: 20px 0 30px;
+            padding: 24px 8% 0;
+        }
+
         /* Two-column body */
         .nb-hero-body {
             display: grid;
@@ -774,6 +780,8 @@
                 padding-left: 5%;
                 padding-right: 5%;
             }
+
+            .nubaa-case-study > .breadcrumb { padding: 20px 5% 0; }
 
             .nb-hero-body { grid-template-columns: 1fr; }
 

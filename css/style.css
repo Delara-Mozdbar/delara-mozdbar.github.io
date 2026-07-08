@@ -37,6 +37,12 @@ a {
   transition: 0.3s;
 }
 
+/* Images never overflow their container (specific width/height rules still win) */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* =========================
    FONT RENDERING

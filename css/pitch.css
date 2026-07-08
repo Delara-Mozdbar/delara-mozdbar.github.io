@@ -30,6 +30,12 @@
         .pitch-hero .breadcrumb a:hover { color: var(--pitch-pink); }
         .pitch-hero .breadcrumb .current { color: var(--pitch-text); }
 
+        /* Page breadcrumb — align to the content column (matches hero padding) */
+        main > .breadcrumb {
+            margin: 20px 0 30px;
+            padding: 24px 8% 0;
+        }
+
         /* Two-column hero body */
         .pitch-hero-body {
             display: grid;
@@ -245,6 +251,8 @@
                 padding-left: 5%;
                 padding-right: 5%;
             }
+
+            main > .breadcrumb { padding: 20px 5% 0; }
 
             /* Stack columns — image moves above text on mobile */
             .pitch-hero-body {
@@ -956,7 +964,7 @@
 
         /* Image — full width, landscape */
         .pitch-step-img {
-            width: 745px;
+            width: 100%;
             height: 250px;
             border-radius: 8px;
             background: #1a1a1a;
