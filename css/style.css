@@ -1,4 +1,4 @@
-ï»¿/* =========================
+/* =========================
    ROOT VARIABLES
 ========================= */
 :root {
@@ -145,7 +145,7 @@ footer .hero-availability {
    BUTTONS
 ========================= */
 
-/* Primary CTA â€” "Explore My Work" */
+/* Primary CTA — "Explore My Work" */
 .key-btn {
   display: inline-flex;
   align-items: center;
@@ -188,7 +188,7 @@ footer .hero-availability {
 }
 
 /* =========================
-   RESPONSIVE â€” 900px and below
+   RESPONSIVE — 900px and below
 ========================= */
 @media (max-width: 900px) {
   /* Hero */
@@ -205,7 +205,7 @@ footer .hero-availability {
 }
 
 /* =========================
-   RESPONSIVE â€” 480px and below
+   RESPONSIVE — 480px and below
 ========================= */
 @media (max-width: 480px) {
   .hero-content h1 {
@@ -288,7 +288,7 @@ html {
 }
 
 /* =========================
-   CASE STUDY â€” NEXT TEASER
+   CASE STUDY — NEXT TEASER
    Shared across nubaa, coreview, pitch
 ========================= */
 .cs-next-case {
@@ -1028,7 +1028,7 @@ html {
   margin-top: 2px;
 }
 
-/* Quote â€” collapsed by default on mobile/tablet; scroll on desktop */
+/* Quote — collapsed by default on mobile/tablet; scroll on desktop */
 .ts-quote-wrap {
   position: relative;
 }
@@ -1067,7 +1067,7 @@ html {
 }
 .ts-read-more:hover { opacity: 0.75; }
 
-/* --- Avatar â€” swap in a real photo via `photo` in the data array --- */
+/* --- Avatar — swap in a real photo via `photo` in the data array --- */
 .ts-avatar {
   position: relative;
   flex-shrink: 0;
@@ -1469,7 +1469,7 @@ html {
   line-height: 1.75;
 }
 
-/* IMPACT (legacy grid â€” kept for fallback) */
+/* IMPACT (legacy grid — kept for fallback) */
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1694,7 +1694,7 @@ html {
 }
 
 /* =========================
-   AI LABS â€” HERO
+   AI LABS — HERO
 ========================= */
 .labs-hero {
   padding: 100px 0 80px;
@@ -1756,7 +1756,7 @@ html {
 }
 
 /* =========================
-   AI LABS â€” SECTIONS
+   AI LABS — SECTIONS
 ========================= */
 .labs-section {
   padding: 90px 0;
@@ -1813,7 +1813,7 @@ html {
 }
 
 /* =========================
-   AI LABS â€” EXPERIMENT PAIRS
+   AI LABS — EXPERIMENT PAIRS
 ========================= */
 .labs-exp-pair {
   display: grid;
@@ -1876,7 +1876,7 @@ html {
 }
 
 /* =========================
-   AI LABS â€” DEMO BUTTONS
+   AI LABS — DEMO BUTTONS
 ========================= */
 .labs-demo-actions {
   display: flex;
@@ -1886,7 +1886,7 @@ html {
 }
 
 /* =========================
-   AI LABS â€” ACCORDION
+   AI LABS — ACCORDION
 ========================= */
 .labs-accordion {
   margin: 40px 0 30px;
@@ -1952,7 +1952,7 @@ html {
 }
 
 /* =========================
-   AI LABS â€” KEY FINDINGS
+   AI LABS — KEY FINDINGS
 ========================= */
 .labs-findings {
   margin-top: 10px;
@@ -1980,7 +1980,7 @@ html {
 }
 
 /* =========================
-   AI LABS â€” METHODOLOGY
+   AI LABS — METHODOLOGY
 ========================= */
 .labs-method { margin-bottom: 60px; }
 
@@ -2011,7 +2011,7 @@ html {
 .labs-method-step p  { font-size: 0.82rem; color: var(--text-sec); line-height: 1.6; }
 
 /* =========================
-   AI LABS â€” DETAIL PAGES (labs-exp-*.html)
+   AI LABS — DETAIL PAGES (labs-exp-*.html)
 ========================= */
 .labs-detail {
   max-width: 900px;
@@ -2115,7 +2115,7 @@ html {
 .cs-next-link:hover { color: var(--accent); }
 
 /* =========================
-   AI LABS â€” RESPONSIVE
+   AI LABS — RESPONSIVE
 ========================= */
 /* =========================
    LABS PROJECT CARDS
@@ -2443,7 +2443,7 @@ html {
 }
 
 /* =========================
-   INDEX â€” CONTACT SECTION
+   INDEX — CONTACT SECTION
 ========================= */
 .idx-contact {
   border-top: 1px solid #2e2e38;
@@ -2492,3 +2492,4 @@ html {
     padding: 64px 5%;
   }
 }
+

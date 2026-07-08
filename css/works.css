@@ -1,4 +1,4 @@
-ï»¿/* =========================
+/* =========================
    CASE STUDY PAGE
    case-study.css
 ========================= */
@@ -424,7 +424,7 @@
   aspect-ratio: 4/3;
 }
 
-/* Role table â€” Decision 2 */
+/* Role table — Decision 2 */
 .cs-kd-role-table {
   border: 1px solid #2e2e38;
   border-radius: 14px;
@@ -458,7 +458,7 @@
 
 .cs-kd-role-row:last-child { border-bottom: none; }
 
-/* Layers â€” Decision 3 */
+/* Layers — Decision 3 */
 .cs-kd-layers {
   display: flex;
   flex-direction: column;
@@ -540,7 +540,7 @@
 .cs-kd-panel-icon--red { background: rgba(240,100,100,0.1); color: #f06464; }
 .cs-kd-panel-icon--amber { background: rgba(240,180,60,0.1); color: #f0b43c; }
 
-/* Onboarding â€” Decision 4 */
+/* Onboarding — Decision 4 */
 .cs-kd-onboarding {
   display: flex;
   align-items: center;
@@ -883,3 +883,4 @@
 @media (max-width: 480px) {
   .cs-btn-primary, .cs-btn-secondary { text-align: center; width: 100%; }
 }
+
