@@ -172,8 +172,18 @@ footer {
     text-align: center;
     gap: 20px;
   }
-  .footer-col:nth-child(2),
-  .footer-col:nth-child(3) { align-items: center; }
-  .footer-copy { text-align: center; }
+
+  .footer-col {
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-copy {
+    text-align: center;
+  }
 }
 

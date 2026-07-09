@@ -145,7 +145,7 @@ footer .hero-availability {
    BUTTONS
 ========================= */
 
-/* Primary CTA — "Explore My Work" */
+/* Primary CTA â€” "Explore My Work" */
 .key-btn {
   display: inline-flex;
   align-items: center;
@@ -188,7 +188,7 @@ footer .hero-availability {
 }
 
 /* =========================
-   RESPONSIVE — 900px and below
+   RESPONSIVE â€” 900px and below
 ========================= */
 @media (max-width: 900px) {
   /* Hero */
@@ -205,7 +205,7 @@ footer .hero-availability {
 }
 
 /* =========================
-   RESPONSIVE — 480px and below
+   RESPONSIVE â€” 480px and below
 ========================= */
 @media (max-width: 480px) {
   .hero-content h1 {
@@ -288,7 +288,7 @@ html {
 }
 
 /* =========================
-   CASE STUDY — NEXT TEASER
+   CASE STUDY â€” NEXT TEASER
    Shared across nubaa, coreview, pitch
 ========================= */
 .cs-next-case {
@@ -944,7 +944,6 @@ html {
   margin: 0;
 }
 
-<<<<<<< HEAD
 /* =========================
    TESTIMONIALS
    Desktop: featured (left) + vertical list (right)
@@ -971,31 +970,10 @@ html {
   border: 1.5px solid var(--accent);
   border-radius: 20px;
   padding: 24px 20px;
-=======
-/* TESTIMONIALS */
-/* =========================
-   TESTIMONIAL CAROUSEL
-========================= */
-.ts-carousel {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
-  align-items: start;
-}
-
-.ts-featured {
-  background: var(--card-bg);
-  border: 1.5px solid var(--accent);
-  border-radius: 18px;
-  padding: 32px;
-  min-height: 280px;
->>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
 }
 
 .ts-featured-header {
   display: flex;
-<<<<<<< HEAD
   align-items: flex-start;
   gap: 14px;
   margin-bottom: 18px;
@@ -1028,7 +1006,7 @@ html {
   margin-top: 2px;
 }
 
-/* Quote — collapsed by default on mobile/tablet; scroll on desktop */
+/* Quote â€” collapsed by default on mobile/tablet; scroll on desktop */
 .ts-quote-wrap {
   position: relative;
 }
@@ -1067,7 +1045,7 @@ html {
 }
 .ts-read-more:hover { opacity: 0.75; }
 
-/* --- Avatar — swap in a real photo via `photo` in the data array --- */
+/* --- Avatar â€” swap in a real photo via `photo` in the data array --- */
 .ts-avatar {
   position: relative;
   flex-shrink: 0;
@@ -1121,64 +1099,6 @@ html {
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-=======
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
-}
-
-.ts-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(201, 169, 110, 0.15);
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.95rem;
-  flex-shrink: 0;
-}
-
-.ts-avatar-sm {
-  width: 38px;
-  height: 38px;
-  font-size: 0.8rem;
-}
-
-.ts-name {
-  display: block;
-  font-weight: 600;
-  color: var(--text-main);
-  font-size: 0.98rem;
-}
-
-.ts-role {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--text-sec);
-  margin-top: 2px;
-}
-
-.ts-quote {
-  color: var(--text-sec);
-  line-height: 1.85;
-  font-size: 0.98rem;
-  font-style: italic;
-}
-
-.ts-arrows {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-  justify-content: center;
-}
-
-.ts-arrow {
-  width: 44px;
-  height: 44px;
->>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
   border-radius: 50%;
   border: 1px solid var(--elevated);
   background: var(--card-bg);
@@ -1187,16 +1107,11 @@ html {
   cursor: pointer;
   transition: 0.25s;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
 .ts-arrow:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-<<<<<<< HEAD
 /* --- Selection list --- */
 .ts-list {
   display: flex;
@@ -1364,63 +1279,6 @@ html {
   .ts-card-info .ts-name {
     white-space: normal;
   }
-=======
-.ts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-height: 400px;
-  overflow-y: auto;
-  padding-right: 6px;
-}
-
-.ts-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--card-bg);
-  border: 1px solid var(--elevated);
-  border-radius: 14px;
-  padding: 14px 16px;
-  cursor: pointer;
-  transition: 0.25s;
-  text-align: left;
-  font-family: 'Inter', sans-serif;
-  width: 100%;
-}
-
-.ts-item:hover { border-color: var(--text-sec); }
-
-.ts-item.active {
-  border-color: var(--accent);
-  background: rgba(201, 169, 110, 0.05);
-}
-
-.ts-name-sm {
-  display: block;
-  font-weight: 600;
-  color: var(--text-main);
-  font-size: 0.85rem;
-}
-
-.ts-role-sm {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--text-sec);
-  margin-top: 2px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
-
-.testimonial-meta {
-  font-size: 0.72rem;
-  color: var(--text-sec);
-  opacity: 0.7;
-  margin-top: 2px;
->>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
 }
 
 /* IMPACT ZIGZAG */
@@ -1469,7 +1327,7 @@ html {
   line-height: 1.75;
 }
 
-/* IMPACT (legacy grid — kept for fallback) */
+/* IMPACT (legacy grid â€” kept for fallback) */
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1645,26 +1503,6 @@ html {
     grid-template-columns: 1fr;
   }
 
-<<<<<<< HEAD
-=======
-  .ts-carousel {
-    grid-template-columns: 1fr;
-  }
-
-  .ts-list {
-    flex-direction: row;
-    overflow-x: auto;
-    max-height: none;
-    padding-bottom: 8px;
-    padding-right: 0;
-  }
-
-  .ts-item {
-    min-width: 220px;
-    flex-shrink: 0;
-  }
-
->>>>>>> 0edbd8f1c1212f5d9a7b327de27e5da10dcbc86f
   .impact-grid {
     grid-template-columns: 1fr;
   }
@@ -1694,7 +1532,7 @@ html {
 }
 
 /* =========================
-   AI LABS — HERO
+   AI LABS â€” HERO
 ========================= */
 .labs-hero {
   padding: 100px 0 80px;
@@ -1756,7 +1594,7 @@ html {
 }
 
 /* =========================
-   AI LABS — SECTIONS
+   AI LABS â€” SECTIONS
 ========================= */
 .labs-section {
   padding: 90px 0;
@@ -1813,7 +1651,7 @@ html {
 }
 
 /* =========================
-   AI LABS — EXPERIMENT PAIRS
+   AI LABS â€” EXPERIMENT PAIRS
 ========================= */
 .labs-exp-pair {
   display: grid;
@@ -1876,7 +1714,7 @@ html {
 }
 
 /* =========================
-   AI LABS — DEMO BUTTONS
+   AI LABS â€” DEMO BUTTONS
 ========================= */
 .labs-demo-actions {
   display: flex;
@@ -1886,7 +1724,7 @@ html {
 }
 
 /* =========================
-   AI LABS — ACCORDION
+   AI LABS â€” ACCORDION
 ========================= */
 .labs-accordion {
   margin: 40px 0 30px;
@@ -1952,7 +1790,7 @@ html {
 }
 
 /* =========================
-   AI LABS — KEY FINDINGS
+   AI LABS â€” KEY FINDINGS
 ========================= */
 .labs-findings {
   margin-top: 10px;
@@ -1980,7 +1818,7 @@ html {
 }
 
 /* =========================
-   AI LABS — METHODOLOGY
+   AI LABS â€” METHODOLOGY
 ========================= */
 .labs-method { margin-bottom: 60px; }
 
@@ -2011,7 +1849,7 @@ html {
 .labs-method-step p  { font-size: 0.82rem; color: var(--text-sec); line-height: 1.6; }
 
 /* =========================
-   AI LABS — DETAIL PAGES (labs-exp-*.html)
+   AI LABS â€” DETAIL PAGES (labs-exp-*.html)
 ========================= */
 .labs-detail {
   max-width: 900px;
@@ -2115,7 +1953,7 @@ html {
 .cs-next-link:hover { color: var(--accent); }
 
 /* =========================
-   AI LABS — RESPONSIVE
+   AI LABS â€” RESPONSIVE
 ========================= */
 /* =========================
    LABS PROJECT CARDS
@@ -2443,7 +2281,7 @@ html {
 }
 
 /* =========================
-   INDEX — CONTACT SECTION
+   INDEX â€” CONTACT SECTION
 ========================= */
 .idx-contact {
   border-top: 1px solid #2e2e38;
