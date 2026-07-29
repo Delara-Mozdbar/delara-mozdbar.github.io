@@ -121,6 +121,10 @@ footer .hero-availability {
   max-width: 560px;
 }
 
+.hero-description-secondary {
+  margin-top: 16px;
+}
+
 .hero-image {
   flex: 0.9;
   display: flex;
@@ -1514,6 +1518,13 @@ html {
 
   .impact-row-reversed .impact-row-img {
     order: -1;
+  }
+
+  .impact-row-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .about-cta {

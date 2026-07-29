@@ -360,8 +360,19 @@
 
           function scrollCardIntoView(index) {
             const card = cards[index];
-            if (!card) return;
-            card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            if (!card || !listEl) return;
+
+            if (window.matchMedia('(min-width: 992px)').matches) {
+              const offset = card.offsetTop - listEl.offsetTop;
+              listEl.scrollTo({
+                top: offset - listEl.clientHeight / 2 + card.clientHeight / 2,
+                behavior: 'smooth'
+              });
+              return;
+            }
+
+            const left = card.offsetLeft - (listEl.clientWidth - card.clientWidth) / 2;
+            listEl.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
           }
 
           function show(i, shouldScroll = false) {
@@ -391,7 +402,8 @@
             adjustQuoteFontSize(testimonials[current].quote);
           });
 
-          show(current, false);        })();
+          show(current, false);
+        })();
         </script>
 
     </section>
@@ -402,7 +414,7 @@
     <section class="about-section-block about-dark">
         <p class="about-label">Social impact</p>
         <h2 class="about-h2">Design that gives back</h2>
-        <p class="about-body">Not all meaningful work comes with a paycheck. These are two projects I chose to take on &mdash; one through a handshake agreement, one through a voluntary contract where payment was optional at the client's discretion. I believe senior design skills carry a responsibility to be applied where they matter, not only where they pay.</p>
+        <p class="about-body">Not all meaningful work comes with a paycheck. These are three projects I chose to take on &mdash; from handshake agreements to voluntary contracts where payment was optional at the client's discretion. I believe senior design skills carry a responsibility to be applied where they matter, not only where they pay.</p>
 
         <div class="impact-zigzag">
 
@@ -431,6 +443,20 @@
                 </div>
                 <div class="impact-row-img">
                     <img src="images/Triply.png" alt="Triply">
+                </div>
+            </div>
+
+            <!-- ROW 3: image left, text right -->
+            <div class="impact-row">
+                <div class="impact-row-img">
+                    <img src="images/GanjeMolana.png" alt="Ganje Molana — Rumi poetry platform">
+                </div>
+                <div class="impact-row-text">
+                    <span class="impact-tag">Volunteer</span>
+                    <h3>Product Consultant &mdash; GanjeMolana</h3>
+                    <p class="impact-meta">May 2024 &ndash; Present &middot; Science and Technology</p>
+                    <p>Co-authored the product feature list, helped draft the vendor service agreement, led cross-platform QA testing, and produced a 6-part onboarding video series plus a promotional video &mdash; while maintaining direct access to the analytics dashboard to inform product decisions and coordinating with a global, cross-functional team.</p>
+                    <a href="https://ganjemolana.com/" class="impact-link" target="_blank" rel="noopener">Visit GanjeMolana.com &rarr;</a>
                 </div>
             </div>
 
