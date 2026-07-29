@@ -115,7 +115,7 @@ A B2B2C platform connecting patients to doctors, dentists, labs, pharmacies, and
 Iran's first advanced, precision search platform dedicated to Rumi's poetry — the complete Masnavi Ma'navi and Divan-e Shams, with verse-by-verse commentary, custom Arabic-script keyboard, and audio recitation. Involved end-to-end, from initial concept through launch and ongoing growth.
 
 - Involved from day one — witnessed and contributed to the product's full lifecycle, from concept through vendor selection to today, with direct access to the analytics dashboard throughout
-- Participated in early-stage ideation and wireframing alongside the team during the platform's initial planning phase
+- Participated in early-stage ideation alongside the team during the platform's initial planning phase
 - Co-authored the product feature list with the team, helping define and refine scope
 - Collaborated with the team, as part of the client-side group, on drafting and detailing the service agreement with the outsourced development vendor
 - Provided ongoing design consultation in Figma, translating the team's ideas into hands-on execution
