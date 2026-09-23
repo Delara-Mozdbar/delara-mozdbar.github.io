@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/works.css">
     <link rel="stylesheet" href="css/pitch.css">
+    <link rel="stylesheet" href="css/toc.css">
 </head>
 
-<body>
+<body class="has-toc">
 
 <header>
   <nav>
@@ -50,6 +51,17 @@
   </nav>
 </header>
 
+<nav class="cs-toc" style="--toc-accent:#FF818B" aria-label="On this page">
+  <p class="cs-toc-kicker">On this page</p>
+  <ol class="cs-toc-list">
+    <li><a href="#overview" class="is-active" aria-current="location"><span class="cs-toc-num">01</span>Overview</a></li>
+    <li><a href="#problem"><span class="cs-toc-num">02</span>The Problem</a></li>
+    <li><a href="#research"><span class="cs-toc-num">03</span>Research</a></li>
+    <li><a href="#process"><span class="cs-toc-num">04</span>Process</a></li>
+    <li><a href="#decisions"><span class="cs-toc-num">05</span>Decisions</a></li>
+    <li><a href="#final-ui"><span class="cs-toc-num">06</span>Final UI</a></li>
+  </ol>
+</nav>
 
 <main>
 
@@ -63,7 +75,7 @@
     </div>
 
     <!-- â”€â”€ HERO â”€â”€ -->
-    <section class="pitch-hero">
+    <section class="pitch-hero cs-toc-target" id="overview">
 
         <div class="pitch-hero-body">
 
@@ -147,7 +159,7 @@
     </section>
 
     <!-- â”€â”€ THE PROBLEM â”€â”€ -->
-    <section class="pitch-problem">
+    <section class="pitch-problem cs-toc-target" id="problem">
         <div class="pitch-problem-inner">
 
             <!-- Label + headline -->
@@ -251,7 +263,7 @@
     </section>
 
     <!-- â”€â”€ USERS & RESEARCH â”€â”€ -->
-    <section class="pitch-research">
+    <section class="pitch-research cs-toc-target" id="research">
         <div class="pitch-research-inner">
 
             <p class="pitch-section-label">03 &mdash; Users &amp; Research</p>
@@ -470,7 +482,7 @@
     </section>
 
     <!-- â”€â”€ DESIGN PROCESS â”€â”€ -->
-    <section class="pitch-process">
+    <section class="pitch-process cs-toc-target" id="process">
         <div class="pitch-process-inner">
 
             <p class="pitch-section-label">04 &mdash; Design Process</p>
@@ -616,7 +628,7 @@
     </section>
 
     <!-- â”€â”€ KEY DESIGN DECISIONS â”€â”€ -->
-    <section class="pitch-decisions">
+    <section class="pitch-decisions cs-toc-target" id="decisions">
         <div class="pitch-decisions-inner">
 
             <p class="pitch-section-label">05 &mdash; Key Design Decisions</p>
@@ -756,7 +768,7 @@
     </section>
 
     <!-- â”€â”€ FINAL UI â”€â”€ -->
-    <section class="pitch-final-ui">
+    <section class="pitch-final-ui cs-toc-target" id="final-ui">
         <div class="pitch-final-ui-inner">
 
             <p class="pitch-section-label">06 &mdash; Final UI</p>
@@ -979,6 +991,7 @@
     </div>
 </footer>
 
+<script src="js/toc.js"></script>
 </body>
 </html>
 

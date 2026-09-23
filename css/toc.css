@@ -1,0 +1,189 @@
+/* Section index for case-study pages.
+   Wide screens: fixed rail on the right.
+   Narrow screens: horizontal bar under the main nav. */
+
+body.has-toc {
+  --toc-accent: #c9a96e;
+  --toc-rail: 220px;
+  --toc-bar: 0px;
+}
+
+.cs-toc-target {
+  scroll-margin-top: calc(var(--nav-h) + var(--toc-bar) + 20px);
+}
+
+.cs-toc {
+  --toc-accent: #c9a96e;
+  position: fixed;
+  z-index: 40;
+  top: calc(var(--nav-h) + 32px);
+  right: 20px;
+  width: 168px;
+  height: auto;
+  max-height: calc(100vh - var(--nav-h) - 64px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  scrollbar-width: thin;
+  scrollbar-color: #2e2e38 transparent;
+}
+
+.cs-toc-kicker {
+  margin: 0 0 12px;
+  padding-left: 14px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-sec);
+}
+
+.cs-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #2e2e38;
+}
+
+.cs-toc-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-left: -1px;
+  padding: 7px 4px 7px 12px;
+  border-left: 2px solid transparent;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  min-width: 0;
+  color: #6b6a72;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cs-toc-num {
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: #4e4d55;
+}
+
+.cs-toc-list a:hover {
+  color: var(--text-main);
+}
+
+.cs-toc-list a.is-active {
+  color: var(--text-main);
+  border-left-color: var(--toc-accent);
+}
+
+.cs-toc-list a.is-active .cs-toc-num {
+  color: var(--toc-accent);
+}
+
+.cs-toc-list a:focus-visible {
+  outline: 2px solid var(--toc-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Keep case-study text clear of the rail */
+@media (min-width: 1200px) {
+  body.has-toc .cs-page,
+  body.has-toc .pitch-hero,
+  body.has-toc main > .breadcrumb,
+  body.has-toc .pitch-problem,
+  body.has-toc .pitch-research,
+  body.has-toc .pitch-process,
+  body.has-toc .pitch-decisions,
+  body.has-toc .pitch-final-ui,
+  body.has-toc .nb-hero,
+  body.has-toc .nubaa-case-study > .breadcrumb,
+  body.has-toc .nb-context,
+  body.has-toc .nb-research,
+  body.has-toc .nb-decisions,
+  body.has-toc .nb-solution,
+  body.has-toc .nb-outcomes,
+  body.has-toc .nb-reflection,
+  body.has-toc .cs-next-case,
+  body.has-toc .footer-inner {
+    padding-right: max(8%, var(--toc-rail));
+  }
+
+  body.has-toc .cs-hero-wrap {
+    padding-right: max(5%, var(--toc-rail));
+  }
+
+  /* Full-bleed bands inside the padded CoreView page */
+  body.has-toc .cs-section-dark,
+  body.has-toc .cs-constraints {
+    margin-right: calc(-1 * max(8%, var(--toc-rail)));
+    padding-right: max(8%, var(--toc-rail));
+  }
+}
+
+/* Horizontal section bar when a side rail would crowd the layout */
+@media (max-width: 1199px) {
+  body.has-toc {
+    --toc-bar: 49px;
+    padding-top: calc(var(--nav-h) + var(--toc-bar));
+  }
+
+  body.has-toc .cs-hero,
+  body.has-toc .pitch-hero,
+  body.has-toc .nb-hero {
+    min-height: calc(100vh - var(--nav-h) - var(--toc-bar));
+  }
+
+  .cs-toc {
+    top: var(--nav-h);
+    right: 0;
+    left: 0;
+    width: auto;
+    max-height: none;
+    overflow: hidden;
+    padding: 0 4%;
+    background: rgba(15, 15, 17, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid #2e2e38;
+  }
+
+  .cs-toc-kicker {
+    display: none;
+  }
+
+  .cs-toc-list {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2px;
+    border-left: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .cs-toc-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cs-toc-list a {
+    margin-left: 0;
+    padding: 14px 12px 12px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+
+  .cs-toc-list a.is-active {
+    border-bottom-color: var(--toc-accent);
+  }
+
+  body:has(#menu-toggle:checked) .cs-toc {
+    visibility: hidden;
+  }
+}

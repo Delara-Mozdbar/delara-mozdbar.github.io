@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/works.css">
     <link rel="stylesheet" href="css/coreview.css">
+    <link rel="stylesheet" href="css/toc.css">
 </head>
 
-<body>
+<body class="has-toc">
 <header>
   <nav>
     <div class="nav-container">
@@ -49,6 +50,18 @@
   </nav>
 </header>
 
+<nav class="cs-toc" style="--toc-accent:#818cf8" aria-label="On this page">
+  <p class="cs-toc-kicker">On this page</p>
+  <ol class="cs-toc-list">
+    <li><a href="#overview" class="is-active" aria-current="location"><span class="cs-toc-num">01</span>Overview</a></li>
+    <li><a href="#challenge"><span class="cs-toc-num">02</span>The Challenge</a></li>
+    <li><a href="#approach"><span class="cs-toc-num">03</span>My Approach</a></li>
+    <li><a href="#decisions"><span class="cs-toc-num">04</span>Key Decisions</a></li>
+    <li><a href="#constraints"><span class="cs-toc-num">05</span>Constraints</a></li>
+    <li><a href="#final-design"><span class="cs-toc-num">06</span>Final Design</a></li>
+    <li><a href="#reflection"><span class="cs-toc-num">07</span>Reflection</a></li>
+  </ol>
+</nav>
 
 <div class="cs-hero-wrap">
 
@@ -62,7 +75,7 @@
     </div>
 
     <!-- â”€â”€ HERO â”€â”€ -->
-    <section class="cs-hero">
+    <section class="cs-hero cs-toc-target" id="overview">
 
         <!-- LEFT: all text content -->
         <div class="cv-hero-left">
@@ -117,7 +130,7 @@
 <main class="cs-page">
 
     <!-- â”€â”€ STRATEGIC CHALLENGE â”€â”€ -->
-    <section class="cs-section">
+    <section class="cs-section cs-toc-target" id="challenge">
         <div class="cs-section-inner">
             <div class="cs-section-label">The Challenge</div>
             <h2 class="cs-heading">Building CoreView wasn't one hard problem &mdash;<br>it was several interconnected ones.</h2>
@@ -173,7 +186,7 @@
     </section>
 
     <!-- â”€â”€ MY APPROACH â”€â”€ -->
-    <section class="cs-section cs-section-dark">
+    <section class="cs-section cs-section-dark cs-toc-target" id="approach">
         <div class="cs-section-inner">
             <div class="cs-section-label">My Approach</div>
             <h2 class="cs-heading">How I navigated the complexity</h2>
@@ -245,7 +258,7 @@
 
 
     <!-- â”€â”€ KEY DESIGN DECISIONS â”€â”€ -->
-    <section class="cs-section">
+    <section class="cs-section cs-toc-target" id="decisions">
         <div class="cs-section-inner">
             <div class="cs-section-label">Key Design Decisions</div>
             <h2 class="cs-heading">Why each decision was made</h2>
@@ -400,7 +413,7 @@
     </section>
 
     <!-- â”€â”€ WORKING WITH CONSTRAINTS â”€â”€ -->
-    <section class="cs-constraints">
+    <section class="cs-constraints cs-toc-target" id="constraints">
         <div class="cs-constraints-inner">
 
             <div class="cs-constraints-top">
@@ -454,7 +467,7 @@
     </section>
 
     <!-- â”€â”€ FINAL DESIGN â”€â”€ -->
-    <section class="cs-section">
+    <section class="cs-section cs-toc-target" id="final-design">
         <div class="cs-section-inner">
             <div class="cs-section-label">Final Design</div>
             <h2 class="cs-heading">Selected screens</h2>
@@ -498,7 +511,7 @@
     </section>
 
     <!-- â”€â”€ WHAT I'D DO DIFFERENTLY â”€â”€ -->
-    <section class="cs-section cs-section-dark">
+    <section class="cs-section cs-section-dark cs-toc-target" id="reflection">
         <div class="cs-section-inner">
             <div class="cs-section-label">Reflection</div>
             <h2 class="cs-heading">What I'd Do Differently</h2>
@@ -576,6 +589,7 @@
     </div>
 </footer>
 
+<script src="js/toc.js"></script>
 </body>
 </html>
 

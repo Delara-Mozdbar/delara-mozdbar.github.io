@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/works.css">
     <link rel="stylesheet" href="css/nubaa.css">
+    <link rel="stylesheet" href="css/toc.css">
 </head>
 
-<body>
+<body class="has-toc">
 
 <header>
   <nav>
@@ -50,6 +51,18 @@
   </nav>
 </header>
 
+<nav class="cs-toc" style="--toc-accent:#3B82E8" aria-label="On this page">
+  <p class="cs-toc-kicker">On this page</p>
+  <ol class="cs-toc-list">
+    <li><a href="#overview" class="is-active" aria-current="location"><span class="cs-toc-num">01</span>Overview</a></li>
+    <li><a href="#problem"><span class="cs-toc-num">02</span>The Problem</a></li>
+    <li><a href="#research"><span class="cs-toc-num">03</span>Research</a></li>
+    <li><a href="#decisions"><span class="cs-toc-num">04</span>Trade-offs</a></li>
+    <li><a href="#solution"><span class="cs-toc-num">05</span>Solution</a></li>
+    <li><a href="#outcomes"><span class="cs-toc-num">06</span>Outcomes</a></li>
+    <li><a href="#reflection"><span class="cs-toc-num">07</span>Reflection</a></li>
+  </ol>
+</nav>
 
 <main class="nubaa-case-study">
 
@@ -63,7 +76,7 @@
     </div>
 
     <!-- ── HERO ── -->
-    <section class="nb-hero">
+    <section class="nb-hero cs-toc-target" id="overview">
 
         <div class="nb-hero-body">
 
@@ -128,7 +141,7 @@
 
 
     <!-- ── SECTION 02: THE PROBLEM ── -->
-    <section class="nb-context">
+    <section class="nb-context cs-toc-target" id="problem">
         <div class="nb-context-inner">
 
             <p class="nb-section-label">Section 02</p>
@@ -179,7 +192,7 @@
 
 
     <!-- ── SECTION 03: RESEARCH ── -->
-    <section class="nb-research">
+    <section class="nb-research cs-toc-target" id="research">
         <div class="nb-research-inner">
 
             <p class="nb-section-label">Section 03 &mdash; Research</p>
@@ -374,7 +387,7 @@
 
 
     <!-- ── SECTION 04: DESIGN DECISIONS ── -->
-    <section class="nb-decisions">
+    <section class="nb-decisions cs-toc-target" id="decisions">
         <div class="nb-decisions-inner">
 
             <p class="nb-section-label">Section 04</p>
@@ -468,7 +481,7 @@
 
 
     <!-- ── SECTION 05: THE SOLUTION ── -->
-    <section class="nb-solution">
+    <section class="nb-solution cs-toc-target" id="solution">
         <div class="nb-solution-inner">
 
             <p class="nb-section-label">Section 05</p>
@@ -544,7 +557,7 @@
     </section>
 
     <!-- Section 06 &mdash; Outcomes -->
-    <section class="nb-outcomes">
+    <section class="nb-outcomes cs-toc-target" id="outcomes">
         <div class="nb-outcomes-inner">
             <p class="nb-section-label">Section 06</p>
             <h2 class="nb-outcomes-heading">What changed</h2>
@@ -581,7 +594,7 @@
     </section>
 
     <!-- Section 07 &mdash; Reflection -->
-    <section class="nb-reflection">
+    <section class="nb-reflection cs-toc-target" id="reflection">
         <div class="nb-reflection-inner">
             <p class="nb-section-label">Section 07</p>
             <h2 class="nb-reflection-heading">What I'd do differently</h2>
@@ -646,5 +659,6 @@
     </div>
 </footer>
 
+<script src="js/toc.js"></script>
 </body>
 </html>
