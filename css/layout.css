@@ -53,19 +53,20 @@ nav {
 
 .resume-btn {
   font-size: 0.85rem;
-  font-weight: 500;
-  color: #e2e0dd;
+  font-weight: 600;
+  color: #0f0f11;
+  background: #c9a96e;
   padding: 8px 20px;
   border-radius: 8px;
-  border: 1px solid #2e2e38;
+  border: 1px solid #c9a96e;
   transition: all 0.2s ease;
   letter-spacing: 0.02em;
 }
 
 .resume-btn:hover {
-  background: #e2e0dd;
+  background: #d4b87e;
   color: #0f0f11;
-  border-color: #e2e0dd;
+  border-color: #d4b87e;
 }
 
 .hamburger {
