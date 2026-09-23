@@ -52,6 +52,7 @@
          HERO
     ════════════════════════════════════════ -->
     <section class="labs-hero">
+      <div class="labs-hero-copy">
         <div class="labs-badge">
             <span class="labs-badge-dot"></span>
             Open R&D Notebook
@@ -60,22 +61,76 @@
         <p class="labs-statement">
             Investigating the intersection of human intuition and generative technology.
             This space serves as an open R&D notebook &mdash; documenting interactive experiments,
-            design-driven prototypes, and the evolving role of AI within advanced
+            shipped full-stack products, and the evolving role of AI within advanced
             product design workflows.
         </p>
         <div class="labs-meta">
             <span class="labs-meta-item">Experiments: 3</span>
             <span class="labs-meta-divider"></span>
+            <span class="labs-meta-item">Builds: 3</span>
+            <span class="labs-meta-divider"></span>
             <span class="labs-meta-item">Status: Active</span>
             <span class="labs-meta-divider"></span>
             <span class="labs-meta-item">Focus: Human-AI Co-Creation</span>
         </div>
+      </div>
+      <div class="labs-hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="labsGlowGold" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.42"/>
+              <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="labsGlowLight" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#e2e0dd" stop-opacity="0.16"/>
+              <stop offset="100%" stop-color="#e2e0dd" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="labsCardTop" x1="124" y1="112" x2="300" y2="122" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#e2e0dd"/>
+              <stop offset="100%" stop-color="#c9a96e"/>
+            </linearGradient>
+          </defs>
+          <circle cx="160" cy="140" r="120" fill="url(#labsGlowLight)"/>
+          <circle cx="300" cy="280" r="130" fill="url(#labsGlowGold)"/>
+          <circle cx="220" cy="220" r="188" stroke="rgba(226,224,221,0.16)" stroke-width="1"/>
+          <circle cx="220" cy="220" r="150" stroke="rgba(201,169,110,0.45)" stroke-width="1" stroke-dasharray="3 7"/>
+          <rect x="148" y="128" width="160" height="196" rx="16" fill="#141418" stroke="rgba(226,224,221,0.12)"/>
+          <rect x="124" y="112" width="176" height="216" rx="18" fill="#1a1a22" stroke="#2e2e38"/>
+          <rect x="124" y="112" width="176" height="10" rx="5" fill="url(#labsCardTop)"/>
+          <rect x="148" y="148" width="88" height="6" rx="3" fill="#e2e0dd" opacity="0.72"/>
+          <rect x="148" y="164" width="128" height="6" rx="3" fill="#6b6a72" opacity="0.55"/>
+          <rect x="148" y="180" width="64" height="6" rx="3" fill="#c9a96e"/>
+          <rect x="148" y="204" width="128" height="56" rx="12" fill="#0f0f11" stroke="rgba(201,169,110,0.45)"/>
+          <path d="M196 224l5 12 12 5-12 5-5 12-5-12-12-5 12-5 5-12z" fill="#c9a96e"/>
+          <path d="M228 232l3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8z" fill="#e2e0dd"/>
+          <circle cx="96" cy="168" r="26" fill="#1a1a22" stroke="#e2e0dd" stroke-width="1.5"/>
+          <path d="M96 158v20M86 168h20" stroke="#e2e0dd" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="340" cy="186" r="26" fill="#1a1a22" stroke="#c9a96e" stroke-width="1.5"/>
+          <rect x="330" y="176" width="8" height="18" rx="2" fill="#e2e0dd" opacity="0.85"/>
+          <rect x="341" y="180" width="8" height="14" rx="2" fill="#c9a96e"/>
+          <circle cx="168" cy="352" r="7" fill="#c9a96e"/>
+          <circle cx="292" cy="84" r="5" fill="#e2e0dd" opacity="0.8"/>
+          <circle cx="118" cy="96" r="4" fill="#c9a96e" opacity="0.7"/>
+        </svg>
+      </div>
     </section>
+
+    <div class="labs-switch">
+        <div class="labs-switch-bar" role="radiogroup" aria-label="Choose a section">
+            <label class="labs-tab">
+                <input type="radio" name="labs-view" value="builds" checked>
+                <span class="labs-tab-title">Full-Stack Builds</span>
+            </label>
+            <label class="labs-tab">
+                <input type="radio" name="labs-view" value="experiments">
+                <span class="labs-tab-title">Live Experiments</span>
+            </label>
+        </div>
 
     <!-- ════════════════════════════════════════
          LIVE EXPERIMENTS GRID
     ════════════════════════════════════════ -->
-    <section class="labs-grid-section">
+    <section class="labs-grid-section labs-panel labs-panel--experiments">
 
         <div class="labs-section-header">
             <span class="labs-num">Live Experiments</span>
@@ -176,12 +231,137 @@
     </section>
 
     <!-- ════════════════════════════════════════
+         FULL-STACK BUILDS
+    ════════════════════════════════════════ -->
+    <section class="labs-builds labs-panel labs-panel--builds">
+
+        <div class="labs-section-header">
+            <span class="labs-num">Full-Stack Builds</span>
+            <h2 class="labs-h2">From frontend to production</h2>
+            <p class="labs-focus">
+                Three products built with Claude Code and Cursor during an AI Software Development Bootcamp in July&ndash;August 2026. Each one adds a layer &mdash; from frontend only, to full-stack, to a deployed production app.
+            </p>
+        </div>
+
+        <ol class="labs-progress" aria-label="Build progression">
+            <li>01 Frontend</li>
+            <li>02 Full-stack</li>
+            <li>03 Full-stack + Deploy</li>
+        </ol>
+
+        <article class="labs-build">
+            <div class="labs-build-shot">
+                <img src="images/ai-labs/eurosettle.png" alt="EuroSettle Academy, an online video academy organized by destination country" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+                <p class="labs-build-placeholder" hidden>EuroSettle Academy</p>
+            </div>
+            <div class="labs-build-copy">
+                <span class="labs-card-exp">Build 01 &mdash; Frontend</span>
+                <h3 class="labs-build-title">EuroSettle Academy</h3>
+                <p class="labs-build-date">July &ndash; August 2026</p>
+                <ol class="labs-progress labs-progress--row" aria-label="EuroSettle Academy stage">
+                    <li class="is-on" aria-current="step">01 Frontend</li>
+                    <li>02 Full-stack</li>
+                    <li>03 Full-stack + Deploy</li>
+                </ol>
+                <p class="labs-build-desc">An online video academy for newcomers to Europe &mdash; language and practical life skills, organized by destination country.</p>
+                <ul class="labs-build-features">
+                    <li>12 topics grouped into three relocation stages: First Steps, Work &amp; Career, Daily Life</li>
+                    <li>Country browser, video detail pages, and full-text search with country/topic/subtitle filters</li>
+                    <li>Phase one: frontend only with mock data, to validate the idea and information architecture</li>
+                </ul>
+                <div class="labs-card-tags">
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>shadcn/ui</span>
+                </div>
+                <div class="labs-build-actions">
+                    <a class="labs-build-btn" href="https://euro-settle-academy.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="labs-build labs-build--reverse">
+            <div class="labs-build-shot">
+                <img src="images/ai-labs/orbitask.png" alt="Orbitask, a team workspace with Kanban boards" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+                <p class="labs-build-placeholder" hidden>Orbitask</p>
+            </div>
+            <div class="labs-build-copy">
+                <span class="labs-card-exp">Build 02 &mdash; Full-stack</span>
+                <h3 class="labs-build-title">Orbitask</h3>
+                <p class="labs-build-date">July &ndash; August 2026</p>
+                <ol class="labs-progress labs-progress--row" aria-label="Orbitask stage">
+                    <li>01 Frontend</li>
+                    <li class="is-on" aria-current="step">02 Full-stack</li>
+                    <li>03 Full-stack + Deploy</li>
+                </ol>
+                <p class="labs-build-desc">A team task and project management platform &mdash; Asana-style workspaces combined with Trello-style Kanban boards.</p>
+                <ul class="labs-build-features">
+                    <li>Workspaces, projects, and Kanban boards (To Do / In Progress / Done)</li>
+                    <li>Two-level role-based access (workspace and project roles)</li>
+                    <li>Notifications on task assignment, plus calendar, timeline, and dashboard views</li>
+                    <li>Backend built first with Next.js Route Handlers and tested in Postman</li>
+                </ul>
+                <div class="labs-card-tags">
+                    <span>Next.js</span>
+                    <span>shadcn/ui</span>
+                    <span>PostgreSQL</span>
+                    <span>Prisma</span>
+                    <span>JWT</span>
+                </div>
+                <div class="labs-build-actions">
+                    <a class="labs-build-btn" href="https://orbitask-ten.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="labs-build">
+            <div class="labs-build-shot">
+                <img src="images/ai-labs/ticketa.png" alt="Ticketa, an event and ticketing marketplace" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+                <p class="labs-build-placeholder" hidden>Ticketa</p>
+            </div>
+            <div class="labs-build-copy">
+                <span class="labs-card-exp">Build 03 &mdash; Full-stack + Deploy</span>
+                <h3 class="labs-build-title">Ticketa</h3>
+                <p class="labs-build-date">July &ndash; August 2026</p>
+                <ol class="labs-progress labs-progress--row" aria-label="Ticketa stage">
+                    <li>01 Frontend</li>
+                    <li>02 Full-stack</li>
+                    <li class="is-on" aria-current="step">03 Full-stack + Deploy</li>
+                </ol>
+                <p class="labs-build-desc">An event and ticketing marketplace &mdash; discover events, get tickets, or host your own.</p>
+                <ul class="labs-build-features">
+                    <li>Passwordless login with one-time codes (OTP)</li>
+                    <li>Three roles with dedicated dashboards: organizer, attendee, admin</li>
+                    <li>Automated reminders one hour before events via Vercel Cron</li>
+                    <li>Demo mode: OTP shown on screen, payments simulated</li>
+                </ul>
+                <div class="labs-card-tags">
+                    <span>Next.js 15</span>
+                    <span>React 19</span>
+                    <span>PostgreSQL</span>
+                    <span>Prisma</span>
+                    <span>Resend</span>
+                    <span>Upstash Redis</span>
+                    <span>Vercel</span>
+                </div>
+                <div class="labs-build-actions">
+                    <a class="labs-build-btn" href="https://ticketa-xi.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo &#8599;</a>
+                </div>
+            </div>
+        </article>
+
+    </section>
+    </div>
+
+    <!-- ════════════════════════════════════════
          METHODOLOGY
     ════════════════════════════════════════ -->
     <section class="labs-section labs-dark">
         <div class="labs-method">
             <span class="labs-num">Methodology</span>
             <h2 class="labs-h2">How I document experiments</h2>
+            <p class="labs-method-note">Applies to Live Experiments. Full-Stack Builds follow a product workflow: scope &rarr; backend &rarr; frontend &rarr; deploy.</p>
             <div class="labs-method-grid">
                 <div class="labs-method-step">
                     <span class="labs-method-num">01</span>
@@ -207,7 +387,7 @@
         </div>
 
         <div class="about-cta">
-            <p>Interested in Human-AI collaboration research?</p>
+            <p>Interested in Human-AI collaboration or AI-assisted product building?</p>
             <a href="contact.html" class="key-btn">Let's Talk</a>
         </div>
     </section>
@@ -237,6 +417,19 @@
     </div>
 </footer>
 
+<script>
+(function () {
+  var bar = document.querySelector(".labs-switch-bar");
+  if (!bar) return;
+  bar.querySelectorAll("input").forEach(function (input) {
+    input.addEventListener("change", function () {
+      var top = bar.getBoundingClientRect().top;
+      if (top > 100) return;
+      bar.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+})();
+</script>
 </body>
 </html>
 
