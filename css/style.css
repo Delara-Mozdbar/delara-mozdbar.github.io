@@ -2184,7 +2184,7 @@ html {
 /* CHANNELS GRID */
 .ct-channels {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   padding-bottom: 80px;
 }
@@ -2302,11 +2302,13 @@ html {
 }
 
 /* RESPONSIVE */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .ct-channels {
     grid-template-columns: 1fr;
   }
+}
 
+@media (max-width: 700px) {
   .ct-hero {
     padding: 60px 0 48px;
   }
@@ -2348,16 +2350,18 @@ html {
 
 .idx-contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 32px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .idx-contact-grid {
     grid-template-columns: 1fr;
   }
+}
 
+@media (max-width: 700px) {
   .idx-contact {
     padding: 64px 5%;
   }
