@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delara Mozdbar | Rumi Mirror &mdash; Case Study</title>
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/toc.css">
+    <link rel="stylesheet" href="css/rumi.css">
+    <link rel="stylesheet" href="css/motion.css">
+</head>
+
+<body class="has-toc rm-page">
+<header>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><img src="images/Logo.png" alt="Delara Mozdbar"></a>
+      </div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">&#x2630;</label>
+      <div class="nav-center menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="work.html" class="nav-link active">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="ai-labs.html" class="nav-link">AI Labs</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-right">
+        <a href="files/Delara_Mozdbar_Product_Designer.pdf" class="resume-btn" download>My Resume</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<nav class="cs-toc" aria-label="On this page">
+  <p class="cs-toc-kicker">On this page</p>
+  <ol class="cs-toc-list">
+    <li><a href="#overview"><span class="cs-toc-num">01</span>Overview</a></li>
+    <li><a href="#challenge"><span class="cs-toc-num">02</span>The Challenge</a></li>
+    <li><a href="#approach"><span class="cs-toc-num">03</span>My Approach</a></li>
+    <li><a href="#decisions"><span class="cs-toc-num">04</span>Key Decisions</a></li>
+    <li><a href="#constraints"><span class="cs-toc-num">05</span>What Broke</a></li>
+    <li><a href="#evaluation"><span class="cs-toc-num">06</span>Evaluation</a></li>
+    <li><a href="#final-design"><span class="cs-toc-num">07</span>Final Design</a></li>
+    <li><a href="#reflection"><span class="cs-toc-num">08</span>Reflection</a></li>
+  </ol>
+</nav>
+
+<div class="rm-wrap">
+
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="work.html">Work</a>
+        <span aria-hidden="true">/</span>
+        <span class="current">Rumi Mirror</span>
+    </div>
+
+    <section class="rm-hero cs-toc-target" id="overview">
+        <div>
+            <span class="rm-eyebrow">Case Study</span>
+            <h1 class="rm-title">Rumi Mirror &mdash;<br><em>verified verse</em><br>discovery</h1>
+            <p class="rm-subtitle">A small web app that returns verified verses of Rumi instead of AI-generated ones, designed to protect a literary heritage from misattribution and hallucination.</p>
+            <div class="rm-actions">
+                <a class="rm-btn" href="https://rumimirror.netlify.app/" target="_blank" rel="noopener noreferrer">View Prototype &#8599;</a>
+                <a class="rm-btn-ghost" href="files/Rumi-Mirror-WUI-2026.pdf" target="_blank" rel="noopener noreferrer">View Submission Report</a>
+            </div>
+            <dl class="rm-meta">
+                <div>
+                    <dt>Role</dt>
+                    <dd>Product Designer &mdash; research, UX, content architecture, AI system design</dd>
+                </div>
+                <div>
+                    <dt>Timeline</dt>
+                    <dd>August &ndash; September 2026, part-time</dd>
+                </div>
+                <div>
+                    <dt>Context</dt>
+                    <dd>Solo project, submitted to the World Usability Day Design Challenge 2026</dd>
+                </div>
+                <div>
+                    <dt>Scope</dt>
+                    <dd>30 curated verses &middot; 10 emotional categories &middot; no accounts</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="rm-hero-visual">
+            <img src="images/Rumi/RumiMirror-Intro.png" alt="Rumi Mirror introduction: the category home beside an ornate mirror">
+            <div class="rm-tags">
+                <span>Ethical AI</span>
+                <span>Content Verification</span>
+                <span>Information Architecture</span>
+                <span>Solo Research &amp; Design</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="rm-section cs-toc-target" id="challenge">
+        <p class="rm-label">The Challenge</p>
+        <h2>Building Rumi Mirror wasn't one hard problem. It was several interconnected ones.</h2>
+        <div class="rm-cards">
+            <article class="rm-card">
+                <span class="rm-num">01</span>
+                <h3>A concept that wasn't communicating its value</h3>
+                <p>Before any code, I tested an early concept with two colleagues unfamiliar with Rumi &mdash; one in the Netherlands, one with a Japanese cultural background in Australia. Their first reaction: &ldquo;I'm not clear what the solution will be&hellip; why do you care?&rdquo;</p>
+            </article>
+            <article class="rm-card">
+                <span class="rm-num">02</span>
+                <h3>Two audiences, two trust barriers</h3>
+                <p>Newcomers needed the purpose in seconds. Readers who know the work needed accurate sourcing before they would trust it at all.</p>
+            </article>
+            <article class="rm-card">
+                <span class="rm-num">03</span>
+                <h3>An AI system that had to earn trust</h3>
+                <p>The obvious version lets a model write a &ldquo;Rumi-style&rdquo; reflection on demand. That is also the fastest way to fabricate the heritage the product exists to protect.</p>
+            </article>
+        </div>
+        <div class="rm-testers">
+            <figure class="rm-tester">
+                <img src="images/Rumi/persona-netherlands.jpg" alt="Illustrated portrait of the concept tester based in the Netherlands">
+                <figcaption>
+                    <strong>Netherlands</strong>
+                    <span>Colleague, unfamiliar with Rumi</span>
+                </figcaption>
+            </figure>
+            <figure class="rm-tester">
+                <img src="images/Rumi/persona-australia.jpg" alt="Illustrated portrait of the concept tester with a Japanese cultural background, based in Australia">
+                <figcaption>
+                    <strong>Australia</strong>
+                    <span>Japanese cultural background, unfamiliar with Rumi</span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="rm-personas">
+            <article class="rm-persona">
+                <span class="rm-persona-label">Persona 01 &middot; The Skeptical Outsider</span>
+                <p>Japanese, unfamiliar with Rumi. Needs to understand what the product is and why it matters within seconds.</p>
+            </article>
+            <article class="rm-persona">
+                <span class="rm-persona-label">Persona 02 &middot; The Devoted Reader</span>
+                <p>International, deeply familiar with Rumi. Needs accurate sourcing and interpretation before trusting the experience.</p>
+            </article>
+        </div>
+        <p class="rm-persona-shared"><strong>Shared need:</strong> Credibility must be visible, not merely claimed.</p>
+        <blockquote class="rm-quote">
+            <p>The real challenge wasn't building an AI feature. It was designing constraints that kept the AI from ever inventing text on a literary heritage it wasn't authorized to speak for.</p>
+        </blockquote>
+    </section>
+
+    <section class="rm-section cs-toc-target" id="approach">
+        <p class="rm-label">My Approach</p>
+        <h2>How I navigated the complexity</h2>
+        <div class="rm-steps">
+            <article class="rm-step">
+                <span class="rm-num">Step 01</span>
+                <h3>Test the concept before building</h3>
+                <p>Reframing the idea around ethical AI turned confusion into clarity. The same reviewer went from &ldquo;why do you care?&rdquo; to &ldquo;This I get. This is crystal clear.&rdquo; &mdash; Vlad, concept reviewer</p>
+            </article>
+            <article class="rm-step">
+                <span class="rm-num">Step 02</span>
+                <h3>Validate the problem with people who live it</h3>
+                <p>A Rumi study group (n=4) was asked how they find verses and whether they had doubted a quote online. 3 of 4 had. The trust problem was not hypothetical.</p>
+            </article>
+            <article class="rm-step">
+                <span class="rm-num">Step 03</span>
+                <h3>Design the guardrails before the interface</h3>
+                <p>Four rules the product would not break: retrieve, never generate; public-domain sourcing only; human-authored reflection; a structured emotional taxonomy instead of an open prompt.</p>
+            </article>
+        </div>
+        <div class="rm-survey">
+            <figure class="rm-survey-chart">
+                <img src="images/Rumi/Rumi-Survey-Doubted.png" alt="Survey chart: 75% of the Rumi study group have doubted a quote's authenticity online, 25% never have">
+            </figure>
+            <figure class="rm-survey-chart">
+                <img src="images/Rumi/Rumi-Survey-WouldUse.png" alt="Survey chart: 50% of the Rumi study group would definitely use an app like this, 50% said maybe">
+            </figure>
+        </div>
+        <p class="rm-survey-caption">Results from the Rumi study group survey (n=4) referenced in Step 02.</p>
+    </section>
+
+    <section class="rm-section cs-toc-target" id="decisions">
+        <p class="rm-label">Key Decisions</p>
+        <h2>Why each design decision was made</h2>
+        <div class="rm-decisions">
+            <article class="rm-decision">
+                <span class="rm-num">01</span>
+                <h3>Retrieval, not generation</h3>
+                <p>A model that composes &ldquo;Rumi-style&rdquo; text will eventually present something Rumi never wrote, with full confidence. Restricting the system to a fixed, curated set removes that failure mode.</p>
+            </article>
+            <article class="rm-decision">
+                <span class="rm-num">02</span>
+                <h3>A taxonomy, not free text</h3>
+                <p>Free-text emotional input felt arbitrary and read like a generic chatbot. Ten emotional categories give a clear starting point and keep matching constrained.</p>
+            </article>
+            <article class="rm-decision">
+                <span class="rm-num">03</span>
+                <h3>Nicholson's translation</h3>
+                <p>Popular English translations of Rumi carry copyright restrictions. Reynold A. Nicholson's Mathnavi is public domain, so the product can be shared without adding another unclear source.</p>
+            </article>
+            <article class="rm-decision">
+                <span class="rm-num">04</span>
+                <h3>A standalone Verify feature</h3>
+                <p>People also want to check quotes they have already seen. Verify returns one of five outcomes: Confirmed, Confirmed partial, Confirmed multiple, Close but not exact, or Not found.</p>
+            </article>
+        </div>
+        <blockquote class="rm-quote">
+            <p>The biggest challenge wasn't making the product feel intelligent. It was making sure it never pretended to know something it didn't.</p>
+        </blockquote>
+    </section>
+
+    <section class="rm-section cs-toc-target" id="constraints">
+        <p class="rm-label">What Broke</p>
+        <h2>Small product, several failure points, all tied to the same promise</h2>
+        <div class="rm-fails">
+            <article class="rm-fail">
+                <h3>Category matching</h3>
+                <p>A &ldquo;jealousy&rdquo; selection once returned an unrelated verse. Left unfixed, that quietly breaks the promise that what you see is the verse you asked for.</p>
+            </article>
+            <article class="rm-fail">
+                <h3>Verify vs. search</h3>
+                <p>Testers treated Verify as a search bar and typed single words such as &ldquo;water.&rdquo; That is a framing problem, not a logic problem.</p>
+            </article>
+            <article class="rm-fail">
+                <h3>Visual hierarchy</h3>
+                <p>A professional designer reviewing the live product flagged the logo as too small. It was fixed the same day.</p>
+            </article>
+            <article class="rm-fail">
+                <h3>Retrieval accuracy</h3>
+                <p>Self-testing caught an altered quote still marked Confirmed. It was fixed before any real user saw it.</p>
+            </article>
+        </div>
+        <h3 class="rm-subheading">Post-launch feedback made the value tangible</h3>
+        <div class="rm-testimonials">
+            <blockquote class="rm-testimonial">
+                <p>&ldquo;This is awesome Delara! &hellip;this can be a great and more responsible way to use AI.&rdquo;</p>
+                <p>&ldquo;The value: ensuring AI is not hallucinating&hellip; Then I can see that this is highly accurate translations.&rdquo;</p>
+                <cite>&mdash; Odette</cite>
+            </blockquote>
+            <blockquote class="rm-testimonial">
+                <p>&ldquo;I found the translation comprehensive&hellip; it captures the meanings very well.&rdquo;</p>
+                <cite>&mdash; reader from a Rumi-interest group</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="rm-section cs-toc-target" id="evaluation">
+        <p class="rm-label">Evaluation</p>
+        <h2>Adversarial testing first, then real use</h2>
+        <div class="rm-evaluation-grid">
+            <div class="rm-evaluation-text">
+                <p>Before anyone else touched the product, adversarial self-testing caught three issues a casual pass would miss: an altered quote, one word changed so the meaning reversed, still marked Confirmed; a valid partial line returned as not found; and a phrase that appears in several verses returned only the first match. All three were fixed and re-checked.</p>
+                <p>Real use then surfaced what self-testing could not: the category-verse mismatch, Verify used as search, and the logo note from a designer. Early signals are intentionally modest: 92 category views, 17 verse ratings, 100% helpful ratings, and 5 verification attempts.</p>
+                <div class="rm-metrics">
+                    <span>92 category views</span>
+                    <span>17 verse ratings</span>
+                    <span>100% helpful</span>
+                    <span>5 verifications</span>
+                </div>
+            </div>
+            <figure class="rm-dashboard">
+                <img src="images/Rumi/Rumi-AdminDashboard.png" alt="Admin dashboard showing aggregated, anonymous feedback stats: verse ratings, helpful percentage, verify attempts, category views, most-viewed categories, and verify status breakdown">
+                <figcaption>The admin dashboard behind these numbers &mdash; aggregated, anonymous feedback from real use.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="rm-section cs-toc-target" id="final-design">
+        <p class="rm-label">Final Design</p>
+        <h2>Selected screens</h2>
+        <div class="rm-screens">
+            <article class="rm-screen">
+                <img src="images/Rumi/Rumi-Intro.png" alt="Home screen with ten emotional categories">
+                <h3>Home &mdash; category selection</h3>
+                <p>Ten emotional categories replace free-text input, so matching starts from a clear choice rather than an open prompt.</p>
+            </article>
+            <article class="rm-screen">
+                <img src="images/Rumi/Rumi-Verse.png" alt="A verified verse with its book and line citation">
+                <h3>Verse and reflection</h3>
+                <p>Every verse is shown with its exact book and line. The reflection is human-authored, not generated by the model.</p>
+            </article>
+            <article class="rm-screen">
+                <img src="images/Rumi/Rumi-Verify.png" alt="Verify a Quote screen">
+                <h3>Verify a quote</h3>
+                <p>Paste a quote attributed to Rumi and check it against Books 1&ndash;4 of the Mathnavi. The system states what it found, including when it found nothing.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="rm-section cs-toc-target" id="reflection">
+        <p class="rm-label">Reflection</p>
+        <h2>What I'd do differently</h2>
+        <h3 class="rm-subheading">Five things that generalize beyond this product</h3>
+        <ol class="rm-takeaways">
+            <li>Explain the ethical value before presenting the interface.</li>
+            <li>Make source credibility visible at the moment of use.</li>
+            <li>Use constraints to reduce ambiguous AI behavior.</li>
+            <li>Treat tester confusion as evidence, not as user error.</li>
+            <li>Disclose the limits of both the dataset and the evaluation.</li>
+        </ol>
+        <h3 class="rm-subheading">Where the evidence has clear boundaries</h3>
+        <ul class="rm-list">
+            <li>
+                <strong>A larger, independent testing group</strong>
+                <p>This round relied on 4 survey respondents and a handful of testers, evaluated by me alone. An independent reviewer would reduce the bias of my own closeness to the material.</p>
+            </li>
+            <li>
+                <strong>A broader dataset</strong>
+                <p>The set covers 30 verses across Books 1 to 4 of the Mathnavi only. Wider coverage would make it useful beyond a focused demo.</p>
+            </li>
+            <li>
+                <strong>Clearer first-touch framing for Verify</strong>
+                <p>More than one tester treated Verify like a search bar. That is the clearest next fix, and it is a copy problem, not a matching problem.</p>
+            </li>
+        </ul>
+        <p class="rm-note">Verse translations are Reynold A. Nicholson's public-domain English translation of the Mathnavi, Books 1&ndash;4. Interpretations are Persian-language summaries of Parviz Shahbazi's teachings on the Ganj-e Hozour program, translated into English by the author. Trust is designed into the content model, not added as a disclaimer.</p>
+        <p class="rm-note" style="margin-top: 12px;">Generative AI (Claude, Anthropic) supported technical architecture, application code, wording, and the structure of the research log. Verse selection, citations, interpretations, and authenticity verdicts were reviewed by me for accuracy.</p>
+        <a class="rm-next" href="coreview.html">
+            <div>
+                <span>Read more</span>
+                <strong>View next case study</strong>
+            </div>
+            <b aria-hidden="true">&rarr;</b>
+        </a>
+    </section>
+
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-col">
+            <span class="hero-availability">&#9679; Available for global roles</span>
+        </div>
+        <div class="footer-col">
+            <div class="footer-links">
+                <a href="mailto:delara.mozdbar@gmail.com">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    Email
+                </a>
+                <a href="https://www.linkedin.com/in/delara-mozdbar/" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Delara-Mozdbar" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <span class="footer-copy">&copy; 2026 Delara Mozdbar.</span>
+        </div>
+    </div>
+</footer>
+
+<script src="js/toc.js"></script>
+<script src="js/motion.js"></script>
+</body>
+</html>

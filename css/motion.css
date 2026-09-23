@@ -1,0 +1,117 @@
+/* Soft motion shared by every page. Stays inside the gold / warm gray palette. */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes soft-rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes soft-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .hero-content,
+  .hero-image,
+  .about-hero-photo,
+  .about-hero-content,
+  .labs-hero-copy,
+  .labs-hero-visual,
+  .cs-hero,
+  .pitch-hero,
+  .nb-hero,
+  .rm-hero,
+  .ct-hero-copy,
+  .ct-hero-visual,
+  .work-intro {
+    animation: soft-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .hero-image,
+  .about-hero-content,
+  .labs-hero-visual,
+  .ct-hero-visual {
+    animation-delay: 0.12s;
+  }
+
+  .labs-hero-visual svg,
+  .labs-hero-visual img,
+  .ct-hero-visual svg,
+  .ct-hero-visual img {
+    animation: soft-float 7.5s ease-in-out 1s infinite;
+  }
+
+  html.motion .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+  }
+
+  html.motion .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav-link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    padding-bottom: 2px;
+    transition: color 0.25s ease, background-size 0.35s ease;
+  }
+
+  .nav-link:hover {
+    background-size: 100% 1px;
+  }
+
+  .resume-btn:hover,
+  .key-btn:hover,
+  .labs-build-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(201, 169, 110, 0.22);
+  }
+
+  .labs-card {
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .labs-card:hover {
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+  }
+
+  .ct-card {
+    transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .ct-card:hover {
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+  }
+
+  .showcase-img-wrap img,
+  .labs-build-shot img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .showcase-card:hover .showcase-img-wrap img,
+  .labs-build:hover .labs-build-shot img {
+    transform: scale(1.03);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
