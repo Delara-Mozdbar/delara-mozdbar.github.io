@@ -424,18 +424,6 @@
   aspect-ratio: 4/3;
 }
 
-/* Role hierarchy image � Decision 2 */
-.cs-kd-role-hierarchy {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.cs-kd-role-hierarchy img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
 /* Role table � Decision 2 */
 .cs-kd-role-table {
   border: 1px solid #2e2e38;
