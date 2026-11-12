@@ -1,243 +1,155 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delara Mozdbar | Senior Product Designer</title>
-    <link rel="icon" type="image/png" href="images/Favicon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/motion.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delara Mozdbar has moved to delara.work</title>
+<meta name="description" content="Delara Mozdbar's portfolio has moved to delara.work.">
+<link rel="canonical" href="https://delara.work/">
+<noscript><meta http-equiv="refresh" content="3; url=https://delara.work/"></noscript>
+<style>
+  :root {
+    --ink: #0e0e11;
+    --navy: #0b1a4f;
+    --blue: #2d52d6;
+    --gold: #f0b429;
+    --text: #f4f6ff;
+    --muted: #aab4d8;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--ink);
+    color: var(--text);
+    font-family: Inter, "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+    overflow: hidden;
+    transition: background-color 3.2s ease;
+  }
+  body.blue { background: var(--navy); }
+  .stage { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; gap: 1.6rem; }
+  .notebook { width: min(56vw, 250px); height: auto; opacity: 0; transform: translateY(14px) rotate(-3deg);
+    transition: opacity .7s ease, transform .9s ease; filter: drop-shadow(0 24px 40px rgba(0,0,0,.55)); }
+  .notebook.in { opacity: 1; transform: none; }
+  #brush { opacity: 0; transition: opacity .3s; }
+  .msg { text-align: center; max-width: 360px; opacity: 0; transition: opacity .8s ease; }
+  .msg.in { opacity: 1; }
+  h1 { font-size: 1.2rem; margin: 0 0 .3rem; font-weight: 700; }
+  p { color: var(--muted); line-height: 1.6; margin: 0; }
+  .bar { height: 5px; background: rgba(255,255,255,.12); border-radius: 99px; overflow: hidden; margin: 1.1rem auto 0; width: min(70vw, 280px); }
+  .bar span { display: block; height: 100%; width: 0; background: var(--gold); border-radius: 99px; }
+  .msg.in .bar span { animation: fill 5s linear forwards; }
+  @keyframes fill { to { width: 100%; } }
+  .skip { position: fixed; top: 16px; right: 16px; z-index: 5; border: 1px solid rgba(255,255,255,.25);
+    color: var(--text); padding: .5rem .9rem; border-radius: 99px; font-size: .85rem; text-decoration: none; }
+  .skip:hover { border-color: var(--gold); }
+  .skip:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .notebook, .msg, body { transition: none; }
+    .msg.in .bar span { animation-duration: 2s; }
+  }
+</style>
 </head>
-
 <body>
-<header>
-  <nav>
-    <div class="nav-container">
 
-      <!-- Logo -->
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/Logo.png" alt="Delara Mozdbar">
-        </a>
-      </div>
+<a class="skip" href="https://delara.work/">Go to delara.work</a>
 
-      <!-- Hamburger -->
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="hamburger">&#x2630;</label>
+<div class="stage">
+  <svg class="notebook" id="nb" viewBox="0 0 240 300" aria-hidden="true">
+    <defs>
+      <path id="pM" d="M138.916 106.996H124.951V56.9961C124.951 56.0195 124.756 55.1081 124.365 54.2617C124.007 53.4154 123.503 52.6829 122.852 52.0645C122.233 51.4134 121.501 50.9089 120.654 50.5508C119.808 50.1927 118.896 50.0137 117.92 50.0137C116.943 50.0137 116.032 50.1927 115.186 50.5508C114.339 50.9089 113.59 51.4134 112.939 52.0645C112.321 52.6829 111.833 53.4154 111.475 54.2617C111.117 55.1081 110.938 56.0195 110.938 56.9961V106.996H96.9238V56.9961C96.9238 56.0195 96.7448 55.1081 96.3867 54.2617C96.0286 53.4154 95.5241 52.6829 94.873 52.0645C94.2546 51.4134 93.5221 50.9089 92.6758 50.5508C91.8294 50.1927 90.918 50.0137 89.9414 50.0137C88.9648 50.0137 88.0534 50.1927 87.207 50.5508C86.3607 50.9089 85.612 51.4134 84.9609 52.0645C84.3424 52.6829 83.8542 53.4154 83.4961 54.2617C83.138 55.1081 82.959 56.0195 82.959 56.9961V106.996H68.9453V56.9961C68.9453 54.099 69.4824 51.3809 70.5566 48.8418C71.6634 46.2702 73.1608 44.0404 75.0488 42.1523C76.9694 40.2318 79.1992 38.7344 81.7383 37.6602C84.3099 36.5534 87.0443 36 89.9414 36C92.5456 36 95.0521 36.472 97.4609 37.416C99.8698 38.3275 102.035 39.6621 103.955 41.4199C105.876 39.6621 108.024 38.3275 110.4 37.416C112.809 36.472 115.316 36 117.92 36C120.817 36 123.535 36.5534 126.074 37.6602C128.646 38.7344 130.876 40.2318 132.764 42.1523C134.684 44.0404 136.182 46.2702 137.256 48.8418C138.363 51.3809 138.916 54.099 138.916 56.9961V106.996Z"/>
+      <path id="pD" d="M60.1035 71.9863C60.1035 75.209 59.6803 78.3177 58.834 81.3125C58.0202 84.2747 56.8483 87.0579 55.3184 89.6621C53.7884 92.2337 51.9655 94.5938 49.8496 96.7422C47.7337 98.8581 45.3737 100.681 42.7695 102.211C40.1654 103.741 37.3659 104.929 34.3711 105.775C31.4089 106.589 28.3164 106.996 25.0938 106.996H4V36.9766H25.0938C28.3164 36.9766 31.4089 37.3997 34.3711 38.2461C37.3659 39.0599 40.1654 40.2318 42.7695 41.7617C45.3737 43.2917 47.7337 45.1309 49.8496 47.2793C51.9655 49.3952 53.7884 51.7552 55.3184 54.3594C56.8483 56.931 58.0202 59.7142 58.834 62.709C59.6803 65.6712 60.1035 68.7637 60.1035 71.9863ZM46.0898 71.9863C46.0898 69.0892 45.5365 66.3711 44.4297 63.832C43.3555 61.293 41.8581 59.0794 39.9375 57.1914C38.0495 55.2708 35.8197 53.7572 33.248 52.6504C30.709 51.5436 27.9909 50.9902 25.0938 50.9902H18.1113V92.9824H25.0938C27.9909 92.9824 30.709 92.4453 33.248 91.3711C35.8197 90.2643 38.0495 88.7669 39.9375 86.8789C41.8581 84.9583 43.3555 82.7285 44.4297 80.1895C45.5365 77.6178 46.0898 74.8835 46.0898 71.9863Z"/>
+      <mask id="paintMask" maskUnits="userSpaceOnUse" x="0" y="0" width="240" height="300">
+        <path id="paint" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"
+          d="M16 14 H224 V38 H16 V62 H224 V86 H16 V110 H224 V134 H16 V158 H224 V182 H16 V206 H224 V230 H16 V254 H224 V278 H16 V302 H224"/>
+      </mask>
+    </defs>
 
-      <!-- Menu -->
-      <div class="nav-center menu">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="work.html" class="nav-link">Work</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="ai-labs.html" class="nav-link">AI Labs</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </div>
+    <!-- Old notebook: black cover, gold band, engraved old logo -->
+    <g id="oldBook">
+      <rect x="20" y="10" width="200" height="280" rx="14" fill="#17171c" stroke="#2c2c36" stroke-width="2"/>
+      <rect x="20" y="10" width="26" height="280" rx="14" fill="#0b0b0e"/>
+      <rect x="188" y="10" width="12" height="280" fill="#C9A96E"/>
+      <g transform="translate(62 94) scale(.8)">
+        <g transform="translate(-1.6 -1.6)" fill="#000" opacity=".7"><use href="#pM"/><use href="#pD"/></g>
+        <g transform="translate(1.4 1.4)" fill="#fff" opacity=".16"><use href="#pM"/><use href="#pD"/></g>
+        <use href="#pM" fill="#E2E0DD"/><use href="#pD" fill="#C9A96E"/>
+      </g>
+    </g>
 
-      <!-- Resume Button -->
-      <div class="nav-right">
-        <a href="files/Delara_Mozdbar_Product_Designer_Resume.pdf" class="resume-btn" download>My Resume</a>
-      </div>
+    <!-- New notebook: blue cover, yellow band, engraved new logo; revealed by the brush -->
+    <g id="newBook" mask="url(#paintMask)">
+      <rect x="20" y="10" width="200" height="280" rx="14" fill="#2d52d6" stroke="#4a6fe8" stroke-width="2"/>
+      <rect x="20" y="10" width="26" height="280" rx="14" fill="#1c35a8"/>
+      <rect x="188" y="10" width="12" height="280" fill="#f0b429"/>
+      <g transform="translate(62 94) scale(.8)">
+        <g transform="translate(-1.6 -1.6)" fill="#000" opacity=".45"><use href="#pM"/><use href="#pD"/></g>
+        <g transform="translate(1.4 1.4)" fill="#fff" opacity=".22"><use href="#pM"/><use href="#pD"/></g>
+        <use href="#pM" fill="#5E86BD"/><use href="#pD" fill="#0C3368"/>
+      </g>
+    </g>
 
-    </div>
-  </nav>
-</header>
+    <g id="brush">
+      <g id="brushShape">
+        <rect x="-4.5" y="-80" width="9" height="62" rx="4.5" fill="#f0b429"/>
+        <rect x="-11" y="-20" width="22" height="12" rx="2" fill="#9aa0b5"/>
+        <path d="M-12 -8 H12 L9 16 H-9 Z" fill="#7ea0ff"/>
+      </g>
+    </g>
+  </svg>
 
-<main>
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Delara Mozdbar</h1>
-            <p class="hero-role">Senior Product Designer</p>
-            <p class="hero-description">
-                Turning complex product problems into clear, human-centered experiences.
-            </p>
-            <span class="hero-availability">&#9679; Available for global remote roles</span>
-            <p class="hero-years"><span>6+</span> years of experience</p>
-            <a href="#featured-work" class="key-btn">Explore My Work</a>
-        </div>
-        <div class="hero-image">
-            <img src="images/Hero.png" alt="Delara Mozdbar">
-        </div>
-    </section>
+  <div class="msg" id="msg">
+    <h1>My portfolio has a new home</h1>
+    <p>Taking you to <strong>delara.work</strong> in a moment.</p>
+    <div class="bar"><span></span></div>
+  </div>
+</div>
 
+<script>
+(function () {
+  var TARGET = "https://delara.work/";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var nb = document.getElementById("nb"), msg = document.getElementById("msg");
+  var brush = document.getElementById("brush"), shape = document.getElementById("brushShape");
+  var paint = document.getElementById("paint");
+  var len = paint.getTotalLength();
+  paint.style.strokeDasharray = len;
+  paint.style.strokeDashoffset = reduce ? 0 : len;
 
-    <!-- FEATURED WORK -->
-    <section id="featured-work" class="featured-work">
-      <div class="featured-work-inner">
+  function go() { window.location.replace(TARGET); }
 
-        <div class="featured-work-header">
-          <h2 class="featured-work-title">Featured Work</h2>
-          <a href="work.html" class="view-all-link">View all projects &rarr;</a>
-        </div>
+  if (reduce) {
+    document.getElementById("oldBook").style.display = "none";
+    document.body.classList.add("blue");
+    nb.classList.add("in"); msg.classList.add("in");
+    setTimeout(go, 2500);
+    return;
+  }
 
-        <div class="showcase-grid">
+  setTimeout(function () { nb.classList.add("in"); }, 100);
+  setTimeout(function () { msg.classList.add("in"); }, 500);
 
-          <!-- CoreView -->
-          <article class="showcase-card">
-            <div class="showcase-img-wrap">
-              <img src="images/CoreView/CoreView-Intro.png" alt="CoreView SaaS Dashboard">
-            </div>
-            <div class="showcase-meta">
-              <span class="showcase-tag">B2B SaaS · Enterprise UX</span>
-              
-            </div>
-            <h3 class="showcase-title">CoreView &mdash; Workforce Health Monitoring</h3>
-            <p class="showcase-desc">A B2B SaaS platform for real-time employee health screening and risk control &mdash; designed for managers who need to act fast.</p>
-            <div class="showcase-tags">
-              <span>Enterprise UX</span>
-              <span>Conversational UI</span>
-              <span>Information Architecture</span>
-            </div>
-            <a href="coreview.html" class="showcase-link">View Case Study &rarr;</a>
-          </article>
+  var PAINT_START = 1500, PAINT_MS = 3200;
+  setTimeout(function () {
+    brush.style.opacity = 1;
+    document.body.classList.add("blue");
+    var t0 = null;
+    function step(ts) {
+      if (t0 === null) t0 = ts;
+      var k = Math.min((ts - t0) / PAINT_MS, 1);
+      var d = k * len;
+      paint.style.strokeDashoffset = len - d;
+      var pt = paint.getPointAtLength(d);
+      var wiggle = Math.sin(k * 40) * 2;
+      shape.setAttribute("transform", "translate(" + pt.x + "," + pt.y + ") rotate(" + (28 + wiggle) + ")");
+      if (k < 1) requestAnimationFrame(step);
+      else { brush.style.transition = "opacity .5s"; brush.style.opacity = 0; }
+    }
+    requestAnimationFrame(step);
+  }, PAINT_START);
 
-          <!-- Pitch -->
-          <article class="showcase-card">
-            <div class="showcase-img-wrap">
-              <img src="images/Pitch/Pitch-Intro.png" alt="Pitch app screens">
-            </div>
-            <div class="showcase-meta">
-              <span class="showcase-tag">Mobile App · 0&rarr;1 Product</span>
-              
-            </div>
-            <h3 class="showcase-title">Pitch &mdash; Where founders meet their investors</h3>
-            <p class="showcase-desc">A 0&rarr;1 mobile platform connecting startup founders with accredited investors through curated video pitches. Designed end-to-end in 8 weeks across iOS and Android.</p>
-            <div class="showcase-tags">
-              <span>Social Network</span>
-              <span>iOS & Android</span>
-              <span>UX Strategy</span>
-            </div>
-            <a href="pitch.html" class="showcase-link">View Case Study &rarr;</a>
-          </article>
-
-          <!-- Rumi Mirror -->
-          <article class="showcase-card showcase-card--lead">
-            <div class="showcase-img-wrap">
-              <img src="images/Rumi/RumiMirror-Intro.png" alt="Rumi Mirror introduction, the category home beside an ornate mirror">
-            </div>
-            <div class="showcase-meta">
-              <span class="showcase-tag">Ethical AI · Solo Project</span>
-              
-            </div>
-            <h3 class="showcase-title">Rumi Mirror &mdash; Verified verse discovery</h3>
-            <p class="showcase-desc">A focused web app that retrieves verified Rumi verses instead of generating them, so a literary heritage is not eroded by AI hallucination.</p>
-            <div class="showcase-tags">
-              <span>Ethical AI</span>
-              <span>Content Verification</span>
-              <span>Information Architecture</span>
-            </div>
-            <a href="rumi-mirror.html" class="showcase-link">View Case Study &rarr;</a>
-          </article>
-
-        </div>
-
-    
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="idx-contact">
-      <div class="idx-contact-inner">
-
-        <div class="idx-contact-header">
-          <div class="idx-contact-copy">
-            <p class="ct-label">Get in touch</p>
-            <h2 class="idx-contact-title">Let's build something<br>remarkable together.</h2>
-            <p class="idx-contact-sub">Open to senior product design roles, HCI research collaborations, and international SaaS projects.</p>
-          </div>
-          <div class="ct-hero-visual">
-            <img src="images/Contact.png" alt="Envelope, message, and call">
-          </div>
-        </div>
-
-        <div class="idx-contact-grid">
-
-          <a href="mailto:delara.mozdbar@gmail.com" class="ct-card ct-card--primary">
-            <div class="ct-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </div>
-            <div class="ct-card-body">
-              <span class="ct-card-label">Preferred</span>
-              <h3 class="ct-card-title">Send a Message</h3>
-              <p class="ct-card-desc">delara.mozdbar@gmail.com</p>
-            </div>
-            <span class="ct-card-arrow">&rarr;</span>
-          </a>
-
-          <a href="https://calendar.app.google/7JH3uLpp5a7SVG2TA" target="_blank" rel="noopener noreferrer" class="ct-card">
-            <div class="ct-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            </div>
-            <div class="ct-card-body">
-              <span class="ct-card-label">1:1 meet</span>
-              <h3 class="ct-card-title">Schedule a Call</h3>
-              <p class="ct-card-desc">Book a call via Google Meet</p>
-            </div>
-            <span class="ct-card-arrow">&rarr;</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/delara-mozdbar/" target="_blank" rel="noopener noreferrer" class="ct-card">
-            <div class="ct-card-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </div>
-            <div class="ct-card-body">
-              <span class="ct-card-label">LinkedIn</span>
-              <h3 class="ct-card-title">Connect on LinkedIn</h3>
-              <p class="ct-card-desc">delara-mozdbar</p>
-            </div>
-            <span class="ct-card-arrow">&rarr;</span>
-          </a>
-
-        </div>
-
-        <div class="ct-note" style="border-top: 1px solid var(--elevated); padding: 28px 0 0; margin-top: 8px;">
-          <div class="ct-note-inner">
-            <span class="ct-note-dot"></span>
-            <p>Currently available for new projects &mdash; typical response time is within 24 hours.</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-</main>
-
-<footer>
-    <div class="footer-inner">
-        <div class="footer-col">
-            <span class="hero-availability">&#9679; Available for global roles</span>
-        </div>
-        <div class="footer-col">
-            <div class="footer-links">
-                <a href="mailto:delara.mozdbar@gmail.com">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    Email
-                </a>
-                <a href="https://www.linkedin.com/in/delara-mozdbar/" target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                    LinkedIn
-                </a>
-                <a href="https://github.com/Delara-Mozdbar" target="_blank" rel="noopener noreferrer">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                    GitHub
-                </a>
-            </div>
-        </div>
-        <div class="footer-col">
-            <span class="footer-copy">&copy; 2026 Delara Mozdbar.</span>
-        </div>
-    </div>
-</footer>
-
-<script src="js/motion.js"></script>
+  setTimeout(go, 6200);
+})();
+</script>
 </body>
 </html>
-
-
-
-
